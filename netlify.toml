@@ -3,12 +3,12 @@
 
 [[redirects]]
   from = "/app"
-  to = "https://majestic-empanada-18482c.netlify.app/app"
-  status = 200
+  to = "https://sense-bridge-production.netlify.app/"
+  status = 302
   force = true
 
 [[redirects]]
   from = "/admin"
-  to = "https://majestic-empanada-18482c.netlify.app/admin"
-  status = 200
+  to = "https://sense-bridge-production.netlify.app/admin.html"
+  status = 302
   force = true
