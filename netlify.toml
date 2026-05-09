@@ -1,14 +1,26 @@
 [build]
   publish = "."
 
+# APP
+
 [[redirects]]
   from = "/app"
   to = "https://sense-bridge-production.netlify.app/"
   status = 302
   force = true
 
+# PRIVATE ADMIN
+
+[[redirects]]
+  from = "/luni-admin-2903"
+  to = "https://sense-bridge-production.netlify.app/admin.html"
+  status = 302
+  force = true
+
+# BLOCK PUBLIC ADMIN
+
 [[redirects]]
   from = "/admin"
-  to = "https://sense-bridge-production.netlify.app/admin.html"
+  to = "/"
   status = 302
   force = true
