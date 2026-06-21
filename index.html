@@ -158,7 +158,14 @@
       background:#fff;
       border:1px solid var(--line);
       box-shadow:0 8px 20px rgba(15,23,42,.06);
-      font-size:25px;
+      overflow:hidden;
+    }
+
+    .logo img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      display:block;
     }
 
     .nav-links{
@@ -191,6 +198,27 @@
       color:#fff;
       border:none;
       box-shadow:0 13px 26px rgba(14,42,71,.22);
+    }
+
+    .app-cta{
+      position:relative;
+      font-weight:950;
+      letter-spacing:-.01em;
+    }
+
+    .app-cta::before{
+      content:"";
+      width:24px;
+      height:24px;
+      flex:0 0 auto;
+      border-radius:8px;
+      background:#fff url('https://sensebridge.app/icon-192.png') center/cover no-repeat;
+      box-shadow:0 2px 8px rgba(15,23,42,.14);
+    }
+
+    .nav-link.primary.app-cta{
+      padding-left:14px;
+      padding-right:18px;
     }
 
     .lang-toggle{
@@ -276,6 +304,22 @@
     p{margin:0;color:var(--muted)}
     .lead{color:#4f5d70;font-size:clamp(18px,3vw,25px);max-width:760px}
 
+
+    .hero-proof{
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+      flex-wrap:wrap;
+      margin-top:10px;
+      padding:9px 12px;
+      border-radius:999px;
+      background:rgba(14,42,71,.06);
+      border:1px solid rgba(63,138,114,.18);
+      color:#245c4d;
+      font-size:14px;
+      font-weight:950;
+    }
+
     .cta-row{display:flex;gap:10px;flex-wrap:wrap;margin-top:20px}
     .btn{border-radius:17px;min-height:56px;padding:14px 18px;font-size:16px;color:var(--navy)}
     .btn.green{
@@ -301,6 +345,26 @@
       color:#536173;
       font-size:13px;
       text-align:center;
+    }
+
+    .global-note{
+      margin-top:16px;
+      padding:16px 18px;
+      border-radius:22px;
+      background:linear-gradient(135deg,rgba(63,138,114,.10),rgba(14,42,71,.06));
+      border:1px solid rgba(63,138,114,.22);
+    }
+
+    .global-note h3{
+      margin:0 0 6px;
+      color:var(--navy);
+      font-size:21px;
+      letter-spacing:-.035em;
+    }
+
+    .global-note p{
+      color:#4f5d70;
+      font-size:15px;
     }
 
     .quick{
@@ -388,6 +452,14 @@
       background:var(--soft);
       border:1px solid rgba(63,138,114,.19);
       font-size:26px;
+      overflow:hidden;
+    }
+
+    .icon img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      display:block;
     }
 
     .steps{counter-reset:step}
@@ -407,7 +479,7 @@
       box-shadow:0 8px 16px rgba(14,42,71,.18);
     }
 
-    .updates{display:grid;grid-template-columns:1fr 1fr 1fr;gap:13px}
+    .updates{display:grid;grid-template-columns:repeat(3,1fr);gap:13px}
     .update{
       border:1px solid var(--line);
       background:#fff;
@@ -610,12 +682,14 @@
       display:flex;
       justify-content:center;
       align-items:center;
-      min-height:54px;
-      border-radius:18px;
+      gap:10px;
+      min-height:60px;
+      border-radius:22px;
       text-decoration:none;
       background:linear-gradient(135deg,var(--primary),var(--primary2));
       color:#fff;
       font-weight:950;
+      font-size:18px;
       box-shadow:0 12px 28px rgba(63,138,114,.34);
     }
 
@@ -668,7 +742,14 @@
       .nav{display:block;position:relative}
       .nav-links{justify-content:flex-start;margin-top:12px}
       .nav-link{font-size:13px;padding:8px 10px}
-      .nav-link.primary{display:none}
+      .nav-link.primary{
+        display:flex;
+        width:100%;
+        margin-top:10px;
+        min-height:58px;
+        font-size:17px;
+        background:linear-gradient(135deg,var(--primary),var(--primary2));
+      }
       .card{border-radius:23px;padding:18px}
       h1{font-size:44px}
       .lead{font-size:18px}
@@ -690,7 +771,7 @@
 
   <nav class="nav">
     <div class="brand">
-      <div class="logo">🌉</div>
+      <div class="logo"><img src="https://sensebridge.app/icon-192.png" alt="Sense Bridge logo" onerror="this.style.display='none';this.parentElement.textContent='SB';"></div>
       <div>Sense Bridge</div>
     </div>
 
@@ -709,7 +790,7 @@
       <button class="nav-link lang-toggle" type="button" data-lang="IT" onclick="setSiteLang('IT')">🇮🇹 IT</button>
       <button class="nav-link lang-toggle" type="button" data-lang="ES" onclick="setSiteLang('ES')">🇪🇸 ES</button>
       <button class="nav-link lang-toggle" type="button" data-lang="PT" onclick="setSiteLang('PT')">🇵🇹 PT</button>
-      <a class="nav-link primary" href="https://sense-bridge-production.netlify.app">Otwórz aplikację</a>
+      <a class="nav-link primary app-cta" href="https://sense-bridge-production.netlify.app">Otwórz aplikację</a>
     </div>
   </nav>
 
@@ -718,9 +799,10 @@
       <div class="badge">🌍 Dla ludzi między językami</div>
       <h1>Nie rozumiesz pisma? Pokażemy o co chodzi.</h1>
       <p class="lead">Sense Bridge pomaga zrozumieć oficjalne listy, e-maile, decyzje i dokumenty w obcym języku. Pokazuje tłumaczenie, sens, ryzyka, pilność, podejrzane elementy i przykłady odpowiedzi — w Twoim języku.</p>
+      <div class="hero-proof">📷 Zdjęcie lub tekst • 🌍 Pismo w dowolnym języku • 🌐 Wynik w 9 językach</div>
 
       <div class="cta-row">
-        <a class="btn green" href="https://sense-bridge-production.netlify.app">🚀 Otwórz aplikację</a>
+        <a class="btn green app-cta" href="https://sense-bridge-production.netlify.app">🚀 Otwórz aplikację</a>
         <a class="btn" href="https://sense-bridge-production.netlify.app">📲 Pobierz / dodaj skrót</a>
       </div>
 
@@ -730,15 +812,22 @@
         <div>⚠️ ryzyko</div>
         <div>🛡️ phishing</div>
         <div>✍️ odpowiedzi</div>
+        <div>🌎 wiele krajów</div>
+        <div>🌐 Twój język</div>
       </div>
 
       <div class="trust">
         <div>🆓 3 analizy FREE</div>
         <div>🔒 prywatność</div>
-        <div>🌍 9 języków</div>
+        <div>🌐 Wynik w 9 językach</div>
         <div>📷 OCR zdjęć</div>
         <div>⚡ analiza AI</div>
         <div>🧭 Ty decydujesz</div>
+      </div>
+
+      <div class="global-note">
+        <h3>🌎 Pismo w dowolnym języku. Wynik w języku, który rozumiesz.</h3>
+        <p>Wklej pismo, mail albo decyzję — nawet w języku, którego nie znasz. Sense Bridge wyjaśni sens w języku, który rozumiesz.</p>
       </div>
     </div>
 
@@ -747,13 +836,27 @@
       <div class="screen">
         <h3>Analiza pisma</h3>
         <div class="mini"><b>📄 Wklej pismo lub dodaj zdjęcie</b><span>List, mail, decyzja, wezwanie lub wiadomość z instytucji.</span></div>
-        <div class="mini"><b>🌍 Tłumaczenie pisma</b><span>Najpierw widzisz treść dokumentu w swoim języku.</span></div>
+        <div class="mini"><b>🌍 Tłumaczenie pisma</b><span>Najpierw widzisz treść pisma w swoim języku.</span></div>
         <div class="mini"><b>✅ Co naprawdę komunikuje</b><span>Proste wyjaśnienie: czego chcą i czy trzeba reagować.</span></div>
         <div class="mini"><b>⚠️ Ryzyka i pilność</b><span>Spokojne, warto sprawdzić czy pilne.</span></div>
         <div class="mini"><b>🛡️ Podejrzenie fałszu</b><span>Sprawdzenie phishingu, podejrzanych linków i podszywania się.</span></div>
         <div class="mini"><b>✍️ Przykłady odpowiedzi</b><span>Neutralna, uprzejma i stanowcza wersja odpowiedzi.</span></div>
         <span class="ok-pill">✅ gotowe w kilka sekund</span>
       </div>
+    </div>
+  </section>
+
+
+
+  <section class="section" id="global-understanding">
+    <div class="section-head">
+      <h2>🌍 Pismo w dowolnym języku — wynik w 9 językach</h2>
+      <p>Pismo może być w dowolnym języku. Sense Bridge pomaga wyjaśnić pisma, maile, decyzje i dokumenty z wielu krajów świata — w jednym z 9 języków użytkownika.</p>
+    </div>
+    <div class="updates priority-updates">
+      <div class="update new"><h3>🌎 Z wielu krajów</h3><p>Pisma urzędowe, szpitalne, ubezpieczeniowe, pracownicze i inne sprawy z wielu krajów świata.</p></div>
+      <div class="update"><h3>🌐 W języku, który rozumiesz</h3><p>Wklejasz pismo w dowolnym języku, a Sense Bridge wyjaśnia jego sens w języku, który wybierzesz.</p></div>
+      <div class="update"><h3>🏛️ Rozpoznawanie instytucji</h3><p>Aplikacja pomaga rozpoznać urząd lub instytucję oraz sprawdzić sprawę przez oficjalną stronę.</p></div>
     </div>
   </section>
 
@@ -765,7 +868,7 @@
     <div class="updates">
       <div class="update new"><h3>🛡️ Wykrywanie podejrzanych pism</h3><p>Sense Bridge pomaga zauważyć podejrzane linki, presję czasu, fałszywe nadawcy i możliwe phishingowe wiadomości.</p></div>
       <div class="update warning"><h3>⚠️ Pilność i ryzyko</h3><p>Aplikacja pokazuje, czy sprawa wygląda spokojnie, wymaga sprawdzenia albo szybkiej reakcji.</p></div>
-      <div class="update"><h3>🌍 9 języków</h3><p>Sense Bridge nie jest tylko dla jednego kraju. Pomaga ludziom żyjącym między językami i dokumentami.</p></div>
+      <div class="update"><h3>🌐 Wynik w 9 językach</h3><p>Pismo może być w dowolnym języku. Wyjaśnienie otrzymujesz w jednym z 9 języków użytkownika.</p></div>
     </div>
   </section>
 
@@ -787,11 +890,11 @@
   <section class="section" id="how">
     <div class="section-head">
       <h2>Jak działa Sense Bridge?</h2>
-      <p>Nie musisz znać języka urzędowego. Wklejasz dokument, a aplikacja tłumaczy sens na normalny język.</p>
+      <p>Nie musisz znać języka pisma. Wklejasz pismo, a aplikacja tłumaczy sens na normalny język.</p>
     </div>
 
     <div class="grid-4 steps">
-      <div class="card tile step"><div><h3>Wklej lub dodaj zdjęcie</h3><p>Dokument, mail, decyzja, wezwanie lub pismo z instytucji.</p></div></div>
+      <div class="card tile step"><div><h3>Wklej lub dodaj zdjęcie</h3><p>Pismo, mail, decyzja, wezwanie lub wiadomość z instytucji.</p></div></div>
       <div class="card tile step"><div><h3>Zobacz tłumaczenie</h3><p>Najpierw widzisz treść pisma w swoim języku.</p></div></div>
       <div class="card tile step"><div><h3>Zobacz ryzyka</h3><p>Sprawdź, czy sprawa jest pilna i na co trzeba uważać.</p></div></div>
       <div class="card tile step"><div><h3>Skopiuj odpowiedź</h3><p>Otrzymasz gotowe przykłady odpowiedzi do dalszej edycji.</p></div></div>
@@ -801,7 +904,7 @@
   <section class="section">
     <div class="danger-box">
       <h2>🛡️ Sprawdzenie podejrzenia fałszu</h2>
-      <p>Sense Bridge nie potwierdza autentyczności dokumentu, ale pomaga zauważyć sygnały ostrzegawcze i bezpieczniej sprawdzić sprawę przez oficjalną stronę instytucji.</p>
+      <p>Sense Bridge nie potwierdza autentyczności pisma, ale pomaga zauważyć sygnały ostrzegawcze i bezpieczniej sprawdzić sprawę przez oficjalną stronę instytucji.</p>
       <div class="danger-list">
         <div>🔗 podejrzany link</div>
         <div>⏱️ presja czasu</div>
@@ -822,7 +925,7 @@
     <div class="demo">
       <div class="card">
         <div class="icon">📬</div>
-        <h3>Przykładowy dokument</h3>
+        <h3>Przykładowe pismo</h3>
         <div class="document">Geachte heer,
 
 U heeft nog niet alle documenten doorgestuurd. Wij verzoeken u om de ontbrekende informatie binnen 14 dagen aan te leveren.
@@ -831,7 +934,7 @@ Als wij de gegevens niet tijdig ontvangen, kan dit gevolgen hebben voor uw aanvr
       </div>
 
       <div class="card">
-        <div class="icon">🌉</div>
+        <div class="icon"><img src="https://sensebridge.app/icon-192.png" alt="Sense Bridge logo" onerror="this.style.display='none';this.parentElement.textContent='SB';"></div>
         <h3>Sense Bridge wyjaśnia</h3>
         <div class="analysis-list">
           <div class="analysis-item"><b>🌍 Tłumaczenie pisma</b>„Nie przesłał Pan jeszcze wszystkich dokumentów. Prosimy o dostarczenie brakujących informacji w ciągu 14 dni.”</div>
@@ -852,11 +955,11 @@ Als wij de gegevens niet tijdig ontvangen, kan dit gevolgen hebben voor uw aanvr
 
     <div class="people-grid">
       <div class="person">🇵🇱 Polacy za granicą</div>
-      <div class="person">🇺🇦 Ukraińcy w Europie</div>
+      <div class="person">🇺🇦 Ukraińcy za granicą</div>
       <div class="person">🇳🇱 Holendrzy za granicą</div>
       <div class="person">🇩🇪 Niemcy za granicą</div>
       <div class="person">🇬🇧 Expaci i pracownicy</div>
-      <div class="person">🇪🇺 Rodziny w Europie</div>
+      <div class="person">🌍 Rodziny między krajami</div>
       <div class="person">💼 Pracownicy sezonowi</div>
       <div class="person">🌍 Ludzie żyjący między krajami</div>
     </div>
@@ -898,7 +1001,7 @@ Als wij de gegevens niet tijdig ontvangen, kan dit gevolgen hebben voor uw aanvr
   <section class="section" id="languages">
     <div class="section-head">
       <h2>🌐 Obsługiwane języki</h2>
-      <p>Połącz język dokumentu z językiem, w którym naprawdę rozumiesz sprawę.</p>
+      <p>Pismo może być w dowolnym języku. Wyjaśnienie otrzymasz w jednym z 9 języków użytkownika.</p>
     </div>
 
     <div class="card">
@@ -912,6 +1015,10 @@ Als wij de gegevens niet tijdig ontvangen, kan dit gevolgen hebben voor uw aanvr
         <span class="lang">🇮🇹 Italiano</span>
         <span class="lang">🇪🇸 Español</span>
         <span class="lang">🇵🇹 Português</span>
+      </div>
+      <div class="global-note">
+        <h3>🌐 Nie musisz znać języka pisma.</h3>
+        <p>Sense Bridge może analizować pisma w wielu językach świata i wyjaśnić je w jednym z 9 języków użytkownika.</p>
       </div>
     </div>
   </section>
@@ -935,7 +1042,7 @@ Als wij de gegevens niet tijdig ontvangen, kan dit gevolgen hebben voor uw aanvr
       </div>
 
       <div class="seo-lang-card" lang="en">
-        <h3>For expats, workers and families abroad</h3>
+        <h3>For people living between countries and languages</h3>
         <p>The app is made for people living between languages. You can paste text or use a photo of a letter, then read a calm explanation in the language you understand.</p>
         <div class="keyword-line">
           <span>expats official letters</span>
@@ -1055,12 +1162,12 @@ Als wij de gegevens niet tijdig ontvangen, kan dit gevolgen hebben voor uw aanvr
   <section class="section" id="download">
     <div class="card download">
       <div class="section-head" style="margin-bottom:0">
-        <h2>📲 Działa jak aplikacja</h2>
-        <p>Otwórz Sense Bridge w telefonie i dodaj skrót do ekranu głównego. Bez instalowania ze sklepu.</p>
+        <h2>📱 Prosta aplikacja na telefon</h2>
+        <p>To nie jest skomplikowany program komputerowy. Otwórz Sense Bridge w telefonie, wklej pismo lub dodaj zdjęcie i otrzymaj wyjaśnienie w kilka sekund.</p>
       </div>
 
       <div class="cta-row" style="justify-content:center">
-        <a class="btn" href="https://sense-bridge-production.netlify.app">🚀 Otwórz aplikację</a>
+        <a class="btn app-cta" href="https://sense-bridge-production.netlify.app">🚀 Otwórz aplikację</a>
         <a class="btn" href="https://sense-bridge-production.netlify.app">📲 Pobierz / dodaj skrót</a>
       </div>
     </div>
@@ -1068,8 +1175,8 @@ Als wij de gegevens niet tijdig ontvangen, kan dit gevolgen hebben voor uw aanvr
 
   <section class="section">
     <div class="section-head">
-      <h2>🔎 Najczęściej szukane problemy</h2>
-      <p>Sense Bridge pomaga przy realnych sytuacjach, które ludzie wpisują w Google — nie tylko w jednym kraju.</p>
+      <h2>📄 Przykłady spraw, w których pomaga Sense Bridge</h2>
+      <p>To są typowe sytuacje, w których ludzie potrzebują spokojnego wyjaśnienia pisma, maila lub decyzji w obcym języku.</p>
     </div>
 
     <div class="seo-grid">
@@ -1118,7 +1225,7 @@ Als wij de gegevens niet tijdig ontvangen, kan dit gevolgen hebben voor uw aanvr
     </div>
 
     <div class="legal-grid">
-      <div class="card tile"><div class="icon">🔒</div><h3>Prywatność</h3><p>Nie zapisujemy i nie udostępniamy Twoich dokumentów. Wklejaj tylko treści, które chcesz przeanalizować.</p></div>
+      <div class="card tile"><div class="icon">🔒</div><h3>Prywatność</h3><p>Nie zapisujemy i nie udostępniamy Twoich pism. Wklejaj tylko treści, które chcesz przeanalizować.</p></div>
       <div class="card tile"><div class="icon">📜</div><h3>Warunki</h3><p>Sense Bridge ma charakter informacyjny i nie zastępuje prawnika ani urzędu.</p></div>
       <div class="card tile"><div class="icon">✉️</div><h3>Kontakt</h3><p>W sprawach dostępu, płatności lub działania aplikacji skontaktuj się z obsługą Sense Bridge.</p></div>
     </div>
@@ -1132,7 +1239,7 @@ Als wij de gegevens niet tijdig ontvangen, kan dit gevolgen hebben voor uw aanvr
 
     <details open>
       <summary>Czy Sense Bridge daje porady prawne?</summary>
-      <p>Nie. Sense Bridge pomaga zrozumieć dokument i komunikację. Nie zastępuje prawnika.</p>
+      <p>Nie. Sense Bridge pomaga zrozumieć pismo i komunikację. Nie zastępuje prawnika.</p>
     </details>
 
     <details>
@@ -1141,8 +1248,8 @@ Als wij de gegevens niet tijdig ontvangen, kan dit gevolgen hebben voor uw aanvr
     </details>
 
     <details>
-      <summary>Czy mogę użyć zdjęcia dokumentu?</summary>
-      <p>Tak. Możesz dodać zdjęcie, a aplikacja spróbuje odczytać tekst i przygotować analizę.</p>
+      <summary>Czy mogę użyć zdjęcia pisma?</summary>
+      <p>Tak. Możesz dodać zdjęcie pisma, a aplikacja spróbuje odczytać tekst i przygotować analizę.</p>
     </details>
 
     <details>
@@ -1161,7 +1268,7 @@ Als wij de gegevens niet tijdig ontvangen, kan dit gevolgen hebben voor uw aanvr
       <h2>Nie panikuj. Zrozum i działaj.</h2>
       <p>Otwórz Sense Bridge, wklej pismo i zobacz, co naprawdę oznacza.</p>
       <div class="cta-row" style="justify-content:center">
-        <a class="btn" href="https://sense-bridge-production.netlify.app">🚀 Otwórz aplikację</a>
+        <a class="btn app-cta" href="https://sense-bridge-production.netlify.app">🚀 Otwórz aplikację</a>
       </div>
     </div>
   </section>
@@ -1173,7 +1280,7 @@ Als wij de gegevens niet tijdig ontvangen, kan dit gevolgen hebben voor uw aanvr
 </div>
 
 <div class="sticky-cta" id="stickyCta">
-  <a href="https://sense-bridge-production.netlify.app">🚀 Otwórz aplikację</a>
+  <a class="app-cta" href="https://sense-bridge-production.netlify.app">🚀 Otwórz aplikację</a>
 </div>
 
 <script>
@@ -1189,11 +1296,12 @@ Als wij de gegevens niet tijdig ontvangen, kan dit gevolgen hebben voor uw aanvr
     "Przykład": "Example",
     "Cennik": "Pricing",
     "Prywatność": "Privacy",
-    "Otwórz aplikację": "Open app",
-    "🚀 Otwórz aplikację": "🚀 Open app",
+    "Otwórz aplikację": "Open Sense Bridge App",
+    "🚀 Otwórz aplikację": "🚀 Open Sense Bridge App",
     "📲 Pobierz / dodaj skrót": "📲 Add shortcut",
     "🌍 Dla ludzi między językami": "🌍 For people between languages",
     "Nie rozumiesz pisma? Pokażemy o co chodzi.": "Do not understand a letter? We show what it means.",
+    "📷 Zdjęcie lub tekst • 🌍 Pismo w dowolnym języku • 🌐 Wynik w 9 językach": "📷 Photo or text • 🌍 Many countries • 🌐 9 languages",
     "Sense Bridge pomaga zrozumieć oficjalne listy, e-maile, decyzje i dokumenty w obcym języku. Pokazuje tłumaczenie, sens, ryzyka, pilność, podejrzane elementy i przykłady odpowiedzi — w Twoim języku.": "Sense Bridge helps you understand official letters, emails, decisions and documents in another language. It shows the translation, meaning, risks, urgency, suspicious elements and example replies — in your language.",
     "🌍 tłumaczenie": "🌍 translation",
     "✅ sens pisma": "✅ real meaning",
@@ -1202,7 +1310,7 @@ Als wij de gegevens niet tijdig ontvangen, kan dit gevolgen hebben voor uw aanvr
     "✍️ odpowiedzi": "✍️ replies",
     "🆓 3 analizy FREE": "🆓 3 FREE analyses",
     "🔒 prywatność": "🔒 privacy",
-    "🌍 9 języków": "🌍 9 languages",
+    "🌐 Wynik w 9 językach": "🌍 9 languages",
     "📷 OCR zdjęć": "📷 photo OCR",
     "⚡ analiza AI": "⚡ AI analysis",
     "🧭 Ty decydujesz": "🧭 you decide",
@@ -1210,7 +1318,7 @@ Als wij de gegevens niet tijdig ontvangen, kan dit gevolgen hebben voor uw aanvr
     "📄 Wklej pismo lub dodaj zdjęcie": "📄 Paste a letter or add a photo",
     "List, mail, decyzja, wezwanie lub wiadomość z instytucji.": "A letter, email, decision, request or message from an institution.",
     "🌍 Tłumaczenie pisma": "🌍 Letter translation",
-    "Najpierw widzisz treść dokumentu w swoim języku.": "First you see the document in your own language.",
+    "Najpierw widzisz treść pisma w swoim języku.": "First you see the letter in your own language.",
     "✅ Co naprawdę komunikuje": "✅ What it really communicates",
     "Proste wyjaśnienie: czego chcą i czy trzeba reagować.": "A simple explanation: what they want and whether you need to react.",
     "⚠️ Ryzyka i pilność": "⚠️ Risks and urgency",
@@ -1224,9 +1332,11 @@ Als wij de gegevens niet tijdig ontvangen, kan dit gevolgen hebben voor uw aanvr
     "Projekt jest rozwijany krok po kroku. Nowe funkcje pomagają nie tylko tłumaczyć, ale też spokojniej ocenić sytuację.": "The project is developed step by step. New features help not only translate, but also calmly assess the situation.",
     "🛡️ Wykrywanie podejrzanych pism": "🛡️ Suspicious letter detection",
     "Sense Bridge pomaga zauważyć podejrzane linki, presję czasu, fałszywe nadawcy i możliwe phishingowe wiadomości.": "Sense Bridge helps notice suspicious links, time pressure, fake senders and possible phishing messages.",
+    "🏛️ Rozpoznawanie instytucji": "🏛️ Institution recognition",
+    "Aplikacja pomaga rozpoznać urząd lub instytucję oraz sprawdzić sprawę przez oficjalną stronę.": "The app helps recognize an office or institution and check the matter through the official website.",
     "⚠️ Pilność i ryzyko": "⚠️ Urgency and risk",
     "Aplikacja pokazuje, czy sprawa wygląda spokojnie, wymaga sprawdzenia albo szybkiej reakcji.": "The app shows whether the matter looks calm, needs checking, or requires a quick response.",
-    "Sense Bridge nie jest tylko dla jednego kraju. Pomaga ludziom żyjącym między językami i dokumentami.": "Sense Bridge is not just for one country. It helps people living between languages and documents.",
+    "Pismo może być w dowolnym języku. Wyjaśnienie otrzymujesz w jednym z 9 języków użytkownika.": "Sense Bridge is not just for one country. It helps people living between languages and documents.",
     "📌 W jakich sytuacjach pomaga?": "📌 When can it help?",
     "Nie chodzi tylko o jeden urząd albo jeden kraj. Chodzi o zrozumienie trudnej wiadomości w obcym języku.": "It is not about one office or one country. It is about understanding a difficult message in another language.",
     "📄 Pismo urzędowe": "📄 Official letter",
@@ -1236,9 +1346,9 @@ Als wij de gegevens niet tijdig ontvangen, kan dit gevolgen hebben voor uw aanvr
     "⚖️ Decyzje, wezwania, terminy": "⚖️ Decisions, requests, deadlines",
     "📩 Podejrzany mail lub SMS": "📩 Suspicious email or SMS",
     "Jak działa Sense Bridge?": "How does Sense Bridge work?",
-    "Nie musisz znać języka urzędowego. Wklejasz dokument, a aplikacja tłumaczy sens na normalny język.": "You do not need to know official language. Paste the document and the app explains the meaning in normal language.",
+    "Nie musisz znać języka pisma. Wklejasz pismo, a aplikacja tłumaczy sens na normalny język.": "You do not need to know the language of the letter. Paste the letter and the app explains the meaning in normal language.",
     "Wklej lub dodaj zdjęcie": "Paste or add a photo",
-    "Dokument, mail, decyzja, wezwanie lub pismo z instytucji.": "A document, email, decision, request or letter from an institution.",
+    "Pismo, mail, decyzja, wezwanie lub wiadomość z instytucji.": "A document, email, decision, request or letter from an institution.",
     "Zobacz tłumaczenie": "See the translation",
     "Najpierw widzisz treść pisma w swoim języku.": "First you see the letter in your own language.",
     "Zobacz ryzyka": "See the risks",
@@ -1246,7 +1356,7 @@ Als wij de gegevens niet tijdig ontvangen, kan dit gevolgen hebben voor uw aanvr
     "Skopiuj odpowiedź": "Copy a reply",
     "Otrzymasz gotowe przykłady odpowiedzi do dalszej edycji.": "You get ready reply examples for further editing.",
     "🛡️ Sprawdzenie podejrzenia fałszu": "🛡️ Suspicion of fraud check",
-    "Sense Bridge nie potwierdza autentyczności dokumentu, ale pomaga zauważyć sygnały ostrzegawcze i bezpieczniej sprawdzić sprawę przez oficjalną stronę instytucji.": "Sense Bridge does not confirm authenticity, but helps notice warning signals and check the matter more safely through the official website.",
+    "Sense Bridge nie potwierdza autentyczności pisma, ale pomaga zauważyć sygnały ostrzegawcze i bezpieczniej sprawdzić sprawę przez oficjalną stronę instytucji.": "Sense Bridge does not confirm that a letter is authentic, but it helps notice warning signs and check the matter more safely through the official website.",
     "🔗 podejrzany link": "🔗 suspicious link",
     "⏱️ presja czasu": "⏱️ time pressure",
     "🏛️ podszywanie pod instytucję": "🏛️ impersonating an institution",
@@ -1255,7 +1365,7 @@ Als wij de gegevens niet tijdig ontvangen, kan dit gevolgen hebben voor uw aanvr
     "✅ bezpieczne kroki": "✅ safe steps",
     "👀 Przykład analizy": "👀 Analysis example",
     "Ludzie od razu widzą, o co chodzi: nie tylko tłumaczenie, ale zrozumienie sytuacji.": "People immediately see what it is about: not only translation, but understanding the situation.",
-    "Przykładowy dokument": "Example document",
+    "Przykładowe pismo": "Example letter",
     "Sense Bridge wyjaśnia": "Sense Bridge explains",
     "„Nie przesłał Pan jeszcze wszystkich dokumentów. Prosimy o dostarczenie brakujących informacji w ciągu 14 dni.”": "“You have not sent all documents yet. Please provide the missing information within 14 days.”",
     "✅ Sens pisma": "✅ Meaning of the letter",
@@ -1268,11 +1378,11 @@ Als wij de gegevens niet tijdig ontvangen, kan dit gevolgen hebben voor uw aanvr
     "Dziękuję za wiadomość. Brakujące dokumenty prześlę w najbliższym czasie.": "Thank you for your message. I will send the missing documents soon.",
     "Sense Bridge jest dla osób, które żyją, pracują, uczą się albo załatwiają sprawy w innym języku.": "Sense Bridge is for people who live, work, study or handle matters in another language.",
     "🇵🇱 Polacy za granicą": "🇵🇱 Poles abroad",
-    "🇺🇦 Ukraińcy w Europie": "🇺🇦 Ukrainians in Europe",
+    "🇺🇦 Ukraińcy za granicą": "🇺🇦 Ukrainians abroad",
     "🇳🇱 Holendrzy za granicą": "🇳🇱 Dutch people abroad",
     "🇩🇪 Niemcy za granicą": "🇩🇪 Germans abroad",
     "🇬🇧 Expaci i pracownicy": "🇬🇧 Expats and workers",
-    "🇪🇺 Rodziny w Europie": "🇪🇺 Families in Europe",
+    "🌍 Rodziny między krajami": "🌍 Families between countries",
     "💼 Pracownicy sezonowi": "💼 Seasonal workers",
     "🌍 Ludzie żyjący między krajami": "🌍 People living between countries",
     "🧠 To nie jest zwykły tłumacz": "🧠 This is not a normal translator",
@@ -1291,7 +1401,7 @@ Als wij de gegevens niet tijdig ontvangen, kan dit gevolgen hebben voor uw aanvr
     "tworzy przykłady odpowiedzi": "creates reply examples",
     "pokazuje pilność i możliwe konsekwencje": "shows urgency and possible consequences",
     "🌐 Obsługiwane języki": "🌐 Supported languages",
-    "Połącz język dokumentu z językiem, w którym naprawdę rozumiesz sprawę.": "Connect the document language with the language in which you really understand the matter.",
+    "Pismo może być w dowolnym języku. Wyjaśnienie otrzymasz w jednym z 9 języków użytkownika.": "Connect the letter language with the language in which you really understand the matter.",
     "🌍 Information in many languages": "🌍 Information in many languages",
     "Sense Bridge is built for people who search in different languages before opening the app. These language sections help Google understand that the app supports Polish, English, Dutch, German, Ukrainian, French, Italian, Spanish and Portuguese.": "Sense Bridge is built for people who search in different languages before opening the app. These sections help Google understand that the app supports many languages.",
     "💶 Dostęp bez abonamentu": "💶 Access without subscription",
@@ -1302,10 +1412,10 @@ Als wij de gegevens niet tijdig ontvangen, kan dit gevolgen hebben voor uw aanvr
     "Najlepsza wartość": "Best value",
     "30 dni": "30 days",
     "Spokój na cały miesiąc.": "Peace for a whole month.",
-    "📲 Działa jak aplikacja": "📲 Works like an app",
-    "Otwórz Sense Bridge w telefonie i dodaj skrót do ekranu głównego. Bez instalowania ze sklepu.": "Open Sense Bridge on your phone and add a shortcut to the home screen. No app store installation needed.",
-    "🔎 Najczęściej szukane problemy": "🔎 Commonly searched problems",
-    "Sense Bridge pomaga przy realnych sytuacjach, które ludzie wpisują w Google — nie tylko w jednym kraju.": "Sense Bridge helps with real situations people search for on Google — not only in one country.",
+    "📱 Prosta aplikacja na telefon": "📱 Simple phone app",
+    "To nie jest skomplikowany program komputerowy. Otwórz Sense Bridge w telefonie, wklej pismo lub dodaj zdjęcie i otrzymaj wyjaśnienie w kilka sekund.": "This is not a complicated computer program. Open Sense Bridge on your phone, paste a letter or add a photo, and get an explanation in seconds.",
+    "📄 Przykłady spraw, w których pomaga Sense Bridge": "📄 Examples of cases Sense Bridge can help with",
+    "To są typowe sytuacje, w których ludzie potrzebują spokojnego wyjaśnienia pisma, maila lub decyzji w obcym języku.": "These are typical situations where people need a calm explanation of a letter, email or decision in another language.",
     "Jak zrozumieć pismo urzędowe?": "How to understand an official letter?",
     "Pismo z urzędu po polsku": "Official letter explained in Polish",
     "✅ Co Sense Bridge robi — i czego nie robi": "✅ What Sense Bridge does — and does not do",
@@ -1318,18 +1428,18 @@ Als wij de gegevens niet tijdig ontvangen, kan dit gevolgen hebben voor uw aanvr
     "Sense Bridge daje spokojne wyjaśnienie. Ostateczny krok wybierasz Ty.": "Sense Bridge gives a calm explanation. You choose the final step.",
     "🔒 Prywatność, warunki i kontakt": "🔒 Privacy, terms and contact",
     "Prosto, jasno i bez ukrywania ważnych informacji.": "Simple, clear and without hiding important information.",
-    "Nie zapisujemy i nie udostępniamy Twoich dokumentów. Wklejaj tylko treści, które chcesz przeanalizować.": "We do not save or share your documents. Paste only content you want to analyze.",
+    "Nie zapisujemy i nie udostępniamy Twoich pism. Wklejaj tylko treści, które chcesz przeanalizować.": "We do not save or share your documents. Paste only content you want to analyze.",
     "Warunki": "Terms",
     "Sense Bridge ma charakter informacyjny i nie zastępuje prawnika ani urzędu.": "Sense Bridge is informational and does not replace a lawyer or an official institution.",
     "Kontakt": "Contact",
     "W sprawach dostępu, płatności lub działania aplikacji skontaktuj się z obsługą Sense Bridge.": "For access, payment or app issues, contact Sense Bridge support.",
     "Najważniejsze pytania bez prawniczego labiryntu.": "Key questions without legal labyrinth.",
     "Czy Sense Bridge daje porady prawne?": "Does Sense Bridge give legal advice?",
-    "Nie. Sense Bridge pomaga zrozumieć dokument i komunikację. Nie zastępuje prawnika.": "No. Sense Bridge helps you understand a document and communication. It does not replace a lawyer.",
+    "Nie. Sense Bridge pomaga zrozumieć pismo i komunikację. Nie zastępuje prawnika.": "No. Sense Bridge helps you understand a letter and the communication. It does not replace a lawyer.",
     "Czy sprawdza podejrzenie fałszu lub phishingu?": "Does it check suspected fraud or phishing?",
     "Tak. Aplikacja pomaga wskazać podejrzane elementy, takie jak dziwny link, presja czasu, prośba o dane lub podszywanie się pod instytucję. To analiza ryzyka, nie potwierdzenie autentyczności.": "Yes. The app helps indicate suspicious elements such as a strange link, time pressure, a request for data or impersonation of an institution. This is risk analysis, not confirmation of authenticity.",
-    "Czy mogę użyć zdjęcia dokumentu?": "Can I use a photo of a document?",
-    "Tak. Możesz dodać zdjęcie, a aplikacja spróbuje odczytać tekst i przygotować analizę.": "Yes. You can add a photo and the app will try to read the text and prepare an analysis.",
+    "Czy mogę użyć zdjęcia pisma?": "Can I use a photo of a letter?",
+    "Tak. Możesz dodać zdjęcie pisma, a aplikacja spróbuje odczytać tekst i przygotować analizę.": "Yes. You can add a photo and the app will try to read the text and prepare an analysis.",
     "Czy strona działa jak aplikacja?": "Does the website work like an app?",
     "Tak. Możesz dodać Sense Bridge do ekranu głównego telefonu jako skrót PWA.": "Yes. You can add Sense Bridge to your phone home screen as a PWA shortcut.",
     "Czym różni się od Google Translate albo DeepL?": "How is it different from Google Translate or DeepL?",
@@ -1337,18 +1447,35 @@ Als wij de gegevens niet tijdig ontvangen, kan dit gevolgen hebben voor uw aanvr
     "Nie panikuj. Zrozum i działaj.": "Do not panic. Understand and act.",
     "Otwórz Sense Bridge, wklej pismo i zobacz, co naprawdę oznacza.": "Open Sense Bridge, paste the letter and see what it really means.",
     "© Sense Bridge — narzędzie informacyjne do rozumienia pism, maili i dokumentów. Informational tool for understanding official letters. Nie jest kancelarią prawną.": "© Sense Bridge — informational tool for understanding letters, emails and documents. It is not a law firm."
-  },
+  ,
+    "🌎 wiele krajów": "🌎 many countries" ,
+    "🌐 Twój język": "🌐 your language" ,
+    "🌎 Pismo w dowolnym języku. Wynik w języku, który rozumiesz.": "🌎 From many countries. In the language you understand." ,
+    "Wklej pismo, mail albo decyzję — nawet w języku, którego nie znasz. Sense Bridge wyjaśni sens w języku, który rozumiesz.": "Paste a letter, email or document from another country. Sense Bridge helps explain its meaning in your language." ,
+    "🌍 Wiele krajów i języków": "🌍 Many countries and languages" ,
+    "Sense Bridge pomaga zrozumieć pisma, maile, decyzje i dokumenty z różnych krajów — w języku, który rozumiesz.": "Sense Bridge helps you understand letters, emails and documents from different countries — in the language you understand." ,
+    "🌐 Nie musisz znać języka pisma.": "🌐 You do not need to know the letter language." ,
+    "Sense Bridge może analizować pisma w wielu językach świata i wyjaśnić je w jednym z 9 języków użytkownika.": "Sense Bridge can help you understand letters from many countries and languages — in the language you understand.",
+    "🌍 Pismo w dowolnym języku — wynik w 9 językach": "🌍 Letters from many countries and languages",
+    "Pismo może być w dowolnym języku. Sense Bridge pomaga wyjaśnić pisma, maile, decyzje i dokumenty z wielu krajów świata — w jednym z 9 języków użytkownika.": "You do not need to know the language of the letter. Sense Bridge helps explain letters, emails, decisions and documents from different countries — in the language you understand.",
+    "🌎 Z wielu krajów": "🌎 From many countries",
+    "Pisma urzędowe, szpitalne, ubezpieczeniowe, pracownicze i inne sprawy z wielu krajów świata.": "Official letters, hospital letters, insurance, work matters and other cases from countries around the world.",
+    "🌐 W języku, który rozumiesz": "🌐 In the language you understand",
+    "Wklejasz pismo w dowolnym języku, a Sense Bridge wyjaśnia jego sens w języku, który wybierzesz.": "Paste a letter in another language and Sense Bridge explains its meaning in your language.",
+  
+    "Nie musisz znać języka pisma.": "You do not need to know the language of the letter.",},
   "NL": {
     "Jak działa": "Hoe werkt het",
     "Nowości": "Updates",
     "Przykład": "Voorbeeld",
     "Cennik": "Prijzen",
     "Prywatność": "Privacy",
-    "Otwórz aplikację": "Open app",
-    "🚀 Otwórz aplikację": "🚀 Open app",
+    "Otwórz aplikację": "Open Sense Bridge App",
+    "🚀 Otwórz aplikację": "🚀 Open Sense Bridge App",
     "📲 Pobierz / dodaj skrót": "📲 Snelkoppeling toevoegen",
     "🌍 Dla ludzi między językami": "🌍 Voor mensen tussen talen",
     "Nie rozumiesz pisma? Pokażemy o co chodzi.": "Begrijp je een brief niet? Wij laten zien waar het om gaat.",
+    "📷 Zdjęcie lub tekst • 🌍 Pismo w dowolnym języku • 🌐 Wynik w 9 językach": "📷 Foto of tekst • 🌍 Veel landen • 🌐 9 talen",
     "Sense Bridge pomaga zrozumieć oficjalne listy, e-maile, decyzje i dokumenty w obcym języku. Pokazuje tłumaczenie, sens, ryzyka, pilność, podejrzane elementy i przykłady odpowiedzi — w Twoim języku.": "Sense Bridge helpt je officiële brieven, e-mails, beslissingen en documenten in een andere taal te begrijpen. Het toont vertaling, betekenis, risico’s, urgentie, verdachte elementen en voorbeeldantwoorden — in jouw taal.",
     "🌍 tłumaczenie": "🌍 vertaling",
     "✅ sens pisma": "✅ betekenis",
@@ -1356,7 +1483,7 @@ Als wij de gegevens niet tijdig ontvangen, kan dit gevolgen hebben voor uw aanvr
     "✍️ odpowiedzi": "✍️ antwoorden",
     "🆓 3 analizy FREE": "🆓 3 FREE-analyses",
     "🔒 prywatność": "🔒 privacy",
-    "🌍 9 języków": "🌍 9 talen",
+    "🌐 Wynik w 9 językach": "🌍 9 talen",
     "📷 OCR zdjęć": "📷 foto-OCR",
     "⚡ analiza AI": "⚡ AI-analyse",
     "🧭 Ty decydujesz": "🧭 jij beslist",
@@ -1364,7 +1491,7 @@ Als wij de gegevens niet tijdig ontvangen, kan dit gevolgen hebben voor uw aanvr
     "📄 Wklej pismo lub dodaj zdjęcie": "📄 Plak een brief of voeg een foto toe",
     "List, mail, decyzja, wezwanie lub wiadomość z instytucji.": "Brief, e-mail, beslissing, verzoek of bericht van een instantie.",
     "🌍 Tłumaczenie pisma": "🌍 Vertaling van de brief",
-    "Najpierw widzisz treść dokumentu w swoim języku.": "Eerst zie je de inhoud van het document in je eigen taal.",
+    "Najpierw widzisz treść pisma w swoim języku.": "Eerst zie je de inhoud van het document in je eigen taal.",
     "✅ Co naprawdę komunikuje": "✅ Wat het echt communiceert",
     "Proste wyjaśnienie: czego chcą i czy trzeba reagować.": "Eenvoudige uitleg: wat ze willen en of je moet reageren.",
     "⚠️ Ryzyka i pilność": "⚠️ Risico’s en urgentie",
@@ -1382,26 +1509,56 @@ Als wij de gegevens niet tijdig ontvangen, kan dit gevolgen hebben voor uw aanvr
     "Najlepsza wartość": "Beste waarde",
     "30 dni": "30 dagen",
     "Spokój na cały miesiąc.": "Rust voor een hele maand.",
-    "📲 Działa jak aplikacja": "📲 Werkt als een app",
-    "Otwórz Sense Bridge w telefonie i dodaj skrót do ekranu głównego. Bez instalowania ze sklepu.": "Open Sense Bridge op je telefoon en voeg een snelkoppeling toe aan het startscherm. Zonder app store.",
+    "📱 Prosta aplikacja na telefon": "📱 Eenvoudige telefoonapp",
+    "To nie jest skomplikowany program komputerowy. Otwórz Sense Bridge w telefonie, wklej pismo lub dodaj zdjęcie i otrzymaj wyjaśnienie w kilka sekund.": "Dit is geen ingewikkeld computerprogramma. Open Sense Bridge op je telefoon, plak een brief of voeg een foto toe en krijg binnen enkele seconden uitleg.",
     "🔒 Prywatność, warunki i kontakt": "🔒 Privacy, voorwaarden en contact",
-    "Nie zapisujemy i nie udostępniamy Twoich dokumentów. Wklejaj tylko treści, które chcesz przeanalizować.": "Wij slaan je documenten niet op en delen ze niet. Plak alleen wat je wilt analyseren.",
+    "Nie zapisujemy i nie udostępniamy Twoich pism. Wklejaj tylko treści, które chcesz przeanalizować.": "Wij slaan je documenten niet op en delen ze niet. Plak alleen wat je wilt analyseren.",
     "Warunki": "Voorwaarden",
     "Kontakt": "Contact",
     "Nie panikuj. Zrozum i działaj.": "Geen paniek. Begrijp en handel.",
     "Otwórz Sense Bridge, wklej pismo i zobacz, co naprawdę oznacza.": "Open Sense Bridge, plak de brief en zie wat die echt betekent."
-  },
+  ,
+    "🌎 wiele krajów": "🌎 veel landen" ,
+    "🌐 Twój język": "🌐 jouw taal" ,
+    "🌎 Pismo w dowolnym języku. Wynik w języku, który rozumiesz.": "🌎 Uit veel landen. In de taal die je begrijpt." ,
+    "Wklej pismo, mail albo decyzję — nawet w języku, którego nie znasz. Sense Bridge wyjaśni sens w języku, który rozumiesz.": "Plak een brief, e-mail of document uit een ander land. Sense Bridge helpt de betekenis uit te leggen in jouw taal." ,
+    "🌍 Wiele krajów i języków": "🌍 Veel landen en talen" ,
+    "Sense Bridge pomaga zrozumieć pisma, maile, decyzje i dokumenty z różnych krajów — w języku, który rozumiesz.": "Sense Bridge helpt brieven, e-mails en documenten uit verschillende landen te begrijpen — in de taal die je begrijpt." ,
+    "🌐 Nie musisz znać języka pisma.": "🌐 Je hoeft de taal van het document niet te kennen." ,
+    "Sense Bridge może analizować pisma w wielu językach świata i wyjaśnić je w jednym z 9 języków użytkownika.": "Sense Bridge kan helpen brieven uit veel landen en talen te begrijpen — in de taal die jij begrijpt.",
+    "🌍 Pismo w dowolnym języku — wynik w 9 językach": "🌍 Brieven uit veel landen en talen",
+    "Pismo może być w dowolnym języku. Sense Bridge pomaga wyjaśnić pisma, maile, decyzje i dokumenty z wielu krajów świata — w jednym z 9 języków użytkownika.": "Je hoeft de taal van de brief niet te kennen. Sense Bridge helpt brieven, e-mails, beslissingen en documenten uit verschillende landen uit te leggen — in de taal die jij begrijpt.",
+    "🌎 Z wielu krajów": "🌎 Uit veel landen",
+    "Pisma urzędowe, szpitalne, ubezpieczeniowe, pracownicze i inne sprawy z wielu krajów świata.": "Officiële brieven, ziekenhuisbrieven, verzekeringen, werkzaken en andere zaken uit landen over de hele wereld.",
+    "🌐 W języku, który rozumiesz": "🌐 In de taal die je begrijpt",
+    "Wklejasz pismo w dowolnym języku, a Sense Bridge wyjaśnia jego sens w języku, który wybierzesz.": "Je plakt een brief in een andere taal en Sense Bridge legt de betekenis uit in jouw taal.",
+    "🏛️ Rozpoznawanie instytucji": "🏛️ Herkenning van instellingen",
+    "Aplikacja pomaga rozpoznać urząd lub instytucję oraz sprawdzić sprawę przez oficjalną stronę.": "De app helpt een instantie of instelling te herkennen en de zaak via de officiële website te controleren.",
+    "📌 W jakich sytuacjach pomaga?": "📌 Wanneer kan het helpen?",
+    "🌐 Obsługiwane języki": "🌐 Ondersteunde talen",
+    "🛡️ Wykrywanie podejrzanych pism": "🛡️ Detectie van verdachte brieven",
+    "⚠️ Pilność i ryzyko": "⚠️ Urgentie en risico",
+  
+    "📄 Przykłady spraw, w których pomaga Sense Bridge": "📄 Voorbeelden van situaties waarbij Sense Bridge kan helpen",
+    "To są typowe sytuacje, w których ludzie potrzebują spokojnego wyjaśnienia pisma, maila lub decyzji w obcym języku.": "Dit zijn typische situaties waarin mensen een rustige uitleg nodig hebben van een brief, e-mail of beslissing in een andere taal.",
+    "Przykładowe pismo": "Voorbeeldbrief",
+    "Czy mogę użyć zdjęcia pisma?": "Kan ik een foto van een brief gebruiken?",
+    "Nie. Sense Bridge pomaga zrozumieć pismo i komunikację. Nie zastępuje prawnika.": "Nee. Sense Bridge helpt je een brief en de communicatie te begrijpen. Het vervangt geen advocaat.",
+    "Nie musisz znać języka pisma. Wklejasz pismo, a aplikacja tłumaczy sens na normalny język.": "Je hoeft de taal van de brief niet te kennen. Plak de brief en de app legt de betekenis uit in gewone taal.",
+    "Sense Bridge nie potwierdza autentyczności pisma, ale pomaga zauważyć sygnały ostrzegawcze i bezpieczniej sprawdzić sprawę przez oficjalną stronę instytucji.": "Sense Bridge bevestigt niet of een brief echt is, maar helpt waarschuwingssignalen te zien en de zaak veiliger te controleren via de officiële website.",
+    "Nie musisz znać języka pisma.": "Je hoeft de taal van de brief niet te kennen.",},
   "DE": {
     "Jak działa": "So funktioniert es",
     "Nowości": "Neuigkeiten",
     "Przykład": "Beispiel",
     "Cennik": "Preise",
     "Prywatność": "Datenschutz",
-    "Otwórz aplikację": "App öffnen",
-    "🚀 Otwórz aplikację": "🚀 App öffnen",
+    "Otwórz aplikację": "Sense Bridge App öffnen",
+    "🚀 Otwórz aplikację": "🚀 Sense Bridge App öffnen",
     "📲 Pobierz / dodaj skrót": "📲 Verknüpfung hinzufügen",
     "🌍 Dla ludzi między językami": "🌍 Für Menschen zwischen Sprachen",
     "Nie rozumiesz pisma? Pokażemy o co chodzi.": "Verstehst du ein Schreiben nicht? Wir zeigen, worum es geht.",
+    "📷 Zdjęcie lub tekst • 🌍 Pismo w dowolnym języku • 🌐 Wynik w 9 językach": "📷 Foto oder Text • 🌍 Viele Länder • 🌐 9 Sprachen",
     "Sense Bridge pomaga zrozumieć oficjalne listy, e-maile, decyzje i dokumenty w obcym języku. Pokazuje tłumaczenie, sens, ryzyka, pilność, podejrzane elementy i przykłady odpowiedzi — w Twoim języku.": "Sense Bridge hilft, offizielle Briefe, E-Mails, Entscheidungen und Dokumente in einer anderen Sprache zu verstehen. Es zeigt Übersetzung, Bedeutung, Risiken, Dringlichkeit, verdächtige Elemente und Antwortbeispiele — in deiner Sprache.",
     "🌍 tłumaczenie": "🌍 Übersetzung",
     "✅ sens pisma": "✅ Bedeutung",
@@ -1409,7 +1566,7 @@ Als wij de gegevens niet tijdig ontvangen, kan dit gevolgen hebben voor uw aanvr
     "✍️ odpowiedzi": "✍️ Antworten",
     "🆓 3 analizy FREE": "🆓 3 FREE-Analysen",
     "🔒 prywatność": "🔒 Datenschutz",
-    "🌍 9 języków": "🌍 9 Sprachen",
+    "🌐 Wynik w 9 językach": "🌍 9 Sprachen",
     "📷 OCR zdjęć": "📷 Foto-OCR",
     "⚡ analiza AI": "⚡ KI-Analyse",
     "🧭 Ty decydujesz": "🧭 du entscheidest",
@@ -1417,7 +1574,7 @@ Als wij de gegevens niet tijdig ontvangen, kan dit gevolgen hebben voor uw aanvr
     "📄 Wklej pismo lub dodaj zdjęcie": "📄 Brief einfügen oder Foto hinzufügen",
     "List, mail, decyzja, wezwanie lub wiadomość z instytucji.": "Brief, E-Mail, Entscheidung, Aufforderung oder Nachricht einer Institution.",
     "🌍 Tłumaczenie pisma": "🌍 Übersetzung des Schreibens",
-    "Najpierw widzisz treść dokumentu w swoim języku.": "Zuerst siehst du den Inhalt des Dokuments in deiner Sprache.",
+    "Najpierw widzisz treść pisma w swoim języku.": "Zuerst siehst du den Inhalt des Dokuments in deiner Sprache.",
     "✅ Co naprawdę komunikuje": "✅ Was wirklich mitgeteilt wird",
     "Proste wyjaśnienie: czego chcą i czy trzeba reagować.": "Einfache Erklärung: was verlangt wird und ob du reagieren musst.",
     "⚠️ Ryzyka i pilność": "⚠️ Risiken und Dringlichkeit",
@@ -1428,24 +1585,55 @@ Als wij de gegevens niet tijdig ontvangen, kan dit gevolgen hebben voor uw aanvr
     "7 dni": "7 Tage",
     "Najlepsza wartość": "Bester Wert",
     "30 dni": "30 Tage",
-    "📲 Działa jak aplikacja": "📲 Funktioniert wie eine App",
+    "📱 Prosta aplikacja na telefon": "📱 Einfache App für das Handy",
     "🔒 Prywatność, warunki i kontakt": "🔒 Datenschutz, Bedingungen und Kontakt",
     "Warunki": "Bedingungen",
     "Kontakt": "Kontakt",
     "Nie panikuj. Zrozum i działaj.": "Keine Panik. Verstehen und handeln.",
     "Otwórz Sense Bridge, wklej pismo i zobacz, co naprawdę oznacza.": "Öffne Sense Bridge, füge den Brief ein und sieh, was er wirklich bedeutet."
-  },
+  ,
+    "🌎 wiele krajów": "🌎 viele Länder" ,
+    "🌐 Twój język": "🌐 deine Sprache" ,
+    "🌎 Pismo w dowolnym języku. Wynik w języku, który rozumiesz.": "🌎 Aus vielen Ländern. In der Sprache, die du verstehst." ,
+    "Wklej pismo, mail albo decyzję — nawet w języku, którego nie znasz. Sense Bridge wyjaśni sens w języku, który rozumiesz.": "Füge einen Brief, eine E-Mail oder ein Dokument aus einem anderen Land ein. Sense Bridge hilft, die Bedeutung in deiner Sprache zu erklären." ,
+    "🌍 Wiele krajów i języków": "🌍 Viele Länder und Sprachen" ,
+    "Sense Bridge pomaga zrozumieć pisma, maile, decyzje i dokumenty z różnych krajów — w języku, który rozumiesz.": "Sense Bridge hilft, Briefe, E-Mails und Dokumente aus verschiedenen Ländern zu verstehen — in der Sprache, die du verstehst." ,
+    "🌐 Nie musisz znać języka pisma.": "🌐 Du musst die Sprache des Dokuments nicht kennen." ,
+    "Sense Bridge może analizować pisma w wielu językach świata i wyjaśnić je w jednym z 9 języków użytkownika.": "Sense Bridge kann helfen, Schreiben aus vielen Ländern und Sprachen zu verstehen — in der Sprache, die du verstehst.",
+    "🌍 Pismo w dowolnym języku — wynik w 9 językach": "🌍 Schreiben aus vielen Ländern und Sprachen",
+    "Pismo może być w dowolnym języku. Sense Bridge pomaga wyjaśnić pisma, maile, decyzje i dokumenty z wielu krajów świata — w jednym z 9 języków użytkownika.": "Du musst die Sprache des Schreibens nicht kennen. Sense Bridge hilft, Schreiben, E-Mails, Entscheidungen und Dokumente aus verschiedenen Ländern zu erklären — in der Sprache, die du verstehst.",
+    "🌎 Z wielu krajów": "🌎 Aus vielen Ländern",
+    "Pisma urzędowe, szpitalne, ubezpieczeniowe, pracownicze i inne sprawy z wielu krajów świata.": "Amtliche Schreiben, Krankenhausbriefe, Versicherungs-, Arbeits- und andere Angelegenheiten aus Ländern weltweit.",
+    "🌐 W języku, który rozumiesz": "🌐 In der Sprache, die du verstehst",
+    "Wklejasz pismo w dowolnym języku, a Sense Bridge wyjaśnia jego sens w języku, który wybierzesz.": "Du fügst ein Schreiben in einer Fremdsprache ein und Sense Bridge erklärt die Bedeutung in deiner Sprache.",
+    "🏛️ Rozpoznawanie instytucji": "🏛️ Erkennung von Institutionen",
+    "Aplikacja pomaga rozpoznać urząd lub instytucję oraz sprawdzić sprawę przez oficjalną stronę.": "Die App hilft, ein Amt oder eine Institution zu erkennen und die Angelegenheit über die offizielle Website zu prüfen.",
+    "📌 W jakich sytuacjach pomaga?": "📌 Wann kann es helfen?",
+    "🌐 Obsługiwane języki": "🌐 Unterstützte Sprachen",
+    "🛡️ Wykrywanie podejrzanych pism": "🛡️ Erkennung verdächtiger Schreiben",
+    "⚠️ Pilność i ryzyko": "⚠️ Dringlichkeit und Risiko",
+  
+    "To nie jest skomplikowany program komputerowy. Otwórz Sense Bridge w telefonie, wklej pismo lub dodaj zdjęcie i otrzymaj wyjaśnienie w kilka sekund.": "Das ist kein kompliziertes Computerprogramm. Öffne Sense Bridge auf deinem Handy, füge ein Schreiben ein oder lade ein Foto hoch und erhalte in Sekunden eine Erklärung.",
+    "📄 Przykłady spraw, w których pomaga Sense Bridge": "📄 Beispiele, wobei Sense Bridge helfen kann",
+    "To są typowe sytuacje, w których ludzie potrzebują spokojnego wyjaśnienia pisma, maila lub decyzji w obcym języku.": "Das sind typische Situationen, in denen Menschen eine ruhige Erklärung eines Schreibens, einer E-Mail oder Entscheidung in einer Fremdsprache brauchen.",
+    "Przykładowe pismo": "Beispielschreiben",
+    "Czy mogę użyć zdjęcia pisma?": "Kann ich ein Foto des Schreibens verwenden?",
+    "Nie. Sense Bridge pomaga zrozumieć pismo i komunikację. Nie zastępuje prawnika.": "Nein. Sense Bridge hilft, ein Schreiben und die Kommunikation zu verstehen. Es ersetzt keinen Anwalt.",
+    "Nie musisz znać języka pisma. Wklejasz pismo, a aplikacja tłumaczy sens na normalny język.": "Du musst die Sprache des Schreibens nicht kennen. Füge das Schreiben ein und die App erklärt die Bedeutung in einfacher Sprache.",
+    "Sense Bridge nie potwierdza autentyczności pisma, ale pomaga zauważyć sygnały ostrzegawcze i bezpieczniej sprawdzić sprawę przez oficjalną stronę instytucji.": "Sense Bridge bestätigt nicht die Echtheit eines Schreibens, hilft aber, Warnsignale zu erkennen und die Sache sicherer über die offizielle Website zu prüfen.",
+    "Nie musisz znać języka pisma.": "Du musst die Sprache des Schreibens nicht kennen.",},
   "UA": {
     "Jak działa": "Як це працює",
     "Nowości": "Оновлення",
     "Przykład": "Приклад",
     "Cennik": "Ціни",
     "Prywatność": "Конфіденційність",
-    "Otwórz aplikację": "Відкрити додаток",
-    "🚀 Otwórz aplikację": "🚀 Відкрити додаток",
+    "Otwórz aplikację": "Відкрити Sense Bridge",
+    "🚀 Otwórz aplikację": "🚀 Відкрити Sense Bridge",
     "📲 Pobierz / dodaj skrót": "📲 Додати ярлик",
     "🌍 Dla ludzi między językami": "🌍 Для людей між мовами",
     "Nie rozumiesz pisma? Pokażemy o co chodzi.": "Не розумієте лист? Ми покажемо, про що йдеться.",
+    "📷 Zdjęcie lub tekst • 🌍 Pismo w dowolnym języku • 🌐 Wynik w 9 językach": "📷 Фото або текст • 🌍 Багато країн • 🌐 9 мов",
     "Sense Bridge pomaga zrozumieć oficjalne listy, e-maile, decyzje i dokumenty w obcym języku. Pokazuje tłumaczenie, sens, ryzyka, pilność, podejrzane elementy i przykłady odpowiedzi — w Twoim języku.": "Sense Bridge допомагає зрозуміти офіційні листи, e-mail, рішення та документи іншою мовою. Показує переклад, зміст, ризики, терміновість, підозрілі елементи та приклади відповіді — вашою мовою.",
     "🌍 tłumaczenie": "🌍 переклад",
     "✅ sens pisma": "✅ зміст листа",
@@ -1453,7 +1641,7 @@ Als wij de gegevens niet tijdig ontvangen, kan dit gevolgen hebben voor uw aanvr
     "✍️ odpowiedzi": "✍️ відповіді",
     "🆓 3 analizy FREE": "🆓 3 FREE-аналізи",
     "🔒 prywatność": "🔒 конфіденційність",
-    "🌍 9 języków": "🌍 9 мов",
+    "🌐 Wynik w 9 językach": "🌍 9 мов",
     "📷 OCR zdjęć": "📷 OCR фото",
     "⚡ analiza AI": "⚡ AI-аналіз",
     "🧭 Ty decydujesz": "🧭 ви вирішуєте",
@@ -1468,24 +1656,55 @@ Als wij de gegevens niet tijdig ontvangen, kan dit gevolgen hebben voor uw aanvr
     "7 dni": "7 днів",
     "Najlepsza wartość": "Найкраща вартість",
     "30 dni": "30 днів",
-    "📲 Działa jak aplikacja": "📲 Працює як додаток",
+    "📱 Prosta aplikacja na telefon": "📱 Проста програма для телефона",
     "🔒 Prywatność, warunki i kontakt": "🔒 Конфіденційність, умови та контакт",
     "Warunki": "Умови",
     "Kontakt": "Контакт",
     "Nie panikuj. Zrozum i działaj.": "Без паніки. Зрозумійте і дійте.",
     "Otwórz Sense Bridge, wklej pismo i zobacz, co naprawdę oznacza.": "Відкрийте Sense Bridge, вставте лист і подивіться, що він означає."
-  },
+  ,
+    "🌎 wiele krajów": "🌎 багато країн" ,
+    "🌐 Twój język": "🌐 ваша мова" ,
+    "🌎 Pismo w dowolnym języku. Wynik w języku, który rozumiesz.": "🌎 З багатьох країн. Мовою, яку ви розумієте." ,
+    "Wklej pismo, mail albo decyzję — nawet w języku, którego nie znasz. Sense Bridge wyjaśni sens w języku, który rozumiesz.": "Вставте лист, email або документ з іншої країни. Sense Bridge допоможе пояснити його зміст вашою мовою." ,
+    "🌍 Wiele krajów i języków": "🌍 Багато країн і мов" ,
+    "Sense Bridge pomaga zrozumieć pisma, maile, decyzje i dokumenty z różnych krajów — w języku, który rozumiesz.": "Sense Bridge допомагає зрозуміти листи, email та документи з різних країн — мовою, яку ви розумієте." ,
+    "🌐 Nie musisz znać języka pisma.": "🌐 Вам не потрібно знати мову документа." ,
+    "Sense Bridge może analizować pisma w wielu językach świata i wyjaśnić je w jednym z 9 języków użytkownika.": "Sense Bridge може допомогти зрозуміти листи з багатьох країн і мов — мовою, яку ви розумієте.",
+    "🌍 Pismo w dowolnym języku — wynik w 9 językach": "🌍 Листи з багатьох країн і мов",
+    "Pismo może być w dowolnym języku. Sense Bridge pomaga wyjaśnić pisma, maile, decyzje i dokumenty z wielu krajów świata — w jednym z 9 języków użytkownika.": "Вам не потрібно знати мову листа. Sense Bridge допомагає пояснити листи, електронні повідомлення, рішення та документи з різних країн — мовою, яку ви розумієте.",
+    "🌎 Z wielu krajów": "🌎 З багатьох країн",
+    "Pisma urzędowe, szpitalne, ubezpieczeniowe, pracownicze i inne sprawy z wielu krajów świata.": "Офіційні, лікарняні, страхові, робочі листи та інші справи з різних країн світу.",
+    "🌐 W języku, który rozumiesz": "🌐 Мовою, яку ви розумієте",
+    "Wklejasz pismo w dowolnym języku, a Sense Bridge wyjaśnia jego sens w języku, który wybierzesz.": "Ви вставляєте лист іноземною мовою, а Sense Bridge пояснює його зміст вашою мовою.",
+    "🏛️ Rozpoznawanie instytucji": "🏛️ Розпізнавання установи",
+    "Aplikacja pomaga rozpoznać urząd lub instytucję oraz sprawdzić sprawę przez oficjalną stronę.": "Додаток допомагає розпізнати офіс або установу та перевірити справу через офіційний сайт.",
+    "📌 W jakich sytuacjach pomaga?": "📌 Коли це може допомогти?",
+    "🌐 Obsługiwane języki": "🌐 Підтримувані мови",
+    "🛡️ Wykrywanie podejrzanych pism": "🛡️ Виявлення підозрілих листів",
+    "⚠️ Pilność i ryzyko": "⚠️ Терміновість і ризик",
+  
+    "To nie jest skomplikowany program komputerowy. Otwórz Sense Bridge w telefonie, wklej pismo lub dodaj zdjęcie i otrzymaj wyjaśnienie w kilka sekund.": "Це не складна комп’ютерна програма. Відкрийте Sense Bridge на телефоні, вставте лист або додайте фото й отримайте пояснення за кілька секунд.",
+    "📄 Przykłady spraw, w których pomaga Sense Bridge": "📄 Приклади ситуацій, у яких допомагає Sense Bridge",
+    "To są typowe sytuacje, w których ludzie potrzebują spokojnego wyjaśnienia pisma, maila lub decyzji w obcym języku.": "Це типові ситуації, коли людям потрібне спокійне пояснення листа, електронного повідомлення або рішення іноземною мовою.",
+    "Przykładowe pismo": "Приклад листа",
+    "Czy mogę użyć zdjęcia pisma?": "Чи можна використати фото листа?",
+    "Nie. Sense Bridge pomaga zrozumieć pismo i komunikację. Nie zastępuje prawnika.": "Ні. Sense Bridge допомагає зрозуміти лист і комунікацію. Він не замінює юриста.",
+    "Nie musisz znać języka pisma. Wklejasz pismo, a aplikacja tłumaczy sens na normalny język.": "Вам не потрібно знати мову листа. Вставте лист, і додаток пояснить зміст простою мовою.",
+    "Sense Bridge nie potwierdza autentyczności pisma, ale pomaga zauważyć sygnały ostrzegawcze i bezpieczniej sprawdzić sprawę przez oficjalną stronę instytucji.": "Sense Bridge не підтверджує справжність листа, але допомагає помітити попереджувальні ознаки й безпечніше перевірити справу через офіційний сайт установи.",
+    "Nie musisz znać języka pisma.": "Вам не потрібно знати мову листа.",},
   "FR": {
     "Jak działa": "Comment ça marche",
     "Nowości": "Nouveautés",
     "Przykład": "Exemple",
     "Cennik": "Tarifs",
     "Prywatność": "Confidentialité",
-    "Otwórz aplikację": "Ouvrir l’application",
-    "🚀 Otwórz aplikację": "🚀 Ouvrir l’application",
+    "Otwórz aplikację": "Ouvrir Sense Bridge",
+    "🚀 Otwórz aplikację": "🚀 Ouvrir Sense Bridge",
     "📲 Pobierz / dodaj skrót": "📲 Ajouter un raccourci",
     "🌍 Dla ludzi między językami": "🌍 Pour les personnes entre les langues",
     "Nie rozumiesz pisma? Pokażemy o co chodzi.": "Vous ne comprenez pas une lettre ? Nous montrons ce que cela signifie.",
+    "📷 Zdjęcie lub tekst • 🌍 Pismo w dowolnym języku • 🌐 Wynik w 9 językach": "📷 Photo ou texte • 🌍 De nombreux pays • 🌐 9 langues",
     "Sense Bridge pomaga zrozumieć oficjalne listy, e-maile, decyzje i dokumenty w obcym języku. Pokazuje tłumaczenie, sens, ryzyka, pilność, podejrzane elementy i przykłady odpowiedzi — w Twoim języku.": "Sense Bridge aide à comprendre les lettres officielles, e-mails, décisions et documents dans une autre langue. Il montre la traduction, le sens, les risques, l’urgence, les éléments suspects et des exemples de réponse — dans votre langue.",
     "🌍 tłumaczenie": "🌍 traduction",
     "✅ sens pisma": "✅ sens réel",
@@ -1493,7 +1712,7 @@ Als wij de gegevens niet tijdig ontvangen, kan dit gevolgen hebben voor uw aanvr
     "✍️ odpowiedzi": "✍️ réponses",
     "🆓 3 analizy FREE": "🆓 3 analyses FREE",
     "🔒 prywatność": "🔒 confidentialité",
-    "🌍 9 języków": "🌍 9 langues",
+    "🌐 Wynik w 9 językach": "🌍 9 langues",
     "📷 OCR zdjęć": "📷 OCR photo",
     "⚡ analiza AI": "⚡ analyse IA",
     "🧭 Ty decydujesz": "🧭 vous décidez",
@@ -1508,24 +1727,55 @@ Als wij de gegevens niet tijdig ontvangen, kan dit gevolgen hebben voor uw aanvr
     "7 dni": "7 jours",
     "Najlepsza wartość": "Meilleure valeur",
     "30 dni": "30 jours",
-    "📲 Działa jak aplikacja": "📲 Fonctionne comme une application",
+    "📱 Prosta aplikacja na telefon": "📱 Application simple pour téléphone",
     "🔒 Prywatność, warunki i kontakt": "🔒 Confidentialité, conditions et contact",
     "Warunki": "Conditions",
     "Kontakt": "Contact",
     "Nie panikuj. Zrozum i działaj.": "Ne paniquez pas. Comprenez et agissez.",
     "Otwórz Sense Bridge, wklej pismo i zobacz, co naprawdę oznacza.": "Ouvrez Sense Bridge, collez la lettre et voyez ce qu’elle signifie vraiment."
-  },
+  ,
+    "🌎 wiele krajów": "🌎 de nombreux pays" ,
+    "🌐 Twój język": "🌐 votre langue" ,
+    "🌎 Pismo w dowolnym języku. Wynik w języku, który rozumiesz.": "🌎 De nombreux pays. Dans la langue que vous comprenez." ,
+    "Wklej pismo, mail albo decyzję — nawet w języku, którego nie znasz. Sense Bridge wyjaśni sens w języku, który rozumiesz.": "Collez une lettre, un e-mail ou un document d’un autre pays. Sense Bridge aide à expliquer son sens dans votre langue." ,
+    "🌍 Wiele krajów i języków": "🌍 De nombreux pays et langues" ,
+    "Sense Bridge pomaga zrozumieć pisma, maile, decyzje i dokumenty z różnych krajów — w języku, który rozumiesz.": "Sense Bridge aide à comprendre les lettres, e-mails et documents de différents pays — dans la langue que vous comprenez." ,
+    "🌐 Nie musisz znać języka pisma.": "🌐 Vous n’avez pas besoin de connaître la langue du document." ,
+    "Sense Bridge może analizować pisma w wielu językach świata i wyjaśnić je w jednym z 9 języków użytkownika.": "Sense Bridge peut aider à comprendre des lettres de nombreux pays et langues — dans la langue que vous comprenez.",
+    "🌍 Pismo w dowolnym języku — wynik w 9 językach": "🌍 Lettres de nombreux pays et langues",
+    "Pismo może być w dowolnym języku. Sense Bridge pomaga wyjaśnić pisma, maile, decyzje i dokumenty z wielu krajów świata — w jednym z 9 języków użytkownika.": "Vous n’avez pas besoin de connaître la langue de la lettre. Sense Bridge aide à expliquer les lettres, e-mails, décisions et documents de différents pays — dans la langue que vous comprenez.",
+    "🌎 Z wielu krajów": "🌎 De nombreux pays",
+    "Pisma urzędowe, szpitalne, ubezpieczeniowe, pracownicze i inne sprawy z wielu krajów świata.": "Lettres officielles, hospitalières, d’assurance, de travail et autres situations de pays du monde entier.",
+    "🌐 W języku, który rozumiesz": "🌐 Dans la langue que vous comprenez",
+    "Wklejasz pismo w dowolnym języku, a Sense Bridge wyjaśnia jego sens w języku, który wybierzesz.": "Vous collez une lettre dans une autre langue et Sense Bridge explique son sens dans votre langue.",
+    "🏛️ Rozpoznawanie instytucji": "🏛️ Reconnaissance des institutions",
+    "Aplikacja pomaga rozpoznać urząd lub instytucję oraz sprawdzić sprawę przez oficjalną stronę.": "L’application aide à reconnaître un bureau ou une institution et à vérifier via le site officiel.",
+    "📌 W jakich sytuacjach pomaga?": "📌 Quand cela peut aider ?",
+    "🌐 Obsługiwane języki": "🌐 Langues prises en charge",
+    "🛡️ Wykrywanie podejrzanych pism": "🛡️ Détection de lettres suspectes",
+    "⚠️ Pilność i ryzyko": "⚠️ Urgence et risque",
+  
+    "To nie jest skomplikowany program komputerowy. Otwórz Sense Bridge w telefonie, wklej pismo lub dodaj zdjęcie i otrzymaj wyjaśnienie w kilka sekund.": "Ce n’est pas un programme informatique compliqué. Ouvrez Sense Bridge sur votre téléphone, collez une lettre ou ajoutez une photo et obtenez une explication en quelques secondes.",
+    "📄 Przykłady spraw, w których pomaga Sense Bridge": "📄 Exemples de situations où Sense Bridge peut aider",
+    "To są typowe sytuacje, w których ludzie potrzebują spokojnego wyjaśnienia pisma, maila lub decyzji w obcym języku.": "Ce sont des situations typiques où les personnes ont besoin d’une explication calme d’une lettre, d’un e-mail ou d’une décision dans une autre langue.",
+    "Przykładowe pismo": "Lettre d’exemple",
+    "Czy mogę użyć zdjęcia pisma?": "Puis-je utiliser une photo de la lettre ?",
+    "Nie. Sense Bridge pomaga zrozumieć pismo i komunikację. Nie zastępuje prawnika.": "Non. Sense Bridge aide à comprendre une lettre et la communication. Il ne remplace pas un avocat.",
+    "Nie musisz znać języka pisma. Wklejasz pismo, a aplikacja tłumaczy sens na normalny język.": "Vous n’avez pas besoin de connaître la langue de la lettre. Collez la lettre et l’application explique le sens simplement.",
+    "Sense Bridge nie potwierdza autentyczności pisma, ale pomaga zauważyć sygnały ostrzegawcze i bezpieczniej sprawdzić sprawę przez oficjalną stronę instytucji.": "Sense Bridge ne confirme pas l’authenticité d’une lettre, mais aide à repérer les signaux d’alerte et à vérifier plus sûrement via le site officiel.",
+    "Nie musisz znać języka pisma.": "Vous n’avez pas besoin de connaître la langue de la lettre.",},
   "IT": {
     "Jak działa": "Come funziona",
     "Nowości": "Novità",
     "Przykład": "Esempio",
     "Cennik": "Prezzi",
     "Prywatność": "Privacy",
-    "Otwórz aplikację": "Apri app",
-    "🚀 Otwórz aplikację": "🚀 Apri app",
+    "Otwórz aplikację": "Apri Sense Bridge",
+    "🚀 Otwórz aplikację": "🚀 Apri Sense Bridge",
     "📲 Pobierz / dodaj skrót": "📲 Aggiungi scorciatoia",
     "🌍 Dla ludzi między językami": "🌍 Per persone tra lingue",
     "Nie rozumiesz pisma? Pokażemy o co chodzi.": "Non capisci una lettera? Ti mostriamo cosa significa.",
+    "📷 Zdjęcie lub tekst • 🌍 Pismo w dowolnym języku • 🌐 Wynik w 9 językach": "📷 Foto o testo • 🌍 Molti paesi • 🌐 9 lingue",
     "Sense Bridge pomaga zrozumieć oficjalne listy, e-maile, decyzje i dokumenty w obcym języku. Pokazuje tłumaczenie, sens, ryzyka, pilność, podejrzane elementy i przykłady odpowiedzi — w Twoim języku.": "Sense Bridge aiuta a capire lettere ufficiali, e-mail, decisioni e documenti in un’altra lingua. Mostra traduzione, significato, rischi, urgenza, elementi sospetti ed esempi di risposta — nella tua lingua.",
     "🌍 tłumaczenie": "🌍 traduzione",
     "✅ sens pisma": "✅ significato",
@@ -1533,7 +1783,7 @@ Als wij de gegevens niet tijdig ontvangen, kan dit gevolgen hebben voor uw aanvr
     "✍️ odpowiedzi": "✍️ risposte",
     "🆓 3 analizy FREE": "🆓 3 analisi FREE",
     "🔒 prywatność": "🔒 privacy",
-    "🌍 9 języków": "🌍 9 lingue",
+    "🌐 Wynik w 9 językach": "🌍 9 lingue",
     "📷 OCR zdjęć": "📷 OCR foto",
     "⚡ analiza AI": "⚡ analisi AI",
     "🧭 Ty decydujesz": "🧭 decidi tu",
@@ -1548,24 +1798,55 @@ Als wij de gegevens niet tijdig ontvangen, kan dit gevolgen hebben voor uw aanvr
     "7 dni": "7 giorni",
     "Najlepsza wartość": "Miglior valore",
     "30 dni": "30 giorni",
-    "📲 Działa jak aplikacja": "📲 Funziona come app",
+    "📱 Prosta aplikacja na telefon": "📱 App semplice per telefono",
     "🔒 Prywatność, warunki i kontakt": "🔒 Privacy, termini e contatto",
     "Warunki": "Termini",
     "Kontakt": "Contatto",
     "Nie panikuj. Zrozum i działaj.": "Niente panico. Capisci e agisci.",
     "Otwórz Sense Bridge, wklej pismo i zobacz, co naprawdę oznacza.": "Apri Sense Bridge, incolla la lettera e scopri cosa significa davvero."
-  },
+  ,
+    "🌎 wiele krajów": "🌎 molti paesi" ,
+    "🌐 Twój język": "🌐 la tua lingua" ,
+    "🌎 Pismo w dowolnym języku. Wynik w języku, który rozumiesz.": "🌎 Da molti paesi. Nella lingua che capisci." ,
+    "Wklej pismo, mail albo decyzję — nawet w języku, którego nie znasz. Sense Bridge wyjaśni sens w języku, który rozumiesz.": "Incolla una lettera, un’e-mail o un documento da un altro paese. Sense Bridge aiuta a spiegarne il significato nella tua lingua." ,
+    "🌍 Wiele krajów i języków": "🌍 Molti paesi e lingue" ,
+    "Sense Bridge pomaga zrozumieć pisma, maile, decyzje i dokumenty z różnych krajów — w języku, który rozumiesz.": "Sense Bridge aiuta a capire lettere, e-mail e documenti di diversi paesi — nella lingua che capisci." ,
+    "🌐 Nie musisz znać języka pisma.": "🌐 Non devi conoscere la lingua del documento." ,
+    "Sense Bridge może analizować pisma w wielu językach świata i wyjaśnić je w jednym z 9 języków użytkownika.": "Sense Bridge può aiutare a capire lettere di molti paesi e lingue — nella lingua che capisci.",
+    "🌍 Pismo w dowolnym języku — wynik w 9 językach": "🌍 Lettere da molti paesi e lingue",
+    "Pismo może być w dowolnym języku. Sense Bridge pomaga wyjaśnić pisma, maile, decyzje i dokumenty z wielu krajów świata — w jednym z 9 języków użytkownika.": "Non devi conoscere la lingua della lettera. Sense Bridge aiuta a spiegare lettere, email, decisioni e documenti di diversi paesi — nella lingua che capisci.",
+    "🌎 Z wielu krajów": "🌎 Da molti paesi",
+    "Pisma urzędowe, szpitalne, ubezpieczeniowe, pracownicze i inne sprawy z wielu krajów świata.": "Lettere ufficiali, ospedaliere, assicurative, di lavoro e altre situazioni da paesi di tutto il mondo.",
+    "🌐 W języku, który rozumiesz": "🌐 Nella lingua che capisci",
+    "Wklejasz pismo w dowolnym języku, a Sense Bridge wyjaśnia jego sens w języku, który wybierzesz.": "Incolli una lettera in un’altra lingua e Sense Bridge ne spiega il significato nella tua lingua.",
+    "🏛️ Rozpoznawanie instytucji": "🏛️ Riconoscimento istituzioni",
+    "Aplikacja pomaga rozpoznać urząd lub instytucję oraz sprawdzić sprawę przez oficjalną stronę.": "L’app aiuta a riconoscere un ufficio o istituzione e a controllare tramite il sito ufficiale.",
+    "📌 W jakich sytuacjach pomaga?": "📌 Quando può aiutare?",
+    "🌐 Obsługiwane języki": "🌐 Lingue supportate",
+    "🛡️ Wykrywanie podejrzanych pism": "🛡️ Rilevamento lettere sospette",
+    "⚠️ Pilność i ryzyko": "⚠️ Urgenza e rischio",
+  
+    "To nie jest skomplikowany program komputerowy. Otwórz Sense Bridge w telefonie, wklej pismo lub dodaj zdjęcie i otrzymaj wyjaśnienie w kilka sekund.": "Non è un programma complicato per computer. Apri Sense Bridge sul telefono, incolla una lettera o aggiungi una foto e ricevi una spiegazione in pochi secondi.",
+    "📄 Przykłady spraw, w których pomaga Sense Bridge": "📄 Esempi di situazioni in cui Sense Bridge aiuta",
+    "To są typowe sytuacje, w których ludzie potrzebują spokojnego wyjaśnienia pisma, maila lub decyzji w obcym języku.": "Sono situazioni tipiche in cui le persone hanno bisogno di una spiegazione chiara di una lettera, email o decisione in un’altra lingua.",
+    "Przykładowe pismo": "Lettera di esempio",
+    "Czy mogę użyć zdjęcia pisma?": "Posso usare una foto della lettera?",
+    "Nie. Sense Bridge pomaga zrozumieć pismo i komunikację. Nie zastępuje prawnika.": "No. Sense Bridge aiuta a capire una lettera e la comunicazione. Non sostituisce un avvocato.",
+    "Nie musisz znać języka pisma. Wklejasz pismo, a aplikacja tłumaczy sens na normalny język.": "Non devi conoscere la lingua della lettera. Incolla la lettera e l’app ne spiega il significato in modo semplice.",
+    "Sense Bridge nie potwierdza autentyczności pisma, ale pomaga zauważyć sygnały ostrzegawcze i bezpieczniej sprawdzić sprawę przez oficjalną stronę instytucji.": "Sense Bridge non conferma l’autenticità di una lettera, ma aiuta a notare segnali di avvertimento e a verificare in modo più sicuro tramite il sito ufficiale.",
+    "Nie musisz znać języka pisma.": "Non devi conoscere la lingua della lettera.",},
   "ES": {
     "Jak działa": "Cómo funciona",
     "Nowości": "Novedades",
     "Przykład": "Ejemplo",
     "Cennik": "Precios",
     "Prywatność": "Privacidad",
-    "Otwórz aplikację": "Abrir app",
-    "🚀 Otwórz aplikację": "🚀 Abrir app",
+    "Otwórz aplikację": "Abrir Sense Bridge",
+    "🚀 Otwórz aplikację": "🚀 Abrir Sense Bridge",
     "📲 Pobierz / dodaj skrót": "📲 Añadir acceso directo",
     "🌍 Dla ludzi między językami": "🌍 Para personas entre idiomas",
     "Nie rozumiesz pisma? Pokażemy o co chodzi.": "¿No entiendes una carta? Te mostramos qué significa.",
+    "📷 Zdjęcie lub tekst • 🌍 Pismo w dowolnym języku • 🌐 Wynik w 9 językach": "📷 Foto o texto • 🌍 Muchos países • 🌐 9 idiomas",
     "Sense Bridge pomaga zrozumieć oficjalne listy, e-maile, decyzje i dokumenty w obcym języku. Pokazuje tłumaczenie, sens, ryzyka, pilność, podejrzane elementy i przykłady odpowiedzi — w Twoim języku.": "Sense Bridge ayuda a entender cartas oficiales, correos, decisiones y documentos en otro idioma. Muestra traducción, significado, riesgos, urgencia, elementos sospechosos y ejemplos de respuesta — en tu idioma.",
     "🌍 tłumaczenie": "🌍 traducción",
     "✅ sens pisma": "✅ significado",
@@ -1573,7 +1854,7 @@ Als wij de gegevens niet tijdig ontvangen, kan dit gevolgen hebben voor uw aanvr
     "✍️ odpowiedzi": "✍️ respuestas",
     "🆓 3 analizy FREE": "🆓 3 análisis FREE",
     "🔒 prywatność": "🔒 privacidad",
-    "🌍 9 języków": "🌍 9 idiomas",
+    "🌐 Wynik w 9 językach": "🌍 9 idiomas",
     "📷 OCR zdjęć": "📷 OCR foto",
     "⚡ analiza AI": "⚡ análisis AI",
     "🧭 Ty decydujesz": "🧭 tú decides",
@@ -1588,24 +1869,55 @@ Als wij de gegevens niet tijdig ontvangen, kan dit gevolgen hebben voor uw aanvr
     "7 dni": "7 días",
     "Najlepsza wartość": "Mejor valor",
     "30 dni": "30 días",
-    "📲 Działa jak aplikacja": "📲 Funciona como app",
+    "📱 Prosta aplikacja na telefon": "📱 Aplicación sencilla para el teléfono",
     "🔒 Prywatność, warunki i kontakt": "🔒 Privacidad, términos y contacto",
     "Warunki": "Condiciones",
     "Kontakt": "Contacto",
     "Nie panikuj. Zrozum i działaj.": "No entres en pánico. Entiende y actúa.",
     "Otwórz Sense Bridge, wklej pismo i zobacz, co naprawdę oznacza.": "Abre Sense Bridge, pega la carta y mira qué significa realmente."
-  },
+  ,
+    "🌎 wiele krajów": "🌎 muchos países" ,
+    "🌐 Twój język": "🌐 tu idioma" ,
+    "🌎 Pismo w dowolnym języku. Wynik w języku, który rozumiesz.": "🌎 De muchos países. En el idioma que entiendes." ,
+    "Wklej pismo, mail albo decyzję — nawet w języku, którego nie znasz. Sense Bridge wyjaśni sens w języku, który rozumiesz.": "Pega una carta, correo o documento de otro país. Sense Bridge ayuda a explicar su significado en tu idioma." ,
+    "🌍 Wiele krajów i języków": "🌍 Muchos países e idiomas" ,
+    "Sense Bridge pomaga zrozumieć pisma, maile, decyzje i dokumenty z różnych krajów — w języku, który rozumiesz.": "Sense Bridge ayuda a entender cartas, correos y documentos de diferentes países — en el idioma que entiendes." ,
+    "🌐 Nie musisz znać języka pisma.": "🌐 No necesitas conocer el idioma del documento." ,
+    "Sense Bridge może analizować pisma w wielu językach świata i wyjaśnić je w jednym z 9 języków użytkownika.": "Sense Bridge puede ayudar a entender cartas de muchos países e idiomas — en el idioma que entiendes.",
+    "🌍 Pismo w dowolnym języku — wynik w 9 językach": "🌍 Cartas de muchos países e idiomas",
+    "Pismo może być w dowolnym języku. Sense Bridge pomaga wyjaśnić pisma, maile, decyzje i dokumenty z wielu krajów świata — w jednym z 9 języków użytkownika.": "No necesitas conocer el idioma de la carta. Sense Bridge ayuda a explicar cartas, correos, decisiones y documentos de distintos países — en el idioma que entiendes.",
+    "🌎 Z wielu krajów": "🌎 De muchos países",
+    "Pisma urzędowe, szpitalne, ubezpieczeniowe, pracownicze i inne sprawy z wielu krajów świata.": "Cartas oficiales, hospitalarias, de seguros, laborales y otros asuntos de países de todo el mundo.",
+    "🌐 W języku, który rozumiesz": "🌐 En el idioma que entiendes",
+    "Wklejasz pismo w dowolnym języku, a Sense Bridge wyjaśnia jego sens w języku, który wybierzesz.": "Pegas una carta en otro idioma y Sense Bridge explica su significado en tu idioma.",
+    "🏛️ Rozpoznawanie instytucji": "🏛️ Reconocimiento de instituciones",
+    "Aplikacja pomaga rozpoznać urząd lub instytucję oraz sprawdzić sprawę przez oficjalną stronę.": "La app ayuda a reconocer una oficina o institución y comprobar el asunto en el sitio oficial.",
+    "📌 W jakich sytuacjach pomaga?": "📌 ¿Cuándo puede ayudar?",
+    "🌐 Obsługiwane języki": "🌐 Idiomas compatibles",
+    "🛡️ Wykrywanie podejrzanych pism": "🛡️ Detección de cartas sospechosas",
+    "⚠️ Pilność i ryzyko": "⚠️ Urgencia y riesgo",
+  
+    "To nie jest skomplikowany program komputerowy. Otwórz Sense Bridge w telefonie, wklej pismo lub dodaj zdjęcie i otrzymaj wyjaśnienie w kilka sekund.": "No es un programa complicado de ordenador. Abre Sense Bridge en tu teléfono, pega una carta o añade una foto y recibe una explicación en segundos.",
+    "📄 Przykłady spraw, w których pomaga Sense Bridge": "📄 Ejemplos de casos en los que ayuda Sense Bridge",
+    "To są typowe sytuacje, w których ludzie potrzebują spokojnego wyjaśnienia pisma, maila lub decyzji w obcym języku.": "Son situaciones típicas en las que las personas necesitan una explicación clara de una carta, correo o decisión en otro idioma.",
+    "Przykładowe pismo": "Carta de ejemplo",
+    "Czy mogę użyć zdjęcia pisma?": "¿Puedo usar una foto de la carta?",
+    "Nie. Sense Bridge pomaga zrozumieć pismo i komunikację. Nie zastępuje prawnika.": "No. Sense Bridge ayuda a entender una carta y la comunicación. No sustituye a un abogado.",
+    "Nie musisz znać języka pisma. Wklejasz pismo, a aplikacja tłumaczy sens na normalny język.": "No necesitas conocer el idioma de la carta. Pega la carta y la app explica el significado en lenguaje sencillo.",
+    "Sense Bridge nie potwierdza autentyczności pisma, ale pomaga zauważyć sygnały ostrzegawcze i bezpieczniej sprawdzić sprawę przez oficjalną stronę instytucji.": "Sense Bridge no confirma la autenticidad de una carta, pero ayuda a detectar señales de advertencia y a comprobar el asunto de forma más segura en la web oficial.",
+    "Nie musisz znać języka pisma.": "No necesitas conocer el idioma de la carta.",},
   "PT": {
     "Jak działa": "Como funciona",
     "Nowości": "Novidades",
     "Przykład": "Exemplo",
     "Cennik": "Preços",
     "Prywatność": "Privacidade",
-    "Otwórz aplikację": "Abrir app",
-    "🚀 Otwórz aplikację": "🚀 Abrir app",
+    "Otwórz aplikację": "Abrir Sense Bridge",
+    "🚀 Otwórz aplikację": "🚀 Abrir Sense Bridge",
     "📲 Pobierz / dodaj skrót": "📲 Adicionar atalho",
     "🌍 Dla ludzi między językami": "🌍 Para pessoas entre línguas",
     "Nie rozumiesz pisma? Pokażemy o co chodzi.": "Não entende uma carta? Mostramos o que significa.",
+    "📷 Zdjęcie lub tekst • 🌍 Pismo w dowolnym języku • 🌐 Wynik w 9 językach": "📷 Foto ou texto • 🌍 Muitos países • 🌐 9 línguas",
     "Sense Bridge pomaga zrozumieć oficjalne listy, e-maile, decyzje i dokumenty w obcym języku. Pokazuje tłumaczenie, sens, ryzyka, pilność, podejrzane elementy i przykłady odpowiedzi — w Twoim języku.": "Sense Bridge ajuda a compreender cartas oficiais, emails, decisões e documentos noutra língua. Mostra tradução, significado, riscos, urgência, elementos suspeitos e exemplos de resposta — no seu idioma.",
     "🌍 tłumaczenie": "🌍 tradução",
     "✅ sens pisma": "✅ significado",
@@ -1613,7 +1925,7 @@ Als wij de gegevens niet tijdig ontvangen, kan dit gevolgen hebben voor uw aanvr
     "✍️ odpowiedzi": "✍️ respostas",
     "🆓 3 analizy FREE": "🆓 3 análises FREE",
     "🔒 prywatność": "🔒 privacidade",
-    "🌍 9 języków": "🌍 9 idiomas",
+    "🌐 Wynik w 9 językach": "🌍 9 idiomas",
     "📷 OCR zdjęć": "📷 OCR foto",
     "⚡ analiza AI": "⚡ análise AI",
     "🧭 Ty decydujesz": "🧭 você decide",
@@ -1628,15 +1940,718 @@ Als wij de gegevens niet tijdig ontvangen, kan dit gevolgen hebben voor uw aanvr
     "7 dni": "7 dias",
     "Najlepsza wartość": "Melhor valor",
     "30 dni": "30 dias",
-    "📲 Działa jak aplikacja": "📲 Funciona como app",
+    "📱 Prosta aplikacja na telefon": "📱 Aplicação simples para o telemóvel",
     "🔒 Prywatność, warunki i kontakt": "🔒 Privacidade, termos e contacto",
     "Warunki": "Termos",
     "Kontakt": "Contacto",
     "Nie panikuj. Zrozum i działaj.": "Não entre em pânico. Compreenda e aja.",
     "Otwórz Sense Bridge, wklej pismo i zobacz, co naprawdę oznacza.": "Abra o Sense Bridge, cole a carta e veja o que realmente significa."
+  ,
+    "🌎 wiele krajów": "🌎 muitos países" ,
+    "🌐 Twój język": "🌐 a sua língua" ,
+    "🌎 Pismo w dowolnym języku. Wynik w języku, który rozumiesz.": "🌎 De muitos países. Na língua que compreende." ,
+    "Wklej pismo, mail albo decyzję — nawet w języku, którego nie znasz. Sense Bridge wyjaśni sens w języku, który rozumiesz.": "Cole uma carta, email ou documento de outro país. O Sense Bridge ajuda a explicar o significado na sua língua." ,
+    "🌍 Wiele krajów i języków": "🌍 Muitos países e línguas" ,
+    "Sense Bridge pomaga zrozumieć pisma, maile, decyzje i dokumenty z różnych krajów — w języku, który rozumiesz.": "O Sense Bridge ajuda a compreender cartas, emails e documentos de diferentes países — na língua que compreende." ,
+    "🌐 Nie musisz znać języka pisma.": "🌐 Não precisa conhecer a língua do documento." ,
+    "Sense Bridge może analizować pisma w wielu językach świata i wyjaśnić je w jednym z 9 języków użytkownika.": "O Sense Bridge pode ajudar a compreender cartas de muitos países e línguas — na língua que compreendes.",
+    "To nie jest skomplikowany program komputerowy. Otwórz Sense Bridge w telefonie, wklej pismo lub dodaj zdjęcie i otrzymaj wyjaśnienie w kilka sekund.": "Não é um programa de computador complicado. Abre o Sense Bridge no telemóvel, cola uma carta ou adiciona uma foto e recebe uma explicação em segundos.",
+    "📄 Przykłady spraw, w których pomaga Sense Bridge": "📄 Exemplos de situações em que o Sense Bridge ajuda",
+    "To są typowe sytuacje, w których ludzie potrzebują spokojnego wyjaśnienia pisma, maila lub decyzji w obcym języku.": "São situações típicas em que as pessoas precisam de uma explicação clara de uma carta, email ou decisão noutra língua.",
+    "Przykładowe pismo": "Carta de exemplo",
+    "Czy mogę użyć zdjęcia pisma?": "Posso usar uma foto da carta?",
+    "Nie. Sense Bridge pomaga zrozumieć pismo i komunikację. Nie zastępuje prawnika.": "Não. O Sense Bridge ajuda a compreender uma carta e a comunicação. Não substitui um advogado.",
+    "Nie musisz znać języka pisma. Wklejasz pismo, a aplikacja tłumaczy sens na normalny język.": "Não precisas de conhecer a língua da carta. Cola a carta e a aplicação explica o sentido em linguagem simples.",
+    "Sense Bridge nie potwierdza autentyczności pisma, ale pomaga zauważyć sygnały ostrzegawcze i bezpieczniej sprawdzić sprawę przez oficjalną stronę instytucji.": "O Sense Bridge não confirma a autenticidade de uma carta, mas ajuda a notar sinais de alerta e a verificar o assunto com mais segurança no site oficial.",
+    "Nie musisz znać języka pisma.": "Não precisas de conhecer a língua da carta.",
+    "🌍 Pismo w dowolnym języku — wynik w 9 językach": "🌍 Cartas de muitos países e línguas",
+    "Pismo może być w dowolnym języku. Sense Bridge pomaga wyjaśnić pisma, maile, decyzje i dokumenty z wielu krajów świata — w jednym z 9 języków użytkownika.": "Não precisas de conhecer a língua da carta. O Sense Bridge ajuda a explicar cartas, emails, decisões e documentos de diferentes países — na língua que compreendes.",
+    "🌎 Z wielu krajów": "🌎 De muitos países",
+    "Pisma urzędowe, szpitalne, ubezpieczeniowe, pracownicze i inne sprawy z wielu krajów świata.": "Cartas oficiais, hospitalares, de seguros, de trabalho e outros assuntos de países de todo o mundo.",
+    "🌐 W języku, który rozumiesz": "🌐 Na língua que compreendes",
+    "Wklejasz pismo w dowolnym języku, a Sense Bridge wyjaśnia jego sens w języku, który wybierzesz.": "Colas uma carta noutra língua e o Sense Bridge explica o significado na tua língua.",}
+,
+    "🌍 Pismo w dowolnym języku — wynik w 9 językach": "🌍 Cartas de muitos países e línguas",
+    "Pismo może być w dowolnym języku. Sense Bridge pomaga wyjaśnić pisma, maile, decyzje i dokumenty z wielu krajów świata — w jednym z 9 języków użytkownika.": "Não precisa conhecer a língua do documento. O Sense Bridge ajuda a explicar cartas, emails e documentos de diferentes países — na língua que compreende.",
+    "🌎 Z wielu krajów": "🌎 De muitos países",
+    "Pisma urzędowe, szpitalne, ubezpieczeniowe, pracownicze i inne sprawy z wielu krajów świata.": "Cartas oficiais, hospitalares, de seguros, trabalho e outros documentos de diferentes países.",
+    "🌐 W języku, który rozumiesz": "🌐 Na língua que compreende",
+    "Wklejasz pismo w dowolnym języku, a Sense Bridge wyjaśnia jego sens w języku, który wybierzesz.": "Cola um documento noutra língua e o Sense Bridge explica o significado na sua língua.",
+    "🏛️ Rozpoznawanie instytucji": "🏛️ Reconhecimento de instituições",
+    "Aplikacja pomaga rozpoznać urząd lub instytucję oraz sprawdzić sprawę przez oficjalną stronę.": "A app ajuda a reconhecer uma entidade ou instituição e verificar pelo site oficial.",
+    "📌 W jakich sytuacjach pomaga?": "📌 Quando pode ajudar?",
+    "🌐 Obsługiwane języki": "🌐 Línguas suportadas",
+    "🛡️ Wykrywanie podejrzanych pism": "🛡️ Deteção de cartas suspeitas",
+    "⚠️ Pilność i ryzyko": "⚠️ Urgência e risco"
+  };
+
+  /* =========================================================
+     SAFE I18N FIX v11 — only text translations + wording.
+     No app links, OCR, payments or analysis logic changed.
+     ========================================================= */
+  const SB_SAFE_I18N_FIX = {
+    "EN": {
+      "📷 Zdjęcie lub tekst • 🌍 Pismo w dowolnym języku • 🌐 Wynik w 9 językach": "📷 Photo or text • 🌍 Letter in any language • 🌐 Result in 9 languages",
+      "🌐 Wynik w 9 językach": "🌐 Result in 9 languages",
+      "🌎 Pismo w dowolnym języku. Wynik w języku, który rozumiesz.": "🌎 Letter in any language. Result in the language you understand.",
+      "Wklej pismo, mail albo decyzję — nawet w języku, którego nie znasz. Sense Bridge wyjaśni sens w języku, który rozumiesz.": "Paste a letter, email or decision — even in a language you do not know. Sense Bridge explains the meaning in the language you understand.",
+      "🌍 Pismo w dowolnym języku — wynik w 9 językach": "🌍 Letter in any language — result in 9 languages",
+      "Pismo może być w dowolnym języku. Sense Bridge pomaga wyjaśnić pisma, maile, decyzje i dokumenty z wielu krajów świata — w jednym z 9 języków użytkownika.": "The letter can be in any language. Sense Bridge helps explain letters, emails, decisions and documents from many countries — in one of 9 user languages.",
+      "Pisma urzędowe, szpitalne, ubezpieczeniowe, pracownicze i inne sprawy z wielu krajów świata.": "Official, hospital, insurance, work and other letters from many countries around the world.",
+      "Wklejasz pismo w dowolnym języku, a Sense Bridge wyjaśnia jego sens w języku, który wybierzesz.": "Paste a letter in any language, and Sense Bridge explains its meaning in the language you choose.",
+      "Pismo może być w dowolnym języku. Wyjaśnienie otrzymujesz w jednym z 9 języków użytkownika.": "The letter can be in any language. You get the explanation in one of 9 user languages.",
+      "Pismo może być w dowolnym języku. Wyjaśnienie otrzymasz w jednym z 9 języków użytkownika.": "The letter can be in any language. You get the explanation in one of 9 user languages.",
+      "Sense Bridge może analizować pisma w wielu językach świata i wyjaśnić je w jednym z 9 języków użytkownika.": "Sense Bridge can analyze letters in many languages of the world and explain them in one of 9 user languages.",
+      "Przykładowe pismo": "Example letter",
+      "Czy mogę użyć zdjęcia pisma?": "Can I use a photo of a letter?",
+      "Tak. Możesz dodać zdjęcie pisma, a aplikacja spróbuje odczytać tekst i przygotować analizę.": "Yes. You can add a photo of a letter and the app will try to read the text and prepare an analysis.",
+      "Czy strona działa jak aplikacja?": "Does the website work like an app?",
+      "Tak. Możesz dodać Sense Bridge do ekranu głównego telefonu jako skrót PWA.": "Yes. You can add Sense Bridge to your phone home screen as a PWA shortcut.",
+      "Czym różni się od Google Translate albo DeepL?": "How is it different from Google Translate or DeepL?",
+      "Sense Bridge nie tylko tłumaczy tekst. Pokazuje tłumaczenie, sens, ryzyka, pilność, podejrzane elementy i przykłady odpowiedzi.": "Sense Bridge does not only translate text. It shows translation, meaning, risks, urgency, suspicious elements and reply examples.",
+      "Nie. Sense Bridge pomaga zrozumieć pismo i komunikację. Nie zastępuje prawnika.": "No. Sense Bridge helps you understand a letter and communication. It does not replace a lawyer.",
+      "Nie musisz znać języka pisma. Wklejasz pismo, a aplikacja tłumaczy sens na normalny język.": "You do not need to know the language of the letter. Paste the letter and the app explains the meaning in normal language.",
+      "Pismo, mail, decyzja, wezwanie lub wiadomość z instytucji.": "A letter, email, decision, request or message from an institution.",
+      "Sense Bridge nie potwierdza autentyczności pisma, ale pomaga zauważyć sygnały ostrzegawcze i bezpieczniej sprawdzić sprawę przez oficjalną stronę instytucji.": "Sense Bridge does not confirm authenticity, but helps notice warning signals and check the matter more safely through the official website.",
+      "Nie zapisujemy i nie udostępniamy Twoich pism. Wklejaj tylko treści, które chcesz przeanalizować.": "We do not save or share your letters. Paste only content you want to analyze.",
+      "© Sense Bridge — narzędzie informacyjne do rozumienia pism, maili i dokumentów. Informational tool for understanding official letters. Nie jest kancelarią prawną.": "© Sense Bridge — informational tool for understanding letters, emails and documents. It is not a law firm."
+    },
+    "NL": {
+      "📷 Zdjęcie lub tekst • 🌍 Pismo w dowolnym języku • 🌐 Wynik w 9 językach": "📷 Foto of tekst • 🌍 Brief in elke taal • 🌐 Uitleg in 9 talen",
+      "🌐 Wynik w 9 językach": "🌐 Uitleg in 9 talen",
+      "🌎 Pismo w dowolnym języku. Wynik w języku, który rozumiesz.": "🌎 Brief in elke taal. Uitleg in de taal die je begrijpt.",
+      "Wklej pismo, mail albo decyzję — nawet w języku, którego nie znasz. Sense Bridge wyjaśni sens w języku, który rozumiesz.": "Plak een brief, e-mail of beslissing — zelfs in een taal die je niet kent. Sense Bridge legt de betekenis uit in de taal die je begrijpt.",
+      "🌍 Pismo w dowolnym języku — wynik w 9 językach": "🌍 Brief in elke taal — uitleg in 9 talen",
+      "Pismo może być w dowolnym języku. Sense Bridge pomaga wyjaśnić pisma, maile, decyzje i dokumenty z wielu krajów świata — w jednym z 9 języków użytkownika.": "De brief kan in elke taal zijn. Sense Bridge helpt brieven, e-mails, beslissingen en documenten uit veel landen uit te leggen — in een van 9 gebruikerstalen.",
+      "🌎 Z wielu krajów": "🌎 Uit veel landen",
+      "Pisma urzędowe, szpitalne, ubezpieczeniowe, pracownicze i inne sprawy z wielu krajów świata.": "Officiële brieven, ziekenhuisbrieven, verzekeringen, werkzaken en andere brieven uit veel landen wereldwijd.",
+      "🌐 W języku, który rozumiesz": "🌐 In de taal die je begrijpt",
+      "Wklejasz pismo w dowolnym języku, a Sense Bridge wyjaśnia jego sens w języku, który wybierzesz.": "Je plakt een brief in elke taal en Sense Bridge legt de betekenis uit in de taal die je kiest.",
+      "Pismo może być w dowolnym języku. Wyjaśnienie otrzymujesz w jednym z 9 języków użytkownika.": "De brief kan in elke taal zijn. Je krijgt de uitleg in een van 9 gebruikerstalen.",
+      "Pismo może być w dowolnym języku. Wyjaśnienie otrzymasz w jednym z 9 języków użytkownika.": "De brief kan in elke taal zijn. Je krijgt de uitleg in een van 9 gebruikerstalen.",
+      "Sense Bridge może analizować pisma w wielu językach świata i wyjaśnić je w jednym z 9 języków użytkownika.": "Sense Bridge kan brieven in veel wereldtalen analyseren en uitleggen in een van 9 gebruikerstalen.",
+      "📱 Prosta aplikacja na telefon": "📱 Eenvoudige app op je telefoon",
+      "To nie jest skomplikowany program komputerowy. Otwórz Sense Bridge w telefonie, wklej pismo lub dodaj zdjęcie i otrzymaj wyjaśnienie w kilka sekund.": "Dit is geen ingewikkeld computerprogramma. Open Sense Bridge op je telefoon, plak een brief of voeg een foto toe en krijg in enkele seconden uitleg.",
+      "📄 Przykłady spraw, w których pomaga Sense Bridge": "📄 Voorbeelden waarbij Sense Bridge helpt",
+      "To są typowe sytuacje, w których ludzie potrzebują spokojnego wyjaśnienia pisma, maila lub decyzji w obcym języku.": "Dit zijn typische situaties waarin mensen een rustige uitleg nodig hebben van een brief, e-mail of beslissing in een andere taal.",
+      "Przykładowe pismo": "Voorbeeldbrief",
+      "Czy mogę użyć zdjęcia pisma?": "Kan ik een foto van een brief gebruiken?",
+      "Tak. Możesz dodać zdjęcie pisma, a aplikacja spróbuje odczytać tekst i przygotować analizę.": "Ja. Je kunt een foto van de brief toevoegen en de app probeert de tekst te lezen en een analyse te maken.",
+      "Czy strona działa jak aplikacja?": "Werkt de website als een app?",
+      "Tak. Możesz dodać Sense Bridge do ekranu głównego telefonu jako skrót PWA.": "Ja. Je kunt Sense Bridge als PWA-snelkoppeling aan het startscherm van je telefoon toevoegen.",
+      "Czym różni się od Google Translate albo DeepL?": "Wat is het verschil met Google Translate of DeepL?",
+      "Sense Bridge nie tylko tłumaczy tekst. Pokazuje tłumaczenie, sens, ryzyka, pilność, podejrzane elementy i przykłady odpowiedzi.": "Sense Bridge vertaalt niet alleen tekst. Het toont vertaling, betekenis, risico’s, urgentie, verdachte elementen en voorbeeldantwoorden.",
+      "Nie. Sense Bridge pomaga zrozumieć pismo i komunikację. Nie zastępuje prawnika.": "Nee. Sense Bridge helpt je een brief en communicatie te begrijpen. Het vervangt geen advocaat.",
+      "Nie musisz znać języka pisma. Wklejasz pismo, a aplikacja tłumaczy sens na normalny język.": "Je hoeft de taal van de brief niet te kennen. Plak de brief en de app legt de betekenis uit in gewone taal.",
+      "Pismo, mail, decyzja, wezwanie lub wiadomość z instytucji.": "Een brief, e-mail, beslissing, verzoek of bericht van een instelling.",
+      "Sense Bridge nie potwierdza autentyczności pisma, ale pomaga zauważyć sygnały ostrzegawcze i bezpieczniej sprawdzić sprawę przez oficjalną stronę instytucji.": "Sense Bridge bevestigt niet of een brief echt is, maar helpt waarschuwingssignalen te zien en de zaak veiliger te controleren via de officiële website.",
+      "Nie zapisujemy i nie udostępniamy Twoich pism. Wklejaj tylko treści, które chcesz przeanalizować.": "Wij bewaren of delen je brieven niet. Plak alleen inhoud die je wilt analyseren.",
+      "© Sense Bridge — narzędzie informacyjne do rozumienia pism, maili i dokumentów. Informational tool for understanding official letters. Nie jest kancelarią prawną.": "© Sense Bridge — informatief hulpmiddel om brieven, e-mails en documenten te begrijpen. Het is geen advocatenkantoor."
+    },
+    "DE": {
+      "📷 Zdjęcie lub tekst • 🌍 Pismo w dowolnym języku • 🌐 Wynik w 9 językach": "📷 Foto oder Text • 🌍 Schreiben in jeder Sprache • 🌐 Ergebnis in 9 Sprachen",
+      "🌐 Wynik w 9 językach": "🌐 Ergebnis in 9 Sprachen",
+      "🌎 Pismo w dowolnym języku. Wynik w języku, który rozumiesz.": "🌎 Schreiben in jeder Sprache. Ergebnis in der Sprache, die du verstehst.",
+      "Wklej pismo, mail albo decyzję — nawet w języku, którego nie znasz. Sense Bridge wyjaśni sens w języku, który rozumiesz.": "Füge ein Schreiben, eine E-Mail oder Entscheidung ein — auch in einer Sprache, die du nicht kennst. Sense Bridge erklärt die Bedeutung in der Sprache, die du verstehst.",
+      "🌍 Pismo w dowolnym języku — wynik w 9 językach": "🌍 Schreiben in jeder Sprache — Ergebnis in 9 Sprachen",
+      "Pismo może być w dowolnym języku. Sense Bridge pomaga wyjaśnić pisma, maile, decyzje i dokumenty z wielu krajów świata — w jednym z 9 języków użytkownika.": "Das Schreiben kann in jeder Sprache sein. Sense Bridge hilft, Schreiben, E-Mails, Entscheidungen und Dokumente aus vielen Ländern zu erklären — in einer von 9 Nutzersprachen.",
+      "🌎 Z wielu krajów": "🌎 Aus vielen Ländern",
+      "Pisma urzędowe, szpitalne, ubezpieczeniowe, pracownicze i inne sprawy z wielu krajów świata.": "Amtliche Schreiben, Krankenhausbriefe, Versicherungs-, Arbeits- und andere Schreiben aus vielen Ländern weltweit.",
+      "🌐 W języku, który rozumiesz": "🌐 In der Sprache, die du verstehst",
+      "Wklejasz pismo w dowolnym języku, a Sense Bridge wyjaśnia jego sens w języku, który wybierzesz.": "Du fügst ein Schreiben in beliebiger Sprache ein und Sense Bridge erklärt die Bedeutung in der Sprache, die du wählst.",
+      "Pismo może być w dowolnym języku. Wyjaśnienie otrzymujesz w jednym z 9 języków użytkownika.": "Das Schreiben kann in jeder Sprache sein. Die Erklärung erhältst du in einer von 9 Nutzersprachen.",
+      "Pismo może być w dowolnym języku. Wyjaśnienie otrzymasz w jednym z 9 języków użytkownika.": "Das Schreiben kann in jeder Sprache sein. Die Erklärung erhältst du in einer von 9 Nutzersprachen.",
+      "Sense Bridge może analizować pisma w wielu językach świata i wyjaśnić je w jednym z 9 języków użytkownika.": "Sense Bridge kann Schreiben in vielen Weltsprachen analysieren und in einer von 9 Nutzersprachen erklären.",
+      "📱 Prosta aplikacja na telefon": "📱 Einfache App fürs Telefon",
+      "To nie jest skomplikowany program komputerowy. Otwórz Sense Bridge w telefonie, wklej pismo lub dodaj zdjęcie i otrzymaj wyjaśnienie w kilka sekund.": "Das ist kein kompliziertes Computerprogramm. Öffne Sense Bridge auf deinem Telefon, füge ein Schreiben ein oder lade ein Foto hoch und erhalte in Sekunden eine Erklärung.",
+      "📄 Przykłady spraw, w których pomaga Sense Bridge": "📄 Beispiele, wobei Sense Bridge hilft",
+      "To są typowe sytuacje, w których ludzie potrzebują spokojnego wyjaśnienia pisma, maila lub decyzji w obcym języku.": "Das sind typische Situationen, in denen Menschen eine ruhige Erklärung eines Schreibens, einer E-Mail oder Entscheidung in einer fremden Sprache brauchen.",
+      "Przykładowe pismo": "Beispielschreiben",
+      "Czy mogę użyć zdjęcia pisma?": "Kann ich ein Foto eines Schreibens verwenden?",
+      "Tak. Możesz dodać zdjęcie pisma, a aplikacja spróbuje odczytać tekst i przygotować analizę.": "Ja. Du kannst ein Foto des Schreibens hinzufügen und die App versucht, den Text zu lesen und eine Analyse zu erstellen.",
+      "Czy strona działa jak aplikacja?": "Funktioniert die Website wie eine App?",
+      "Tak. Możesz dodać Sense Bridge do ekranu głównego telefonu jako skrót PWA.": "Ja. Du kannst Sense Bridge als PWA-Verknüpfung zum Startbildschirm deines Telefons hinzufügen.",
+      "Czym różni się od Google Translate albo DeepL?": "Worin unterscheidet es sich von Google Translate oder DeepL?",
+      "Sense Bridge nie tylko tłumaczy tekst. Pokazuje tłumaczenie, sens, ryzyka, pilność, podejrzane elementy i przykłady odpowiedzi.": "Sense Bridge übersetzt nicht nur Text. Es zeigt Übersetzung, Bedeutung, Risiken, Dringlichkeit, verdächtige Elemente und Antwortbeispiele.",
+      "Nie. Sense Bridge pomaga zrozumieć pismo i komunikację. Nie zastępuje prawnika.": "Nein. Sense Bridge hilft, ein Schreiben und die Kommunikation zu verstehen. Es ersetzt keinen Anwalt.",
+      "Nie musisz znać języka pisma. Wklejasz pismo, a aplikacja tłumaczy sens na normalny język.": "Du musst die Sprache des Schreibens nicht kennen. Füge das Schreiben ein und die App erklärt die Bedeutung in normaler Sprache.",
+      "Pismo, mail, decyzja, wezwanie lub wiadomość z instytucji.": "Ein Schreiben, eine E-Mail, Entscheidung, Aufforderung oder Nachricht einer Institution.",
+      "Sense Bridge nie potwierdza autentyczności pisma, ale pomaga zauważyć sygnały ostrzegawcze i bezpieczniej sprawdzić sprawę przez oficjalną stronę instytucji.": "Sense Bridge bestätigt nicht die Echtheit eines Schreibens, hilft aber Warnsignale zu erkennen und die Sache sicherer über die offizielle Website zu prüfen.",
+      "Nie zapisujemy i nie udostępniamy Twoich pism. Wklejaj tylko treści, które chcesz przeanalizować.": "Wir speichern oder teilen deine Schreiben nicht. Füge nur Inhalte ein, die du analysieren möchtest.",
+      "© Sense Bridge — narzędzie informacyjne do rozumienia pism, maili i dokumentów. Informational tool for understanding official letters. Nie jest kancelarią prawną.": "© Sense Bridge — Informationswerkzeug zum Verstehen von Schreiben, E-Mails und Dokumenten. Es ist keine Kanzlei."
+    },
+    "UA": {
+      "📷 Zdjęcie lub tekst • 🌍 Pismo w dowolnym języku • 🌐 Wynik w 9 językach": "📷 Фото або текст • 🌍 Лист будь-якою мовою • 🌐 Результат 9 мовами",
+      "🌐 Wynik w 9 językach": "🌐 Результат 9 мовами",
+      "🌎 Pismo w dowolnym języku. Wynik w języku, który rozumiesz.": "🌎 Лист будь-якою мовою. Результат мовою, яку ви розумієте.",
+      "Wklej pismo, mail albo decyzję — nawet w języku, którego nie znasz. Sense Bridge wyjaśni sens w języku, który rozumiesz.": "Вставте лист, email або рішення — навіть мовою, якої ви не знаєте. Sense Bridge пояснить зміст мовою, яку ви розумієте.",
+      "🌍 Pismo w dowolnym języku — wynik w 9 językach": "🌍 Лист будь-якою мовою — результат 9 мовами",
+      "Pismo może być w dowolnym języku. Sense Bridge pomaga wyjaśnić pisma, maile, decyzje i dokumenty z wielu krajów świata — w jednym z 9 języków użytkownika.": "Лист може бути будь-якою мовою. Sense Bridge допомагає пояснити листи, email, рішення та документи з багатьох країн світу — однією з 9 мов користувача.",
+      "🌎 Z wielu krajów": "🌎 З багатьох країн",
+      "Pisma urzędowe, szpitalne, ubezpieczeniowe, pracownicze i inne sprawy z wielu krajów świata.": "Офіційні, лікарняні, страхові, робочі та інші листи з багатьох країн світу.",
+      "🌐 W języku, który rozumiesz": "🌐 Мовою, яку ви розумієте",
+      "Wklejasz pismo w dowolnym języku, a Sense Bridge wyjaśnia jego sens w języku, który wybierzesz.": "Ви вставляєте лист будь-якою мовою, а Sense Bridge пояснює його зміст мовою, яку ви виберете.",
+      "Pismo może być w dowolnym języku. Wyjaśnienie otrzymujesz w jednym z 9 języków użytkownika.": "Лист може бути будь-якою мовою. Пояснення ви отримуєте однією з 9 мов користувача.",
+      "Pismo może być w dowolnym języku. Wyjaśnienie otrzymasz w jednym z 9 języków użytkownika.": "Лист може бути будь-якою мовою. Пояснення ви отримаєте однією з 9 мов користувача.",
+      "Sense Bridge może analizować pisma w wielu językach świata i wyjaśnić je w jednym z 9 języków użytkownika.": "Sense Bridge може аналізувати листи багатьма мовами світу і пояснювати їх однією з 9 мов користувача.",
+      "📱 Prosta aplikacja na telefon": "📱 Проста програма на телефон",
+      "To nie jest skomplikowany program komputerowy. Otwórz Sense Bridge w telefonie, wklej pismo lub dodaj zdjęcie i otrzymaj wyjaśnienie w kilka sekund.": "Це не складна комп’ютерна програма. Відкрийте Sense Bridge на телефоні, вставте лист або додайте фото й отримайте пояснення за кілька секунд.",
+      "📄 Przykłady spraw, w których pomaga Sense Bridge": "📄 Приклади справ, з якими допомагає Sense Bridge",
+      "To są typowe sytuacje, w których ludzie potrzebują spokojnego wyjaśnienia pisma, maila lub decyzji w obcym języku.": "Це типові ситуації, коли людям потрібне спокійне пояснення листа, email або рішення іншою мовою.",
+      "Przykładowe pismo": "Приклад листа",
+      "Czy mogę użyć zdjęcia pisma?": "Чи можна використати фото листа?",
+      "Tak. Możesz dodać zdjęcie pisma, a aplikacja spróbuje odczytać tekst i przygotować analizę.": "Так. Ви можете додати фото листа, а програма спробує прочитати текст і підготувати аналіз.",
+      "Czy strona działa jak aplikacja?": "Чи сайт працює як додаток?",
+      "Tak. Możesz dodać Sense Bridge do ekranu głównego telefonu jako skrót PWA.": "Так. Ви можете додати Sense Bridge на головний екран телефону як PWA-ярлик.",
+      "Czym różni się od Google Translate albo DeepL?": "Чим це відрізняється від Google Translate або DeepL?",
+      "Sense Bridge nie tylko tłumaczy tekst. Pokazuje tłumaczenie, sens, ryzyka, pilność, podejrzane elementy i przykłady odpowiedzi.": "Sense Bridge не лише перекладає текст. Він показує переклад, зміст, ризики, терміновість, підозрілі елементи та приклади відповідей.",
+      "Nie. Sense Bridge pomaga zrozumieć pismo i komunikację. Nie zastępuje prawnika.": "Ні. Sense Bridge допомагає зрозуміти лист і комунікацію. Він не замінює юриста.",
+      "Nie musisz znać języka pisma. Wklejasz pismo, a aplikacja tłumaczy sens na normalny język.": "Вам не потрібно знати мову листа. Вставте лист, і програма пояснить зміст простою мовою.",
+      "Pismo, mail, decyzja, wezwanie lub wiadomość z instytucji.": "Лист, email, рішення, запит або повідомлення від установи.",
+      "Sense Bridge nie potwierdza autentyczności pisma, ale pomaga zauważyć sygnały ostrzegawcze i bezpieczniej sprawdzić sprawę przez oficjalną stronę instytucji.": "Sense Bridge не підтверджує справжність листа, але допомагає помітити попереджувальні сигнали й безпечніше перевірити справу через офіційний сайт установи.",
+      "Nie zapisujemy i nie udostępniamy Twoich pism. Wklejaj tylko treści, które chcesz przeanalizować.": "Ми не зберігаємо і не передаємо ваші листи. Вставляйте лише той зміст, який хочете проаналізувати.",
+      "© Sense Bridge — narzędzie informacyjne do rozumienia pism, maili i dokumentów. Informational tool for understanding official letters. Nie jest kancelarią prawną.": "© Sense Bridge — інформаційний інструмент для розуміння листів, email і документів. Це не юридична фірма."
+    },
+    "FR": {
+      "📷 Zdjęcie lub tekst • 🌍 Pismo w dowolnym języku • 🌐 Wynik w 9 językach": "📷 Photo ou texte • 🌍 Lettre dans n’importe quelle langue • 🌐 Résultat en 9 langues",
+      "🌐 Wynik w 9 językach": "🌐 Résultat en 9 langues",
+      "🌎 Pismo w dowolnym języku. Wynik w języku, który rozumiesz.": "🌎 Lettre dans n’importe quelle langue. Résultat dans la langue que vous comprenez.",
+      "Wklej pismo, mail albo decyzję — nawet w języku, którego nie znasz. Sense Bridge wyjaśni sens w języku, który rozumiesz.": "Collez une lettre, un e-mail ou une décision — même dans une langue que vous ne connaissez pas. Sense Bridge explique le sens dans la langue que vous comprenez.",
+      "🌍 Pismo w dowolnym języku — wynik w 9 językach": "🌍 Lettre dans n’importe quelle langue — résultat en 9 langues",
+      "Pismo może być w dowolnym języku. Sense Bridge pomaga wyjaśnić pisma, maile, decyzje i dokumenty z wielu krajów świata — w jednym z 9 języków użytkownika.": "La lettre peut être dans n’importe quelle langue. Sense Bridge aide à expliquer lettres, e-mails, décisions et documents de nombreux pays — dans l’une des 9 langues utilisateur.",
+      "🌎 Z wielu krajów": "🌎 De nombreux pays",
+      "Pisma urzędowe, szpitalne, ubezpieczeniowe, pracownicze i inne sprawy z wielu krajów świata.": "Lettres officielles, hospitalières, d’assurance, de travail et autres courriers de nombreux pays du monde.",
+      "🌐 W języku, który rozumiesz": "🌐 Dans la langue que vous comprenez",
+      "Wklejasz pismo w dowolnym języku, a Sense Bridge wyjaśnia jego sens w języku, który wybierzesz.": "Vous collez une lettre dans n’importe quelle langue et Sense Bridge explique son sens dans la langue choisie.",
+      "Pismo może być w dowolnym języku. Wyjaśnienie otrzymujesz w jednym z 9 języków użytkownika.": "La lettre peut être dans n’importe quelle langue. Vous recevez l’explication dans l’une des 9 langues utilisateur.",
+      "Pismo może być w dowolnym języku. Wyjaśnienie otrzymasz w jednym z 9 języków użytkownika.": "La lettre peut être dans n’importe quelle langue. Vous recevrez l’explication dans l’une des 9 langues utilisateur.",
+      "Sense Bridge może analizować pisma w wielu językach świata i wyjaśnić je w jednym z 9 języków użytkownika.": "Sense Bridge peut analyser des lettres dans de nombreuses langues du monde et les expliquer dans l’une des 9 langues utilisateur.",
+      "📱 Prosta aplikacja na telefon": "📱 Application simple sur téléphone",
+      "To nie jest skomplikowany program komputerowy. Otwórz Sense Bridge w telefonie, wklej pismo lub dodaj zdjęcie i otrzymaj wyjaśnienie w kilka sekund.": "Ce n’est pas un programme informatique compliqué. Ouvrez Sense Bridge sur votre téléphone, collez une lettre ou ajoutez une photo et recevez une explication en quelques secondes.",
+      "📄 Przykłady spraw, w których pomaga Sense Bridge": "📄 Exemples de situations où Sense Bridge aide",
+      "To są typowe sytuacje, w których ludzie potrzebują spokojnego wyjaśnienia pisma, maila lub decyzji w obcym języku.": "Ce sont des situations typiques où les gens ont besoin d’une explication calme d’une lettre, d’un e-mail ou d’une décision dans une autre langue.",
+      "Przykładowe pismo": "Lettre d’exemple",
+      "Czy mogę użyć zdjęcia pisma?": "Puis-je utiliser une photo d’une lettre ?",
+      "Tak. Możesz dodać zdjęcie pisma, a aplikacja spróbuje odczytać tekst i przygotować analizę.": "Oui. Vous pouvez ajouter une photo de la lettre et l’application essaiera de lire le texte et de préparer une analyse.",
+      "Czy strona działa jak aplikacja?": "Le site fonctionne-t-il comme une application ?",
+      "Tak. Możesz dodać Sense Bridge do ekranu głównego telefonu jako skrót PWA.": "Oui. Vous pouvez ajouter Sense Bridge à l’écran d’accueil de votre téléphone comme raccourci PWA.",
+      "Czym różni się od Google Translate albo DeepL?": "Quelle différence avec Google Translate ou DeepL ?",
+      "Sense Bridge nie tylko tłumaczy tekst. Pokazuje tłumaczenie, sens, ryzyka, pilność, podejrzane elementy i przykłady odpowiedzi.": "Sense Bridge ne fait pas que traduire le texte. Il montre la traduction, le sens, les risques, l’urgence, les éléments suspects et des exemples de réponse.",
+      "Nie. Sense Bridge pomaga zrozumieć pismo i komunikację. Nie zastępuje prawnika.": "Non. Sense Bridge aide à comprendre une lettre et la communication. Il ne remplace pas un avocat.",
+      "Nie musisz znać języka pisma. Wklejasz pismo, a aplikacja tłumaczy sens na normalny język.": "Vous n’avez pas besoin de connaître la langue de la lettre. Collez la lettre et l’application explique le sens simplement.",
+      "Pismo, mail, decyzja, wezwanie lub wiadomość z instytucji.": "Une lettre, un e-mail, une décision, une demande ou un message d’une institution.",
+      "Sense Bridge nie potwierdza autentyczności pisma, ale pomaga zauważyć sygnały ostrzegawcze i bezpieczniej sprawdzić sprawę przez oficjalną stronę instytucji.": "Sense Bridge ne confirme pas l’authenticité d’une lettre, mais aide à repérer les signaux d’alerte et à vérifier plus sûrement via le site officiel.",
+      "Nie zapisujemy i nie udostępniamy Twoich pism. Wklejaj tylko treści, które chcesz przeanalizować.": "Nous n’enregistrons pas et ne partageons pas vos lettres. Collez uniquement le contenu que vous voulez analyser.",
+      "© Sense Bridge — narzędzie informacyjne do rozumienia pism, maili i dokumentów. Informational tool for understanding official letters. Nie jest kancelarią prawną.": "© Sense Bridge — outil d’information pour comprendre lettres, e-mails et documents. Ce n’est pas un cabinet juridique."
+    },
+    "IT": {
+      "📷 Zdjęcie lub tekst • 🌍 Pismo w dowolnym języku • 🌐 Wynik w 9 językach": "📷 Foto o testo • 🌍 Lettera in qualsiasi lingua • 🌐 Risultato in 9 lingue",
+      "🌐 Wynik w 9 językach": "🌐 Risultato in 9 lingue",
+      "🌎 Pismo w dowolnym języku. Wynik w języku, który rozumiesz.": "🌎 Lettera in qualsiasi lingua. Risultato nella lingua che capisci.",
+      "Wklej pismo, mail albo decyzję — nawet w języku, którego nie znasz. Sense Bridge wyjaśni sens w języku, który rozumiesz.": "Incolla una lettera, email o decisione — anche in una lingua che non conosci. Sense Bridge spiega il significato nella lingua che capisci.",
+      "🌍 Pismo w dowolnym języku — wynik w 9 językach": "🌍 Lettera in qualsiasi lingua — risultato in 9 lingue",
+      "Pismo może być w dowolnym języku. Sense Bridge pomaga wyjaśnić pisma, maile, decyzje i dokumenty z wielu krajów świata — w jednym z 9 języków użytkownika.": "La lettera può essere in qualsiasi lingua. Sense Bridge aiuta a spiegare lettere, email, decisioni e documenti da molti paesi del mondo — in una delle 9 lingue dell’utente.",
+      "🌎 Z wielu krajów": "🌎 Da molti paesi",
+      "Pisma urzędowe, szpitalne, ubezpieczeniowe, pracownicze i inne sprawy z wielu krajów świata.": "Lettere ufficiali, ospedaliere, assicurative, di lavoro e altre pratiche da molti paesi del mondo.",
+      "🌐 W języku, który rozumiesz": "🌐 Nella lingua che capisci",
+      "Wklejasz pismo w dowolnym języku, a Sense Bridge wyjaśnia jego sens w języku, który wybierzesz.": "Incolli una lettera in qualsiasi lingua e Sense Bridge spiega il significato nella lingua che scegli.",
+      "Pismo może być w dowolnym języku. Wyjaśnienie otrzymujesz w jednym z 9 języków użytkownika.": "La lettera può essere in qualsiasi lingua. Ricevi la spiegazione in una delle 9 lingue dell’utente.",
+      "Pismo może być w dowolnym języku. Wyjaśnienie otrzymasz w jednym z 9 języków użytkownika.": "La lettera può essere in qualsiasi lingua. Riceverai la spiegazione in una delle 9 lingue dell’utente.",
+      "Sense Bridge może analizować pisma w wielu językach świata i wyjaśnić je w jednym z 9 języków użytkownika.": "Sense Bridge può analizzare lettere in molte lingue del mondo e spiegarle in una delle 9 lingue dell’utente.",
+      "📱 Prosta aplikacja na telefon": "📱 App semplice sul telefono",
+      "To nie jest skomplikowany program komputerowy. Otwórz Sense Bridge w telefonie, wklej pismo lub dodaj zdjęcie i otrzymaj wyjaśnienie w kilka sekund.": "Non è un programma complicato per computer. Apri Sense Bridge sul telefono, incolla una lettera o aggiungi una foto e ricevi una spiegazione in pochi secondi.",
+      "📄 Przykłady spraw, w których pomaga Sense Bridge": "📄 Esempi di situazioni in cui Sense Bridge aiuta",
+      "To są typowe sytuacje, w których ludzie potrzebują spokojnego wyjaśnienia pisma, maila lub decyzji w obcym języku.": "Sono situazioni tipiche in cui le persone hanno bisogno di una spiegazione chiara di una lettera, email o decisione in un’altra lingua.",
+      "Przykładowe pismo": "Lettera di esempio",
+      "Czy mogę użyć zdjęcia pisma?": "Posso usare una foto della lettera?",
+      "Tak. Możesz dodać zdjęcie pisma, a aplikacja spróbuje odczytać tekst i przygotować analizę.": "Sì. Puoi aggiungere una foto della lettera e l’app proverà a leggere il testo e preparare un’analisi.",
+      "Czy strona działa jak aplikacja?": "Il sito funziona come un’app?",
+      "Tak. Możesz dodać Sense Bridge do ekranu głównego telefonu jako skrót PWA.": "Sì. Puoi aggiungere Sense Bridge alla schermata principale del telefono come scorciatoia PWA.",
+      "Czym różni się od Google Translate albo DeepL?": "In cosa è diverso da Google Translate o DeepL?",
+      "Sense Bridge nie tylko tłumaczy tekst. Pokazuje tłumaczenie, sens, ryzyka, pilność, podejrzane elementy i przykłady odpowiedzi.": "Sense Bridge non traduce solo il testo. Mostra traduzione, significato, rischi, urgenza, elementi sospetti ed esempi di risposta.",
+      "Nie. Sense Bridge pomaga zrozumieć pismo i komunikację. Nie zastępuje prawnika.": "No. Sense Bridge aiuta a capire una lettera e la comunicazione. Non sostituisce un avvocato.",
+      "Nie musisz znać języka pisma. Wklejasz pismo, a aplikacja tłumaczy sens na normalny język.": "Non devi conoscere la lingua della lettera. Incolla la lettera e l’app spiega il significato in modo semplice.",
+      "Pismo, mail, decyzja, wezwanie lub wiadomość z instytucji.": "Una lettera, email, decisione, richiesta o messaggio da un’istituzione.",
+      "Sense Bridge nie potwierdza autentyczności pisma, ale pomaga zauważyć sygnały ostrzegawcze i bezpieczniej sprawdzić sprawę przez oficjalną stronę instytucji.": "Sense Bridge non conferma l’autenticità di una lettera, ma aiuta a notare segnali di avvertimento e a verificare la questione più facilmente tramite il sito ufficiale.",
+      "Nie zapisujemy i nie udostępniamy Twoich pism. Wklejaj tylko treści, które chcesz przeanalizować.": "Non salviamo né condividiamo le tue lettere. Incolla solo contenuti che vuoi analizzare.",
+      "© Sense Bridge — narzędzie informacyjne do rozumienia pism, maili i dokumentów. Informational tool for understanding official letters. Nie jest kancelarią prawną.": "© Sense Bridge — strumento informativo per capire lettere, email e documenti. Non è uno studio legale."
+    },
+    "ES": {
+      "📷 Zdjęcie lub tekst • 🌍 Pismo w dowolnym języku • 🌐 Wynik w 9 językach": "📷 Foto o texto • 🌍 Carta en cualquier idioma • 🌐 Resultado en 9 idiomas",
+      "🌐 Wynik w 9 językach": "🌐 Resultado en 9 idiomas",
+      "🌎 Pismo w dowolnym języku. Wynik w języku, który rozumiesz.": "🌎 Carta en cualquier idioma. Resultado en el idioma que entiendes.",
+      "Wklej pismo, mail albo decyzję — nawet w języku, którego nie znasz. Sense Bridge wyjaśni sens w języku, który rozumiesz.": "Pega una carta, email o decisión — incluso en un idioma que no conoces. Sense Bridge explica el significado en el idioma que entiendes.",
+      "🌍 Pismo w dowolnym języku — wynik w 9 językach": "🌍 Carta en cualquier idioma — resultado en 9 idiomas",
+      "Pismo może być w dowolnym języku. Sense Bridge pomaga wyjaśnić pisma, maile, decyzje i dokumenty z wielu krajów świata — w jednym z 9 języków użytkownika.": "La carta puede estar en cualquier idioma. Sense Bridge ayuda a explicar cartas, emails, decisiones y documentos de muchos países del mundo — en uno de los 9 idiomas del usuario.",
+      "🌎 Z wielu krajów": "🌎 De muchos países",
+      "Pisma urzędowe, szpitalne, ubezpieczeniowe, pracownicze i inne sprawy z wielu krajów świata.": "Cartas oficiales, hospitalarias, de seguros, de trabajo y otros asuntos de muchos países del mundo.",
+      "🌐 W języku, który rozumiesz": "🌐 En el idioma que entiendes",
+      "Wklejasz pismo w dowolnym języku, a Sense Bridge wyjaśnia jego sens w języku, który wybierzesz.": "Pegas una carta en cualquier idioma y Sense Bridge explica su significado en el idioma que elijas.",
+      "Pismo może być w dowolnym języku. Wyjaśnienie otrzymujesz w jednym z 9 języków użytkownika.": "La carta puede estar en cualquier idioma. Recibes la explicación en uno de los 9 idiomas del usuario.",
+      "Pismo może być w dowolnym języku. Wyjaśnienie otrzymasz w jednym z 9 języków użytkownika.": "La carta puede estar en cualquier idioma. Recibirás la explicación en uno de los 9 idiomas del usuario.",
+      "Sense Bridge może analizować pisma w wielu językach świata i wyjaśnić je w jednym z 9 języków użytkownika.": "Sense Bridge puede analizar cartas en muchos idiomas del mundo y explicarlas en uno de los 9 idiomas del usuario.",
+      "📱 Prosta aplikacja na telefon": "📱 Aplicación sencilla para el teléfono",
+      "To nie jest skomplikowany program komputerowy. Otwórz Sense Bridge w telefonie, wklej pismo lub dodaj zdjęcie i otrzymaj wyjaśnienie w kilka sekund.": "No es un programa complicado de ordenador. Abre Sense Bridge en tu teléfono, pega una carta o añade una foto y recibe una explicación en segundos.",
+      "📄 Przykłady spraw, w których pomaga Sense Bridge": "📄 Ejemplos de situaciones en las que ayuda Sense Bridge",
+      "To są typowe sytuacje, w których ludzie potrzebują spokojnego wyjaśnienia pisma, maila lub decyzji w obcym języku.": "Son situaciones típicas en las que la gente necesita una explicación clara de una carta, email o decisión en otro idioma.",
+      "Przykładowe pismo": "Carta de ejemplo",
+      "Czy mogę użyć zdjęcia pisma?": "¿Puedo usar una foto de la carta?",
+      "Tak. Możesz dodać zdjęcie pisma, a aplikacja spróbuje odczytać tekst i przygotować analizę.": "Sí. Puedes añadir una foto de la carta y la app intentará leer el texto y preparar un análisis.",
+      "Czy strona działa jak aplikacja?": "¿La web funciona como una app?",
+      "Tak. Możesz dodać Sense Bridge do ekranu głównego telefonu jako skrót PWA.": "Sí. Puedes añadir Sense Bridge a la pantalla de inicio del teléfono como acceso directo PWA.",
+      "Czym różni się od Google Translate albo DeepL?": "¿En qué se diferencia de Google Translate o DeepL?",
+      "Sense Bridge nie tylko tłumaczy tekst. Pokazuje tłumaczenie, sens, ryzyka, pilność, podejrzane elementy i przykłady odpowiedzi.": "Sense Bridge no solo traduce texto. Muestra traducción, significado, riesgos, urgencia, elementos sospechosos y ejemplos de respuesta.",
+      "Nie. Sense Bridge pomaga zrozumieć pismo i komunikację. Nie zastępuje prawnika.": "No. Sense Bridge ayuda a entender una carta y la comunicación. No sustituye a un abogado.",
+      "Nie musisz znać języka pisma. Wklejasz pismo, a aplikacja tłumaczy sens na normalny język.": "No necesitas conocer el idioma de la carta. Pegas la carta y la app explica el significado en lenguaje sencillo.",
+      "Pismo, mail, decyzja, wezwanie lub wiadomość z instytucji.": "Una carta, email, decisión, solicitud o mensaje de una institución.",
+      "Sense Bridge nie potwierdza autentyczności pisma, ale pomaga zauważyć sygnały ostrzegawcze i bezpieczniej sprawdzić sprawę przez oficjalną stronę instytucji.": "Sense Bridge no confirma la autenticidad de una carta, pero ayuda a detectar señales de advertencia y a verificar el asunto de forma más segura en el sitio oficial.",
+      "Nie zapisujemy i nie udostępniamy Twoich pism. Wklejaj tylko treści, które chcesz przeanalizować.": "No guardamos ni compartimos tus cartas. Pega solo el contenido que quieres analizar.",
+      "© Sense Bridge — narzędzie informacyjne do rozumienia pism, maili i dokumentów. Informational tool for understanding official letters. Nie jest kancelarią prawną.": "© Sense Bridge — herramienta informativa para entender cartas, emails y documentos. No es un despacho jurídico."
+    },
+    "PT": {
+      "📷 Zdjęcie lub tekst • 🌍 Pismo w dowolnym języku • 🌐 Wynik w 9 językach": "📷 Foto ou texto • 🌍 Carta em qualquer idioma • 🌐 Resultado em 9 idiomas",
+      "🌐 Wynik w 9 językach": "🌐 Resultado em 9 idiomas",
+      "🌎 Pismo w dowolnym języku. Wynik w języku, który rozumiesz.": "🌎 Carta em qualquer idioma. Resultado no idioma que compreende.",
+      "Wklej pismo, mail albo decyzję — nawet w języku, którego nie znasz. Sense Bridge wyjaśni sens w języku, który rozumiesz.": "Cole uma carta, email ou decisão — mesmo num idioma que não conhece. O Sense Bridge explica o significado no idioma que compreende.",
+      "🌍 Pismo w dowolnym języku — wynik w 9 językach": "🌍 Carta em qualquer idioma — resultado em 9 idiomas",
+      "Pismo może być w dowolnym języku. Sense Bridge pomaga wyjaśnić pisma, maile, decyzje i dokumenty z wielu krajów świata — w jednym z 9 języków użytkownika.": "A carta pode estar em qualquer idioma. O Sense Bridge ajuda a explicar cartas, emails, decisões e documentos de muitos países do mundo — num dos 9 idiomas do utilizador.",
+      "🌎 Z wielu krajów": "🌎 De muitos países",
+      "Pisma urzędowe, szpitalne, ubezpieczeniowe, pracownicze i inne sprawy z wielu krajów świata.": "Cartas oficiais, hospitalares, de seguros, de trabalho e outros assuntos de muitos países do mundo.",
+      "🌐 W języku, który rozumiesz": "🌐 No idioma que compreende",
+      "Wklejasz pismo w dowolnym języku, a Sense Bridge wyjaśnia jego sens w języku, który wybierzesz.": "Cola uma carta em qualquer idioma e o Sense Bridge explica o significado no idioma que escolher.",
+      "Pismo może być w dowolnym języku. Wyjaśnienie otrzymujesz w jednym z 9 języków użytkownika.": "A carta pode estar em qualquer idioma. Recebe a explicação num dos 9 idiomas do utilizador.",
+      "Pismo może być w dowolnym języku. Wyjaśnienie otrzymasz w jednym z 9 języków użytkownika.": "A carta pode estar em qualquer idioma. Receberá a explicação num dos 9 idiomas do utilizador.",
+      "Sense Bridge może analizować pisma w wielu językach świata i wyjaśnić je w jednym z 9 języków użytkownika.": "O Sense Bridge pode analisar cartas em muitos idiomas do mundo e explicá-las num dos 9 idiomas do utilizador.",
+      "📱 Prosta aplikacja na telefon": "📱 Aplicação simples no telefone",
+      "To nie jest skomplikowany program komputerowy. Otwórz Sense Bridge w telefonie, wklej pismo lub dodaj zdjęcie i otrzymaj wyjaśnienie w kilka sekund.": "Não é um programa de computador complicado. Abra o Sense Bridge no telefone, cole uma carta ou adicione uma foto e receba uma explicação em segundos.",
+      "📄 Przykłady spraw, w których pomaga Sense Bridge": "📄 Exemplos de situações em que o Sense Bridge ajuda",
+      "To są typowe sytuacje, w których ludzie potrzebują spokojnego wyjaśnienia pisma, maila lub decyzji w obcym języku.": "São situações típicas em que as pessoas precisam de uma explicação clara de uma carta, email ou decisão noutro idioma.",
+      "Przykładowe pismo": "Carta de exemplo",
+      "Czy mogę użyć zdjęcia pisma?": "Posso usar uma foto da carta?",
+      "Tak. Możesz dodać zdjęcie pisma, a aplikacja spróbuje odczytać tekst i przygotować analizę.": "Sim. Pode adicionar uma foto da carta e a app tentará ler o texto e preparar uma análise.",
+      "Czy strona działa jak aplikacja?": "O site funciona como uma app?",
+      "Tak. Możesz dodać Sense Bridge do ekranu głównego telefonu jako skrót PWA.": "Sim. Pode adicionar o Sense Bridge ao ecrã inicial do telefone como atalho PWA.",
+      "Czym różni się od Google Translate albo DeepL?": "Qual é a diferença em relação ao Google Translate ou DeepL?",
+      "Sense Bridge nie tylko tłumaczy tekst. Pokazuje tłumaczenie, sens, ryzyka, pilność, podejrzane elementy i przykłady odpowiedzi.": "O Sense Bridge não traduz apenas texto. Mostra tradução, significado, riscos, urgência, elementos suspeitos e exemplos de resposta.",
+      "Nie. Sense Bridge pomaga zrozumieć pismo i komunikację. Nie zastępuje prawnika.": "Não. O Sense Bridge ajuda a compreender uma carta e a comunicação. Não substitui um advogado.",
+      "Nie musisz znać języka pisma. Wklejasz pismo, a aplikacja tłumaczy sens na normalny język.": "Não precisa de conhecer o idioma da carta. Cole a carta e a app explica o significado em linguagem simples.",
+      "Pismo, mail, decyzja, wezwanie lub wiadomość z instytucji.": "Uma carta, email, decisão, pedido ou mensagem de uma instituição.",
+      "Sense Bridge nie potwierdza autentyczności pisma, ale pomaga zauważyć sygnały ostrzegawcze i bezpieczniej sprawdzić sprawę przez oficjalną stronę instytucji.": "O Sense Bridge não confirma a autenticidade de uma carta, mas ajuda a notar sinais de alerta e a verificar o assunto com mais segurança através do site oficial.",
+      "Nie zapisujemy i nie udostępniamy Twoich pism. Wklejaj tylko treści, które chcesz przeanalizować.": "Não guardamos nem partilhamos as suas cartas. Cole apenas conteúdos que quer analisar.",
+      "© Sense Bridge — narzędzie informacyjne do rozumienia pism, maili i dokumentów. Informational tool for understanding official letters. Nie jest kancelarią prawną.": "© Sense Bridge — ferramenta informativa para compreender cartas, emails e documentos. Não é um escritório de advogados."
+    }
+  };
+  Object.keys(SB_SAFE_I18N_FIX).forEach(function(lang){
+    SB_PAGE_I18N[lang] = Object.assign({}, SB_PAGE_I18N[lang] || {}, SB_SAFE_I18N_FIX[lang]);
+  });
+
+  
+
+  /* FINAL v14: complete visible-text guard for all language switches */
+  const SB_FINAL_I18N_V14 = {
+  "EN": {
+    "📷 Zdjęcie lub tekst • 🌍 Pismo w dowolnym języku • 🌐 Wynik w 9 językach": "📷 Photo or text • 🌍 Letter in any language • 🌐 Result in 9 user languages",
+    "🌐 Wynik w 9 językach": "🌐 Result in 9 user languages",
+    "🌎 Pismo w dowolnym języku. Wynik w języku, który rozumiesz.": "🌎 Letter in any language. Result in a language you understand.",
+    "Wklej pismo, mail albo decyzję — nawet w języku, którego nie znasz. Sense Bridge wyjaśni sens w języku, który rozumiesz.": "Paste a letter, email or decision — even in a language you do not know. Sense Bridge explains the meaning in a language you understand.",
+    "🌍 Pismo w dowolnym języku — wynik w 9 językach": "🌍 Letter in any language — result in 9 user languages",
+    "Pismo może być w dowolnym języku. Sense Bridge pomaga wyjaśnić pisma, maile, decyzje i dokumenty z wielu krajów świata — w jednym z 9 języków użytkownika.": "The letter can be in any language. Sense Bridge helps explain letters, emails, decisions and documents from many countries worldwide — in one of 9 user languages.",
+    "🌎 Z wielu krajów": "🌎 From many countries",
+    "Pisma urzędowe, szpitalne, ubezpieczeniowe, pracownicze i inne sprawy z wielu krajów świata.": "Official, hospital, insurance, work and other letters from many countries worldwide.",
+    "🌐 W języku, który rozumiesz": "🌐 In a language you understand",
+    "Wklejasz pismo w dowolnym języku, a Sense Bridge wyjaśnia jego sens w języku, który wybierzesz.": "Paste a letter in any language and Sense Bridge explains its meaning in the language you choose.",
+    "🏛️ Rozpoznawanie instytucji": "🏛️ Institution recognition",
+    "Aplikacja pomaga rozpoznać urząd lub instytucję oraz sprawdzić sprawę przez oficjalną stronę.": "The app helps recognize an office or institution and check the matter through the official website.",
+    "🆕 Nowości w Sense Bridge": "🆕 What's new in Sense Bridge",
+    "Projekt jest rozwijany krok po kroku. Nowe funkcje pomagają nie tylko tłumaczyć, ale też spokojniej ocenić sytuację.": "The project is developed step by step. New features help not only translate, but also calmly assess the situation.",
+    "🛡️ Wykrywanie podejrzanych pism": "🛡️ Suspicious letter detection",
+    "Sense Bridge pomaga zauważyć podejrzane linki, presję czasu, fałszywe nadawcy i możliwe phishingowe wiadomości.": "Sense Bridge helps notice suspicious links, time pressure, fake senders and possible phishing messages.",
+    "⚠️ Pilność i ryzyko": "⚠️ Urgency and risk",
+    "Aplikacja pokazuje, czy sprawa wygląda spokojnie, wymaga sprawdzenia albo szybkiej reakcji.": "The app shows whether the matter looks calm, needs checking, or requires a quick response.",
+    "Pismo może być w dowolnym języku. Wyjaśnienie otrzymujesz w jednym z 9 języków użytkownika.": "The letter can be in any language. You receive the explanation in one of 9 user languages.",
+    "📌 W jakich sytuacjach pomaga?": "📌 When can it help?",
+    "Nie chodzi tylko o jeden urząd albo jeden kraj. Chodzi o zrozumienie trudnej wiadomości w obcym języku.": "It is not about one office or one country. It is about understanding a difficult message in another language.",
+    "📄 Pismo urzędowe": "📄 Official letter",
+    "🏥 Szpital lub ubezpieczenie": "🏥 Hospital or insurance",
+    "💼 Praca i pracodawca": "💼 Work and employer",
+    "🏠 Mieszkanie, rachunki, umowy": "🏠 Housing, bills, contracts",
+    "⚖️ Decyzje, wezwania, terminy": "⚖️ Decisions, requests, deadlines",
+    "📩 Podejrzany mail lub SMS": "📩 Suspicious email or SMS",
+    "Jak działa Sense Bridge?": "How does Sense Bridge work?",
+    "Nie musisz znać języka pisma. Wklejasz pismo, a aplikacja tłumaczy sens na normalny język.": "You do not need to know the language of the letter. Paste the letter and the app explains the meaning in simple language.",
+    "Wklej lub dodaj zdjęcie": "Paste or add a photo",
+    "Pismo, mail, decyzja, wezwanie lub wiadomość z instytucji.": "A letter, email, decision, request or message from an institution.",
+    "Zobacz tłumaczenie": "See the translation",
+    "Najpierw widzisz treść pisma w swoim języku.": "First you see the letter in your own language.",
+    "Zobacz ryzyka": "See the risks",
+    "Sprawdź, czy sprawa jest pilna i na co trzeba uważać.": "Check whether the matter is urgent and what to watch out for.",
+    "Skopiuj odpowiedź": "Copy a reply",
+    "Otrzymasz gotowe przykłady odpowiedzi do dalszej edycji.": "You get ready reply examples for further editing.",
+    "🛡️ Sprawdzenie podejrzenia fałszu": "🛡️ Suspicion of fraud check",
+    "Sense Bridge nie potwierdza autentyczności pisma, ale pomaga zauważyć sygnały ostrzegawcze i bezpieczniej sprawdzić sprawę przez oficjalną stronę instytucji.": "Sense Bridge does not confirm that a letter is authentic, but helps notice warning signs and check the matter more safely through the official website.",
+    "🔗 podejrzany link": "🔗 suspicious link",
+    "⏱️ presja czasu": "⏱️ time pressure",
+    "🏛️ podszywanie pod instytucję": "🏛️ impersonating an institution",
+    "📩 nietypowy nadawca": "📩 unusual sender",
+    "🔐 prośba o dane": "🔐 request for data",
+    "✅ bezpieczne kroki": "✅ safe steps",
+    "👀 Przykład analizy": "👀 Analysis example",
+    "Ludzie od razu widzą, o co chodzi: nie tylko tłumaczenie, ale zrozumienie sytuacji.": "People immediately see what it is about: not only translation, but understanding the situation.",
+    "Przykładowe pismo": "Example letter",
+    "Sense Bridge wyjaśnia": "Sense Bridge explains",
+    "✅ Sens pisma": "✅ Meaning of the letter",
+    "Instytucja prosi o brakujące dokumenty.": "The institution asks for missing documents.",
+    "📅 Termin": "📅 Deadline",
+    "Masz 14 dni na odpowiedź.": "You have 14 days to respond.",
+    "⚠️ Ryzyko": "⚠️ Risk",
+    "Brak reakcji może wpłynąć na Twoją sprawę.": "No response may affect your case.",
+    "✍️ Przykład odpowiedzi": "✍️ Reply example",
+    "Dziękuję za wiadomość. Brakujące dokumenty prześlę w najbliższym czasie.": "Thank you for your message. I will send the missing documents soon.",
+    "🌍 Dla ludzi między językami": "🌍 For people between languages",
+    "Sense Bridge jest dla osób, które żyją, pracują, uczą się albo załatwiają sprawy w innym języku.": "Sense Bridge is for people who live, work, study or handle matters in another language.",
+    "🇵🇱 Polacy za granicą": "🇵🇱 Poles abroad",
+    "🇺🇦 Ukraińcy za granicą": "🇺🇦 Ukrainians abroad",
+    "🇳🇱 Holendrzy za granicą": "🇳🇱 Dutch people abroad",
+    "🇩🇪 Niemcy za granicą": "🇩🇪 Germans abroad",
+    "🇬🇧 Expaci i pracownicy": "🇬🇧 Expats and workers",
+    "🌍 Rodziny między krajami": "🌍 Families between countries",
+    "💼 Pracownicy sezonowi": "💼 Seasonal workers",
+    "🌍 Ludzie żyjący między krajami": "🌍 People living between countries",
+    "📱 Prosta aplikacja na telefon": "📱 Simple phone app",
+    "To nie jest skomplikowany program komputerowy. Otwórz Sense Bridge w telefonie, wklej pismo lub dodaj zdjęcie i otrzymaj wyjaśnienie w kilka sekund.": "This is not a complicated computer program. Open Sense Bridge on your phone, paste a letter or add a photo, and get an explanation in seconds.",
+    "📄 Przykłady spraw, w których pomaga Sense Bridge": "📄 Examples of cases Sense Bridge helps with",
+    "To są typowe sytuacje, w których ludzie potrzebują spokojnego wyjaśnienia pisma, maila lub decyzji w obcym języku.": "These are typical situations where people need a calm explanation of a letter, email or decision in another language.",
+    "🔒 Prywatność, warunki i kontakt": "🔒 Privacy, terms and contact",
+    "Prywatność": "Privacy",
+    "Warunki": "Terms",
+    "Kontakt": "Contact",
+    "Nie zapisujemy i nie udostępniamy Twoich pism. Wklejaj tylko treści, które chcesz przeanalizować.": "We do not save or share your letters. Paste only content you want to analyze.",
+    "Sense Bridge ma charakter informacyjny i nie zastępuje prawnika ani urzędu.": "Sense Bridge is informational and does not replace a lawyer or an office.",
+    "Nie panikuj. Zrozum i działaj.": "Do not panic. Understand and act.",
+    "Otwórz Sense Bridge, wklej pismo i zobacz, co naprawdę oznacza.": "Open Sense Bridge, paste the letter and see what it really means."
+  },
+  "ES": {
+    "Jak działa": "Cómo funciona",
+    "Nowości": "Novedades",
+    "Przykład": "Ejemplo",
+    "Cennik": "Precios",
+    "Prywatność": "Privacidad",
+    "Otwórz aplikację": "Abrir Sense Bridge",
+    "🚀 Otwórz aplikację": "🚀 Abrir Sense Bridge",
+    "📲 Pobierz / dodaj skrót": "📲 Añadir acceso directo",
+    "🌍 Dla ludzi między językami": "🌍 Para personas entre idiomas",
+    "Nie rozumiesz pisma? Pokażemy o co chodzi.": "¿No entiendes una carta? Te mostramos qué significa.",
+    "Sense Bridge pomaga zrozumieć oficjalne listy, e-maile, decyzje i dokumenty w obcym języku. Pokazuje tłumaczenie, sens, ryzyka, pilność, podejrzane elementy i przykłady odpowiedzi — w Twoim języku.": "Sense Bridge te ayuda a entender cartas oficiales, correos, decisiones y documentos en otro idioma. Muestra traducción, significado, riesgos, urgencia, elementos sospechosos y ejemplos de respuesta — en tu idioma.",
+    "📷 Zdjęcie lub tekst • 🌍 Pismo w dowolnym języku • 🌐 Wynik w 9 językach": "📷 Foto o texto • 🌍 Carta en cualquier idioma • 🌐 Resultado en 9 idiomas de usuario",
+    "🌍 tłumaczenie": "🌍 traducción",
+    "✅ sens pisma": "✅ significado",
+    "⚠️ ryzyko": "⚠️ riesgo",
+    "🛡️ phishing": "🛡️ phishing",
+    "✍️ odpowiedzi": "✍️ respuestas",
+    "🌎 wiele krajów": "🌎 muchos países",
+    "🌐 Twój język": "🌐 tu idioma",
+    "🆓 3 analizy FREE": "🆓 3 análisis gratis",
+    "🔒 prywatność": "🔒 privacidad",
+    "🌐 Wynik w 9 językach": "🌐 Resultado en 9 idiomas de usuario",
+    "📷 OCR zdjęć": "📷 OCR de fotos",
+    "⚡ analiza AI": "⚡ análisis IA",
+    "🧭 Ty decydujesz": "🧭 tú decides",
+    "🌎 Pismo w dowolnym języku. Wynik w języku, który rozumiesz.": "🌎 Carta en cualquier idioma. Resultado en un idioma que entiendes.",
+    "Wklej pismo, mail albo decyzję — nawet w języku, którego nie znasz. Sense Bridge wyjaśni sens w języku, który rozumiesz.": "Pega una carta, correo o decisión — incluso en un idioma que no conoces. Sense Bridge explica el significado en un idioma que entiendes.",
+    "Analiza pisma": "Análisis de la carta",
+    "📄 Wklej pismo lub dodaj zdjęcie": "📄 Pega una carta o añade una foto",
+    "List, mail, decyzja, wezwanie lub wiadomość z instytucji.": "Carta, correo, decisión, solicitud o mensaje de una institución.",
+    "🌍 Tłumaczenie pisma": "🌍 Traducción de la carta",
+    "Najpierw widzisz treść pisma w swoim języku.": "Primero ves el contenido de la carta en tu idioma.",
+    "✅ Co naprawdę komunikuje": "✅ Qué comunica realmente",
+    "Proste wyjaśnienie: czego chcą i czy trzeba reagować.": "Explicación simple: qué quieren y si debes responder.",
+    "⚠️ Ryzyka i pilność": "⚠️ Riesgos y urgencia",
+    "Spokojne, warto sprawdzić czy pilne.": "Tranquilo, conviene comprobarlo o urgente.",
+    "🛡️ Podejrzenie fałszu": "🛡️ Sospecha de fraude",
+    "Sprawdzenie phishingu, podejrzanych linków i podszywania się.": "Comprueba phishing, enlaces sospechosos e impersonación.",
+    "✍️ Przykłady odpowiedzi": "✍️ Ejemplos de respuesta",
+    "Neutralna, uprzejma i stanowcza wersja odpowiedzi.": "Versiones de respuesta neutral, educada y firme.",
+    "✅ gotowe w kilka sekund": "✅ listo en segundos",
+    "🌍 Pismo w dowolnym języku — wynik w 9 językach": "🌍 Carta en cualquier idioma — resultado en 9 idiomas de usuario",
+    "Pismo może być w dowolnym języku. Sense Bridge pomaga wyjaśnić pisma, maile, decyzje i dokumenty z wielu krajów świata — w jednym z 9 języków użytkownika.": "La carta puede estar en cualquier idioma. Sense Bridge ayuda a explicar cartas, correos, decisiones y documentos de muchos países del mundo — en uno de 9 idiomas de usuario.",
+    "🌎 Z wielu krajów": "🌎 De muchos países",
+    "Pisma urzędowe, szpitalne, ubezpieczeniowe, pracownicze i inne sprawy z wielu krajów świata.": "Cartas oficiales, médicas, de seguros, laborales y otros asuntos de muchos países del mundo.",
+    "🌐 W języku, który rozumiesz": "🌐 En un idioma que entiendes",
+    "Wklejasz pismo w dowolnym języku, a Sense Bridge wyjaśnia jego sens w języku, który wybierzesz.": "Pegas una carta en cualquier idioma y Sense Bridge explica su significado en el idioma que elijas.",
+    "🏛️ Rozpoznawanie instytucji": "🏛️ Reconocimiento de instituciones",
+    "Aplikacja pomaga rozpoznać urząd lub instytucję oraz sprawdzić sprawę przez oficjalną stronę.": "La app ayuda a reconocer una oficina o institución y comprobar el asunto en el sitio oficial.",
+    "🆕 Nowości w Sense Bridge": "🆕 Novedades de Sense Bridge",
+    "Projekt jest rozwijany krok po kroku. Nowe funkcje pomagają nie tylko tłumaczyć, ale też spokojniej ocenić sytuację.": "El proyecto se desarrolla paso a paso. Las nuevas funciones ayudan no solo a traducir, sino también a evaluar la situación con calma.",
+    "🛡️ Wykrywanie podejrzanych pism": "🛡️ Detección de cartas sospechosas",
+    "Sense Bridge pomaga zauważyć podejrzane linki, presję czasu, fałszywe nadawcy i możliwe phishingowe wiadomości.": "Sense Bridge ayuda a detectar enlaces sospechosos, presión de tiempo, remitentes falsos y posibles mensajes de phishing.",
+    "⚠️ Pilność i ryzyko": "⚠️ Urgencia y riesgo",
+    "Aplikacja pokazuje, czy sprawa wygląda spokojnie, wymaga sprawdzenia albo szybkiej reakcji.": "La app muestra si el asunto parece tranquilo, requiere comprobación o necesita una respuesta rápida.",
+    "Pismo może być w dowolnym języku. Wyjaśnienie otrzymujesz w jednym z 9 języków użytkownika.": "La carta puede estar en cualquier idioma. Recibes la explicación en uno de 9 idiomas de usuario.",
+    "📌 W jakich sytuacjach pomaga?": "📌 ¿Cuándo puede ayudar?",
+    "Nie chodzi tylko o jeden urząd albo jeden kraj. Chodzi o zrozumienie trudnej wiadomości w obcym języku.": "No se trata de una sola oficina ni de un solo país. Se trata de entender un mensaje difícil en otro idioma.",
+    "📄 Pismo urzędowe": "📄 Carta oficial",
+    "🏥 Szpital lub ubezpieczenie": "🏥 Hospital o seguro",
+    "💼 Praca i pracodawca": "💼 Trabajo y empleador",
+    "🏠 Mieszkanie, rachunki, umowy": "🏠 Vivienda, facturas, contratos",
+    "⚖️ Decyzje, wezwania, terminy": "⚖️ Decisiones, solicitudes, plazos",
+    "📩 Podejrzany mail lub SMS": "📩 Correo o SMS sospechoso",
+    "Jak działa Sense Bridge?": "¿Cómo funciona Sense Bridge?",
+    "Nie musisz znać języka pisma. Wklejasz pismo, a aplikacja tłumaczy sens na normalny język.": "No necesitas conocer el idioma de la carta. Pegas la carta y la app explica el significado en lenguaje simple.",
+    "Wklej lub dodaj zdjęcie": "Pega o añade una foto",
+    "Pismo, mail, decyzja, wezwanie lub wiadomość z instytucji.": "Carta, correo, decisión, solicitud o mensaje de una institución.",
+    "Zobacz tłumaczenie": "Ver la traducción",
+    "Zobacz ryzyka": "Ver los riesgos",
+    "Sprawdź, czy sprawa jest pilna i na co trzeba uważać.": "Comprueba si el asunto es urgente y en qué debes fijarte.",
+    "Skopiuj odpowiedź": "Copiar una respuesta",
+    "Otrzymasz gotowe przykłady odpowiedzi do dalszej edycji.": "Recibes ejemplos de respuesta listos para editar.",
+    "🛡️ Sprawdzenie podejrzenia fałszu": "🛡️ Comprobación de sospecha de fraude",
+    "Sense Bridge nie potwierdza autentyczności pisma, ale pomaga zauważyć sygnały ostrzegawcze i bezpieczniej sprawdzić sprawę przez oficjalną stronę instytucji.": "Sense Bridge no confirma la autenticidad de una carta, pero ayuda a detectar señales de alerta y comprobar el asunto con más seguridad en el sitio oficial.",
+    "🔗 podejrzany link": "🔗 enlace sospechoso",
+    "⏱️ presja czasu": "⏱️ presión de tiempo",
+    "🏛️ podszywanie pod instytucję": "🏛️ suplantación de institución",
+    "📩 nietypowy nadawca": "📩 remitente inusual",
+    "🔐 prośba o dane": "🔐 solicitud de datos",
+    "✅ bezpieczne kroki": "✅ pasos seguros",
+    "👀 Przykład analizy": "👀 Ejemplo de análisis",
+    "Ludzie od razu widzą, o co chodzi: nie tylko tłumaczenie, ale zrozumienie sytuacji.": "La gente ve de inmediato de qué se trata: no solo traducción, sino comprensión de la situación.",
+    "Przykładowe pismo": "Carta de ejemplo",
+    "Sense Bridge wyjaśnia": "Sense Bridge explica",
+    "✅ Sens pisma": "✅ Significado de la carta",
+    "Instytucja prosi o brakujące dokumenty.": "La institución pide documentos faltantes.",
+    "📅 Termin": "📅 Plazo",
+    "Masz 14 dni na odpowiedź.": "Tienes 14 días para responder.",
+    "⚠️ Ryzyko": "⚠️ Riesgo",
+    "Brak reakcji może wpłynąć na Twoją sprawę.": "No responder puede afectar tu caso.",
+    "✍️ Przykład odpowiedzi": "✍️ Ejemplo de respuesta",
+    "Dziękuję za wiadomość. Brakujące dokumenty prześlę w najbliższym czasie.": "Gracias por el mensaje. Enviaré los documentos faltantes pronto.",
+    "Sense Bridge jest dla osób, które żyją, pracują, uczą się albo załatwiają sprawy w innym języku.": "Sense Bridge es para personas que viven, trabajan, estudian o gestionan asuntos en otro idioma.",
+    "🇵🇱 Polacy za granicą": "🇵🇱 Polacos en el extranjero",
+    "🇺🇦 Ukraińcy za granicą": "🇺🇦 Ucranianos en el extranjero",
+    "🇳🇱 Holendrzy za granicą": "🇳🇱 Neerlandeses en el extranjero",
+    "🇩🇪 Niemcy za granicą": "🇩🇪 Alemanes en el extranjero",
+    "🇬🇧 Expaci i pracownicy": "🇬🇧 Expats y trabajadores",
+    "🌍 Rodziny między krajami": "🌍 Familias entre países",
+    "💼 Pracownicy sezonowi": "💼 Trabajadores temporales",
+    "🌍 Ludzie żyjący między krajami": "🌍 Personas que viven entre países",
+    "📱 Prosta aplikacja na telefon": "📱 Aplicación sencilla para el teléfono",
+    "To nie jest skomplikowany program komputerowy. Otwórz Sense Bridge w telefonie, wklej pismo lub dodaj zdjęcie i otrzymaj wyjaśnienie w kilka sekund.": "No es un programa de ordenador complicado. Abre Sense Bridge en tu teléfono, pega una carta o añade una foto y recibe una explicación en segundos.",
+    "📄 Przykłady spraw, w których pomaga Sense Bridge": "📄 Ejemplos de casos en los que ayuda Sense Bridge",
+    "To są typowe sytuacje, w których ludzie potrzebują spokojnego wyjaśnienia pisma, maila lub decyzji w obcym języku.": "Son situaciones típicas en las que la gente necesita una explicación clara de una carta, correo o decisión en otro idioma.",
+    "🔒 Prywatność, warunki i kontakt": "🔒 Privacidad, condiciones y contacto",
+    "Warunki": "Condiciones",
+    "Kontakt": "Contacto",
+    "Nie zapisujemy i nie udostępniamy Twoich pism. Wklejaj tylko treści, które chcesz przeanalizować.": "No guardamos ni compartimos tus cartas. Pega solo el contenido que quieres analizar.",
+    "Sense Bridge ma charakter informacyjny i nie zastępuje prawnika ani urzędu.": "Sense Bridge es informativo y no sustituye a un abogado ni a una oficina.",
+    "Nie panikuj. Zrozum i działaj.": "No entres en pánico. Entiende y actúa.",
+    "Otwórz Sense Bridge, wklej pismo i zobacz, co naprawdę oznacza.": "Abre Sense Bridge, pega la carta y descubre qué significa realmente."
+  },
+  "NL": {
+    "Jak działa": "Hoe het werkt",
+    "Nowości": "Updates",
+    "Przykład": "Voorbeeld",
+    "Cennik": "Prijzen",
+    "Prywatność": "Privacy",
+    "Otwórz aplikację": "Open Sense Bridge",
+    "🚀 Otwórz aplikację": "🚀 Open Sense Bridge",
+    "📲 Pobierz / dodaj skrót": "📲 Voeg snelkoppeling toe",
+    "🌍 Dla ludzi między językami": "🌍 Voor mensen tussen talen",
+    "Nie rozumiesz pisma? Pokażemy o co chodzi.": "Begrijp je een brief niet? Wij laten zien wat het betekent.",
+    "Sense Bridge pomaga zrozumieć oficjalne listy, e-maile, decyzje i dokumenty w obcym języku. Pokazuje tłumaczenie, sens, ryzyka, pilność, podejrzane elementy i przykłady odpowiedzi — w Twoim języku.": "Sense Bridge helpt je officiële brieven, e-mails, beslissingen en documenten in een vreemde taal te begrijpen. Het toont vertaling, betekenis, risico's, urgentie, verdachte elementen en voorbeeldantwoorden — in jouw taal.",
+    "📷 Zdjęcie lub tekst • 🌍 Pismo w dowolnym języku • 🌐 Wynik w 9 językach": "📷 Foto of tekst • 🌍 Brief in elke taal • 🌐 Resultaat in 9 gebruikerstalen",
+    "🌍 tłumaczenie": "🌍 vertaling",
+    "✅ sens pisma": "✅ betekenis",
+    "⚠️ ryzyko": "⚠️ risico",
+    "🛡️ phishing": "🛡️ phishing",
+    "✍️ odpowiedzi": "✍️ antwoorden",
+    "🌎 wiele krajów": "🌎 veel landen",
+    "🌐 Twój język": "🌐 jouw taal",
+    "🆓 3 analizy FREE": "🆓 3 gratis analyses",
+    "🔒 prywatność": "🔒 privacy",
+    "🌐 Wynik w 9 językach": "🌐 Resultaat in 9 gebruikerstalen",
+    "📷 OCR zdjęć": "📷 foto-OCR",
+    "⚡ analiza AI": "⚡ AI-analyse",
+    "🧭 Ty decydujesz": "🧭 jij beslist",
+    "🌎 Pismo w dowolnym języku. Wynik w języku, który rozumiesz.": "🌎 Brief in elke taal. Resultaat in een taal die je begrijpt.",
+    "Wklej pismo, mail albo decyzję — nawet w języku, którego nie znasz. Sense Bridge wyjaśni sens w języku, który rozumiesz.": "Plak een brief, e-mail of beslissing — zelfs in een taal die je niet kent. Sense Bridge legt de betekenis uit in een taal die je begrijpt.",
+    "Analiza pisma": "Briefanalyse",
+    "📄 Wklej pismo lub dodaj zdjęcie": "📄 Plak een brief of voeg een foto toe",
+    "List, mail, decyzja, wezwanie lub wiadomość z instytucji.": "Brief, e-mail, beslissing, verzoek of bericht van een instantie.",
+    "🌍 Tłumaczenie pisma": "🌍 Vertaling van de brief",
+    "Najpierw widzisz treść pisma w swoim języku.": "Eerst zie je de inhoud van de brief in je eigen taal.",
+    "✅ Co naprawdę komunikuje": "✅ Wat het echt communiceert",
+    "Proste wyjaśnienie: czego chcą i czy trzeba reagować.": "Eenvoudige uitleg: wat ze willen en of je moet reageren.",
+    "⚠️ Ryzyka i pilność": "⚠️ Risico's en urgentie",
+    "Spokojne, warto sprawdzić czy pilne.": "Rustig, controleren of urgent.",
+    "🛡️ Podejrzenie fałszu": "🛡️ Vermoeden van fraude",
+    "Sprawdzenie phishingu, podejrzanych linków i podszywania się.": "Controle op phishing, verdachte links en imitatie.",
+    "✍️ Przykłady odpowiedzi": "✍️ Voorbeeldantwoorden",
+    "Neutralna, uprzejma i stanowcza wersja odpowiedzi.": "Neutrale, beleefde en duidelijke antwoordversies.",
+    "✅ gotowe w kilka sekund": "✅ klaar in enkele seconden",
+    "🌍 Pismo w dowolnym języku — wynik w 9 językach": "🌍 Brief in elke taal — resultaat in 9 gebruikerstalen",
+    "Pismo może być w dowolnym języku. Sense Bridge pomaga wyjaśnić pisma, maile, decyzje i dokumenty z wielu krajów świata — w jednym z 9 języków użytkownika.": "De brief kan in elke taal zijn. Sense Bridge helpt brieven, e-mails, beslissingen en documenten uit vele landen te begrijpen — in een van 9 gebruikerstalen.",
+    "🌎 Z wielu krajów": "🌎 Uit vele landen",
+    "Pisma urzędowe, szpitalne, ubezpieczeniowe, pracownicze i inne sprawy z wielu krajów świata.": "Officiële, ziekenhuis-, verzekerings-, werk- en andere brieven uit vele landen.",
+    "🌐 W języku, który rozumiesz": "🌐 In een taal die je begrijpt",
+    "Wklejasz pismo w dowolnym języku, a Sense Bridge wyjaśnia jego sens w języku, który wybierzesz.": "Je plakt een brief in elke taal en Sense Bridge legt de betekenis uit in de taal die je kiest.",
+    "🏛️ Rozpoznawanie instytucji": "🏛️ Herkenning van instanties",
+    "Aplikacja pomaga rozpoznać urząd lub instytucję oraz sprawdzić sprawę przez oficjalną stronę.": "De app helpt een kantoor of instantie te herkennen en de zaak via de officiële website te controleren.",
+    "🆕 Nowości w Sense Bridge": "🆕 Nieuw in Sense Bridge",
+    "Projekt jest rozwijany krok po kroku. Nowe funkcje pomagają nie tylko tłumaczyć, ale też spokojniej ocenić sytuację.": "Het project wordt stap voor stap ontwikkeld. Nieuwe functies helpen niet alleen vertalen, maar ook rustig de situatie beoordelen.",
+    "🛡️ Wykrywanie podejrzanych pism": "🛡️ Detectie van verdachte brieven",
+    "Sense Bridge pomaga zauważyć podejrzane linki, presję czasu, fałszywe nadawcy i możliwe phishingowe wiadomości.": "Sense Bridge helpt verdachte links, tijdsdruk, valse afzenders en mogelijke phishingberichten te herkennen.",
+    "⚠️ Pilność i ryzyko": "⚠️ Urgentie en risico",
+    "Aplikacja pokazuje, czy sprawa wygląda spokojnie, wymaga sprawdzenia albo szybkiej reakcji.": "De app laat zien of de zaak rustig lijkt, controle vereist of snelle reactie nodig heeft.",
+    "Pismo może być w dowolnym języku. Wyjaśnienie otrzymujesz w jednym z 9 języków użytkownika.": "De brief kan in elke taal zijn. Je krijgt de uitleg in een van 9 gebruikerstalen.",
+    "📌 W jakich sytuacjach pomaga?": "📌 Wanneer helpt het?",
+    "Nie chodzi tylko o jeden urząd albo jeden kraj. Chodzi o zrozumienie trudnej wiadomości w obcym języku.": "Het gaat niet om één kantoor of één land. Het gaat om het begrijpen van een moeilijk bericht in een vreemde taal.",
+    "📄 Pismo urzędowe": "📄 Officiële brief",
+    "🏥 Szpital lub ubezpieczenie": "🏥 Ziekenhuis of verzekering",
+    "💼 Praca i pracodawca": "💼 Werk en werkgever",
+    "🏠 Mieszkanie, rachunki, umowy": "🏠 Wonen, rekeningen, contracten",
+    "⚖️ Decyzje, wezwania, terminy": "⚖️ Beslissingen, verzoeken, deadlines",
+    "📩 Podejrzany mail lub SMS": "📩 Verdachte e-mail of sms",
+    "Jak działa Sense Bridge?": "Hoe werkt Sense Bridge?",
+    "Nie musisz znać języka pisma. Wklejasz pismo, a aplikacja tłumaczy sens na normalny język.": "Je hoeft de taal van de brief niet te kennen. Je plakt de brief en de app legt de betekenis uit in gewone taal.",
+    "Wklej lub dodaj zdjęcie": "Plak of voeg een foto toe",
+    "Pismo, mail, decyzja, wezwanie lub wiadomość z instytucji.": "Brief, e-mail, beslissing, verzoek of bericht van een instantie.",
+    "Zobacz tłumaczenie": "Bekijk de vertaling",
+    "Zobacz ryzyka": "Bekijk de risico's",
+    "Sprawdź, czy sprawa jest pilna i na co trzeba uważać.": "Controleer of de zaak urgent is en waar je op moet letten.",
+    "Skopiuj odpowiedź": "Kopieer een antwoord",
+    "Otrzymasz gotowe przykłady odpowiedzi do dalszej edycji.": "Je krijgt kant-en-klare antwoordvoorbeelden om verder te bewerken."
+  },
+  "DE": {
+    "🆕 Nowości w Sense Bridge": "🆕 Neu in Sense Bridge",
+    "Projekt jest rozwijany krok po kroku. Nowe funkcje pomagają nie tylko tłumaczyć, ale też spokojniej ocenić sytuację.": "Das Projekt wird Schritt für Schritt entwickelt. Neue Funktionen helfen nicht nur beim Übersetzen, sondern auch bei der ruhigen Einschätzung der Situation.",
+    "🛡️ Wykrywanie podejrzanych pism": "🛡️ Erkennung verdächtiger Briefe",
+    "Sense Bridge pomaga zauważyć podejrzane linki, presję czasu, fałszywe nadawcy i możliwe phishingowe wiadomości.": "Sense Bridge hilft, verdächtige Links, Zeitdruck, falsche Absender und mögliche Phishing-Nachrichten zu erkennen.",
+    "⚠️ Pilność i ryzyko": "⚠️ Dringlichkeit und Risiko",
+    "Aplikacja pokazuje, czy sprawa wygląda spokojnie, wymaga sprawdzenia albo szybkiej reakcji.": "Die App zeigt, ob die Sache unproblematisch wirkt, geprüft werden sollte oder eine schnelle Reaktion erfordert.",
+    "📌 W jakich sytuacjach pomaga?": "📌 Wann kann es helfen?",
+    "Nie chodzi tylko o jeden urząd albo jeden kraj. Chodzi o zrozumienie trudnej wiadomości w obcym języku.": "Es geht nicht nur um ein Amt oder ein Land. Es geht darum, eine schwierige Nachricht in einer fremden Sprache zu verstehen.",
+    "Jak działa Sense Bridge?": "Wie funktioniert Sense Bridge?",
+    "Nie musisz znać języka pisma. Wklejasz pismo, a aplikacja tłumaczy sens na normalny język.": "Du musst die Sprache des Schreibens nicht kennen. Du fügst den Brief ein und die App erklärt die Bedeutung in einfacher Sprache.",
+    "Wklej lub dodaj zdjęcie": "Einfügen oder Foto hinzufügen",
+    "Zobacz tłumaczenie": "Übersetzung ansehen",
+    "Zobacz ryzyka": "Risiken ansehen",
+    "Skopiuj odpowiedź": "Antwort kopieren",
+    "Pismo, mail, decyzja, wezwanie lub wiadomość z instytucji.": "Brief, E-Mail, Entscheidung, Aufforderung oder Nachricht einer Institution.",
+    "Najpierw widzisz treść pisma w swoim języku.": "Zuerst siehst du den Inhalt des Briefes in deiner Sprache.",
+    "Proste wyjaśnienie: czego chcą i czy trzeba reagować.": "Einfache Erklärung: was sie wollen und ob du reagieren musst.",
+    "Spokojne, warto sprawdzić czy pilne.": "Ruhig, prüfen oder dringend.",
+    "Sprawdzenie phishingu, podejrzanych linków i podszywania się.": "Prüfung auf Phishing, verdächtige Links und Identitätsmissbrauch.",
+    "Neutralna, uprzejma i stanowcza wersja odpowiedzi.": "Neutrale, höfliche und klare Antwortversionen.",
+    "📄 Pismo urzędowe": "📄 Offizieller Brief",
+    "🏥 Szpital lub ubezpieczenie": "🏥 Krankenhaus oder Versicherung",
+    "💼 Praca i pracodawca": "💼 Arbeit und Arbeitgeber",
+    "🏠 Mieszkanie, rachunki, umowy": "🏠 Wohnung, Rechnungen, Verträge",
+    "⚖️ Decyzje, wezwania, terminy": "⚖️ Entscheidungen, Aufforderungen, Fristen",
+    "📩 Podejrzany mail lub SMS": "📩 Verdächtige E-Mail oder SMS",
+    "📱 Prosta aplikacja na telefon": "📱 Einfache App fürs Telefon",
+    "To nie jest skomplikowany program komputerowy. Otwórz Sense Bridge w telefonie, wklej pismo lub dodaj zdjęcie i otrzymaj wyjaśnienie w kilka sekund.": "Das ist kein kompliziertes Computerprogramm. Öffne Sense Bridge auf dem Telefon, füge einen Brief ein oder füge ein Foto hinzu und erhalte in Sekunden eine Erklärung."
+  },
+  "FR": {
+    "🆕 Nowości w Sense Bridge": "🆕 Nouveautés de Sense Bridge",
+    "Projekt jest rozwijany krok po kroku. Nowe funkcje pomagają nie tylko tłumaczyć, ale też spokojniej ocenić sytuację.": "Le projet se développe étape par étape. Les nouvelles fonctions aident non seulement à traduire, mais aussi à évaluer la situation plus calmement.",
+    "🛡️ Wykrywanie podejrzanych pism": "🛡️ Détection des courriers suspects",
+    "Sense Bridge pomaga zauważyć podejrzane linki, presję czasu, fałszywe nadawcy i możliwe phishingowe wiadomości.": "Sense Bridge aide à repérer les liens suspects, la pression du temps, les faux expéditeurs et les messages de phishing possibles.",
+    "⚠️ Pilność i ryzyko": "⚠️ Urgence et risque",
+    "Aplikacja pokazuje, czy sprawa wygląda spokojnie, wymaga sprawdzenia albo szybkiej reakcji.": "L’app indique si l’affaire semble calme, nécessite une vérification ou demande une réponse rapide.",
+    "📌 W jakich sytuacjach pomaga?": "📌 Quand cela peut-il aider ?",
+    "Nie chodzi tylko o jeden urząd albo jeden kraj. Chodzi o zrozumienie trudnej wiadomości w obcym języku.": "Il ne s’agit pas d’un seul bureau ou d’un seul pays. Il s’agit de comprendre un message difficile dans une autre langue.",
+    "Jak działa Sense Bridge?": "Comment fonctionne Sense Bridge ?",
+    "Nie musisz znać języka pisma. Wklejasz pismo, a aplikacja tłumaczy sens na normalny język.": "Vous n’avez pas besoin de connaître la langue du courrier. Collez le courrier et l’app explique le sens en langage simple.",
+    "Wklej lub dodaj zdjęcie": "Coller ou ajouter une photo",
+    "Zobacz tłumaczenie": "Voir la traduction",
+    "Zobacz ryzyka": "Voir les risques",
+    "Skopiuj odpowiedź": "Copier une réponse",
+    "Pismo, mail, decyzja, wezwanie lub wiadomość z instytucji.": "Courrier, e-mail, décision, demande ou message d’une institution.",
+    "Najpierw widzisz treść pisma w swoim języku.": "Vous voyez d’abord le contenu du courrier dans votre langue.",
+    "Proste wyjaśnienie: czego chcą i czy trzeba reagować.": "Explication simple : ce qu’ils veulent et s’il faut répondre.",
+    "Spokojne, warto sprawdzić czy pilne.": "Calme, à vérifier ou urgent.",
+    "Sprawdzenie phishingu, podejrzanych linków i podszywania się.": "Vérification du phishing, des liens suspects et de l’usurpation.",
+    "Neutralna, uprzejma i stanowcza wersja odpowiedzi.": "Versions de réponse neutres, polies et fermes.",
+    "📱 Prosta aplikacja na telefon": "📱 Application simple pour téléphone",
+    "To nie jest skomplikowany program komputerowy. Otwórz Sense Bridge w telefonie, wklej pismo lub dodaj zdjęcie i otrzymaj wyjaśnienie w kilka sekund.": "Ce n’est pas un programme informatique compliqué. Ouvrez Sense Bridge sur votre téléphone, collez un courrier ou ajoutez une photo et recevez une explication en quelques secondes."
+  },
+  "IT": {
+    "🆕 Nowości w Sense Bridge": "🆕 Novità in Sense Bridge",
+    "Projekt jest rozwijany krok po kroku. Nowe funkcje pomagają nie tylko tłumaczyć, ale też spokojniej ocenić sytuację.": "Il progetto viene sviluppato passo dopo passo. Le nuove funzioni aiutano non solo a tradurre, ma anche a valutare la situazione con calma.",
+    "🛡️ Wykrywanie podejrzanych pism": "🛡️ Rilevamento di lettere sospette",
+    "Sense Bridge pomaga zauważyć podejrzane linki, presję czasu, fałszywe nadawcy i możliwe phishingowe wiadomości.": "Sense Bridge aiuta a notare link sospetti, pressione del tempo, mittenti falsi e possibili messaggi di phishing.",
+    "⚠️ Pilność i ryzyko": "⚠️ Urgenza e rischio",
+    "Aplikacja pokazuje, czy sprawa wygląda spokojnie, wymaga sprawdzenia albo szybkiej reakcji.": "L’app mostra se la questione sembra tranquilla, richiede controllo o necessita di una risposta rapida.",
+    "📌 W jakich sytuacjach pomaga?": "📌 Quando può aiutare?",
+    "Nie chodzi tylko o jeden urząd albo jeden kraj. Chodzi o zrozumienie trudnej wiadomości w obcym języku.": "Non riguarda un solo ufficio o un solo paese. Si tratta di capire un messaggio difficile in un’altra lingua.",
+    "Jak działa Sense Bridge?": "Come funziona Sense Bridge?",
+    "Nie musisz znać języka pisma. Wklejasz pismo, a aplikacja tłumaczy sens na normalny język.": "Non devi conoscere la lingua della lettera. Incolli la lettera e l’app ne spiega il senso in modo semplice.",
+    "Wklej lub dodaj zdjęcie": "Incolla o aggiungi una foto",
+    "Zobacz tłumaczenie": "Vedi la traduzione",
+    "Zobacz ryzyka": "Vedi i rischi",
+    "Skopiuj odpowiedź": "Copia una risposta",
+    "Pismo, mail, decyzja, wezwanie lub wiadomość z instytucji.": "Lettera, e-mail, decisione, richiesta o messaggio da un’istituzione.",
+    "Najpierw widzisz treść pisma w swoim języku.": "Prima vedi il contenuto della lettera nella tua lingua.",
+    "Proste wyjaśnienie: czego chcą i czy trzeba reagować.": "Spiegazione semplice: cosa vogliono e se devi reagire.",
+    "Spokojne, warto sprawdzić czy pilne.": "Tranquillo, da controllare o urgente.",
+    "Sprawdzenie phishingu, podejrzanych linków i podszywania się.": "Controllo di phishing, link sospetti e imitazione.",
+    "Neutralna, uprzejma i stanowcza wersja odpowiedzi.": "Versioni di risposta neutrali, gentili e ferme.",
+    "📱 Prosta aplikacja na telefon": "📱 App semplice per il telefono",
+    "To nie jest skomplikowany program komputerowy. Otwórz Sense Bridge w telefonie, wklej pismo lub dodaj zdjęcie i otrzymaj wyjaśnienie w kilka sekund.": "Non è un programma complicato per computer. Apri Sense Bridge sul telefono, incolla una lettera o aggiungi una foto e ricevi una spiegazione in pochi secondi."
+  },
+  "UA": {
+    "🆕 Nowości w Sense Bridge": "🆕 Що нового в Sense Bridge",
+    "Projekt jest rozwijany krok po kroku. Nowe funkcje pomagają nie tylko tłumaczyć, ale też spokojniej ocenić sytuację.": "Проєкт розвивається крок за кроком. Нові функції допомагають не лише перекладати, а й спокійніше оцінювати ситуацію.",
+    "🛡️ Wykrywanie podejrzanych pism": "🛡️ Виявлення підозрілих листів",
+    "Sense Bridge pomaga zauważyć podejrzane linki, presję czasu, fałszywe nadawcy i możliwe phishingowe wiadomości.": "Sense Bridge допомагає помітити підозрілі посилання, тиск часу, фальшивих відправників і можливий фішинг.",
+    "⚠️ Pilność i ryzyko": "⚠️ Терміновість і ризик",
+    "Aplikacja pokazuje, czy sprawa wygląda spokojnie, wymaga sprawdzenia albo szybkiej reakcji.": "Додаток показує, чи справа виглядає спокійно, потребує перевірки або швидкої реакції.",
+    "📌 W jakich sytuacjach pomaga?": "📌 Коли це може допомогти?",
+    "Nie chodzi tylko o jeden urząd albo jeden kraj. Chodzi o zrozumienie trudnej wiadomości w obcym języku.": "Йдеться не лише про одну установу чи одну країну. Йдеться про розуміння складного повідомлення іншою мовою.",
+    "Jak działa Sense Bridge?": "Як працює Sense Bridge?",
+    "Nie musisz znać języka pisma. Wklejasz pismo, a aplikacja tłumaczy sens na normalny język.": "Вам не потрібно знати мову листа. Вставте лист, і програма пояснить зміст простою мовою.",
+    "Wklej lub dodaj zdjęcie": "Вставте або додайте фото",
+    "Zobacz tłumaczenie": "Перегляньте переклад",
+    "Zobacz ryzyka": "Перегляньте ризики",
+    "Skopiuj odpowiedź": "Скопіюйте відповідь",
+    "Pismo, mail, decyzja, wezwanie lub wiadomość z instytucji.": "Лист, e-mail, рішення, вимога або повідомлення від установи.",
+    "Najpierw widzisz treść pisma w swoim języku.": "Спочатку ви бачите зміст листа своєю мовою.",
+    "Proste wyjaśnienie: czego chcą i czy trzeba reagować.": "Просте пояснення: чого хочуть і чи треба реагувати.",
+    "Spokojne, warto sprawdzić czy pilne.": "Спокійно, варто перевірити або терміново.",
+    "Sprawdzenie phishingu, podejrzanych linków i podszywania się.": "Перевірка фішингу, підозрілих посилань і підробки установи.",
+    "Neutralna, uprzejma i stanowcza wersja odpowiedzi.": "Нейтральні, ввічливі та тверді варіанти відповіді.",
+    "📱 Prosta aplikacja na telefon": "📱 Простий додаток для телефона",
+    "To nie jest skomplikowany program komputerowy. Otwórz Sense Bridge w telefonie, wklej pismo lub dodaj zdjęcie i otrzymaj wyjaśnienie w kilka sekund.": "Це не складна комп’ютерна програма. Відкрийте Sense Bridge на телефоні, вставте лист або додайте фото й отримайте пояснення за кілька секунд."
+  },
+  "PT": {
+    "🆕 Nowości w Sense Bridge": "🆕 Novidades no Sense Bridge",
+    "Projekt jest rozwijany krok po kroku. Nowe funkcje pomagają nie tylko tłumaczyć, ale też spokojniej ocenić sytuację.": "O projeto é desenvolvido passo a passo. As novas funções ajudam não só a traduzir, mas também a avaliar a situação com calma.",
+    "🛡️ Wykrywanie podejrzanych pism": "🛡️ Deteção de cartas suspeitas",
+    "Sense Bridge pomaga zauważyć podejrzane linki, presję czasu, fałszywe nadawcy i możliwe phishingowe wiadomości.": "O Sense Bridge ajuda a notar links suspeitos, pressão de tempo, remetentes falsos e possíveis mensagens de phishing.",
+    "⚠️ Pilność i ryzyko": "⚠️ Urgência e risco",
+    "Aplikacja pokazuje, czy sprawa wygląda spokojnie, wymaga sprawdzenia albo szybkiej reakcji.": "A app mostra se o assunto parece tranquilo, precisa de verificação ou exige uma resposta rápida.",
+    "📌 W jakich sytuacjach pomaga?": "📌 Em que situações ajuda?",
+    "Nie chodzi tylko o jeden urząd albo jeden kraj. Chodzi o zrozumienie trudnej wiadomości w obcym języku.": "Não se trata de uma só entidade ou de um só país. Trata-se de compreender uma mensagem difícil noutra língua.",
+    "Jak działa Sense Bridge?": "Como funciona o Sense Bridge?",
+    "Nie musisz znać języka pisma. Wklejasz pismo, a aplikacja tłumaczy sens na normalny język.": "Não precisa de conhecer a língua da carta. Cola a carta e a app explica o significado em linguagem simples.",
+    "Wklej lub dodaj zdjęcie": "Colar ou adicionar foto",
+    "Zobacz tłumaczenie": "Ver tradução",
+    "Zobacz ryzyka": "Ver riscos",
+    "Skopiuj odpowiedź": "Copiar resposta",
+    "Pismo, mail, decyzja, wezwanie lub wiadomość z instytucji.": "Carta, email, decisão, pedido ou mensagem de uma instituição.",
+    "Najpierw widzisz treść pisma w swoim języku.": "Primeiro vê o conteúdo da carta no seu idioma.",
+    "Proste wyjaśnienie: czego chcą i czy trzeba reagować.": "Explicação simples: o que querem e se é preciso responder.",
+    "Spokojne, warto sprawdzić czy pilne.": "Tranquilo, a verificar ou urgente.",
+    "Sprawdzenie phishingu, podejrzanych linków i podszywania się.": "Verificação de phishing, links suspeitos e imitação.",
+    "Neutralna, uprzejma i stanowcza wersja odpowiedzi.": "Versões de resposta neutras, educadas e firmes.",
+    "📱 Prosta aplikacja na telefon": "📱 Aplicação simples no telefone",
+    "To nie jest skomplikowany program komputerowy. Otwórz Sense Bridge w telefonie, wklej pismo lub dodaj zdjęcie i otrzymaj wyjaśnienie w kilka sekund.": "Não é um programa de computador complicado. Abra o Sense Bridge no telefone, cole uma carta ou adicione uma foto e receba uma explicação em segundos."
   }
 };
-  const SB_PAGE_META = {
+  Object.keys(SB_FINAL_I18N_V14).forEach(function(lang){
+    SB_PAGE_I18N[lang] = Object.assign({}, SB_PAGE_I18N[lang] || {}, SB_FINAL_I18N_V14[lang]);
+  });
+  
+const SB_PAGE_META = {
   "PL": {
     "html": "pl",
     "title": "Sense Bridge — zrozum pisma, maile i dokumenty bez stresu",
