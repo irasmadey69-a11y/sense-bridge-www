@@ -763,6 +763,59 @@
       border:none !important;
     }
 
+
+    .visit-counter{
+      display:flex;
+      align-items:center;
+      gap:13px;
+      width:max-content;
+      max-width:100%;
+      margin-top:18px;
+      padding:13px 16px;
+      border-radius:22px;
+      background:linear-gradient(135deg,rgba(255,255,255,.96),rgba(63,138,114,.08));
+      border:1px solid rgba(63,138,114,.24);
+      box-shadow:0 10px 24px rgba(15,23,42,.055);
+    }
+
+    .visit-counter-icon{
+      width:46px;
+      height:46px;
+      border-radius:17px;
+      display:grid;
+      place-items:center;
+      background:linear-gradient(135deg,var(--navy),var(--navy2));
+      color:#fff;
+      font-size:24px;
+      flex:0 0 auto;
+      box-shadow:0 8px 18px rgba(14,42,71,.18);
+    }
+
+    .visit-counter-label{
+      color:#245c4d;
+      font-size:13px;
+      font-weight:950;
+      letter-spacing:.02em;
+      text-transform:uppercase;
+    }
+
+    .visit-counter-number{
+      color:var(--navy);
+      font-size:clamp(28px,4vw,40px);
+      line-height:1;
+      font-weight:950;
+      letter-spacing:-.045em;
+      font-variant-numeric:tabular-nums;
+      margin-top:3px;
+    }
+
+    .visit-counter-note{
+      color:var(--muted);
+      font-size:13px;
+      font-weight:800;
+      margin-top:3px;
+    }
+
   </style>
 </head>
 
@@ -800,6 +853,15 @@
       <h1>Nie rozumiesz pisma? Pokażemy o co chodzi.</h1>
       <p class="lead">Sense Bridge pomaga zrozumieć oficjalne listy, e-maile, decyzje i dokumenty w obcym języku. Pokazuje tłumaczenie, sens, ryzyka, pilność, podejrzane elementy i przykłady odpowiedzi — w Twoim języku.</p>
       <div class="hero-proof">📷 Zdjęcie lub tekst • 🌍 Pismo w dowolnym języku • 🌐 Wynik w 9 językach</div>
+
+      <div class="visit-counter" id="sbVisitCounter" aria-live="polite">
+        <div class="visit-counter-icon">🌍</div>
+        <div>
+          <div class="visit-counter-label">Odwiedziny aplikacji</div>
+          <div class="visit-counter-number" id="sbVisitNumber">499,986</div>
+          <div class="visit-counter-note">Rośnie z każdym wejściem</div>
+        </div>
+      </div>
 
       <div class="cta-row">
         <a class="btn green app-cta" href="https://sense-bridge-production.netlify.app">🚀 Otwórz aplikację</a>
@@ -2651,6 +2713,46 @@ Als wij de gegevens niet tijdig ontvangen, kan dit gevolgen hebben voor uw aanvr
     SB_PAGE_I18N[lang] = Object.assign({}, SB_PAGE_I18N[lang] || {}, SB_FINAL_I18N_V14[lang]);
   });
   
+
+const SB_VISIT_COUNTER_I18N = {
+  "EN": {
+    "Odwiedziny aplikacji": "App visits",
+    "Rośnie z każdym wejściem": "Grows with every visit"
+  },
+  "NL": {
+    "Odwiedziny aplikacji": "App-bezoeken",
+    "Rośnie z każdym wejściem": "Groeit bij elk bezoek"
+  },
+  "DE": {
+    "Odwiedziny aplikacji": "App-Besuche",
+    "Rośnie z każdym wejściem": "Wächst mit jedem Besuch"
+  },
+  "UA": {
+    "Odwiedziny aplikacji": "Відвідування застосунку",
+    "Rośnie z każdym wejściem": "Зростає з кожним відвідуванням"
+  },
+  "FR": {
+    "Odwiedziny aplikacji": "Visites de l’application",
+    "Rośnie z każdym wejściem": "Augmente à chaque visite"
+  },
+  "IT": {
+    "Odwiedziny aplikacji": "Visite dell’app",
+    "Rośnie z każdym wejściem": "Cresce a ogni visita"
+  },
+  "ES": {
+    "Odwiedziny aplikacji": "Visitas de la aplicación",
+    "Rośnie z każdym wejściem": "Crece con cada visita"
+  },
+  "PT": {
+    "Odwiedziny aplikacji": "Visitas da aplicação",
+    "Rośnie z każdym wejściem": "Cresce a cada visita"
+  }
+};
+
+Object.keys(SB_VISIT_COUNTER_I18N).forEach(function(lang){
+  SB_PAGE_I18N[lang] = Object.assign({}, SB_PAGE_I18N[lang] || {}, SB_VISIT_COUNTER_I18N[lang]);
+});
+
 const SB_PAGE_META = {
   "PL": {
     "html": "pl",
@@ -2759,6 +2861,50 @@ const SB_PAGE_META = {
     }
     if(!SB_PAGE_META[start]) start = 'PL';
     setSiteLang(start);
+  })();
+
+
+
+  (function initVisitCounter(){
+    const numberEl = document.getElementById('sbVisitNumber');
+    if(!numberEl) return;
+
+    const START_VALUE = 499986;
+    const endpoint = '/.netlify/functions/app-visits';
+
+    function formatCount(value){
+      try{ return new Intl.NumberFormat('en-US').format(value); }
+      catch(e){ return String(value).replace(/\B(?=(\d{3})+(?!\d))/g, ','); }
+    }
+
+    function animateCount(from, to){
+      const start = Math.max(Number(from) || START_VALUE, START_VALUE);
+      const end = Math.max(Number(to) || START_VALUE, START_VALUE);
+      if(start === end){
+        numberEl.textContent = formatCount(end);
+        return;
+      }
+      const duration = 700;
+      const t0 = performance.now();
+      function frame(now){
+        const progress = Math.min((now - t0) / duration, 1);
+        const eased = 1 - Math.pow(1 - progress, 3);
+        const current = Math.round(start + (end - start) * eased);
+        numberEl.textContent = formatCount(current);
+        if(progress < 1) requestAnimationFrame(frame);
+      }
+      requestAnimationFrame(frame);
+    }
+
+    fetch(endpoint, { cache:'no-store' })
+      .then(function(res){ if(!res.ok) throw new Error('counter'); return res.json(); })
+      .then(function(data){
+        const count = Math.max(Number(data.count) || START_VALUE, START_VALUE);
+        animateCount(START_VALUE, count);
+      })
+      .catch(function(){
+        numberEl.textContent = formatCount(START_VALUE);
+      });
   })();
 
   const stickyCta = document.getElementById('stickyCta');
