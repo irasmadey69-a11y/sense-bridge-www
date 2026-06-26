@@ -857,7 +857,7 @@
       <div class="visit-counter" id="sbVisitCounter" aria-live="polite">
         <div class="visit-counter-icon">🌍</div>
         <div>
-          <div class="visit-counter-label">Odwiedziny aplikacji</div>
+          <div class="visit-counter-label">Odwiedziny strony</div>
           <div class="visit-counter-number" id="sbVisitNumber">499,986</div>
           <div class="visit-counter-note">Rośnie z każdym wejściem</div>
         </div>
@@ -2716,35 +2716,35 @@ Als wij de gegevens niet tijdig ontvangen, kan dit gevolgen hebben voor uw aanvr
 
 const SB_VISIT_COUNTER_I18N = {
   "EN": {
-    "Odwiedziny aplikacji": "App visits",
+    "Odwiedziny strony": "Website visits",
     "Rośnie z każdym wejściem": "Grows with every visit"
   },
   "NL": {
-    "Odwiedziny aplikacji": "App-bezoeken",
+    "Odwiedziny strony": "Websitebezoeken",
     "Rośnie z każdym wejściem": "Groeit bij elk bezoek"
   },
   "DE": {
-    "Odwiedziny aplikacji": "App-Besuche",
+    "Odwiedziny strony": "Website-Besuche",
     "Rośnie z każdym wejściem": "Wächst mit jedem Besuch"
   },
   "UA": {
-    "Odwiedziny aplikacji": "Відвідування застосунку",
+    "Odwiedziny strony": "Відвідування сайту",
     "Rośnie z każdym wejściem": "Зростає з кожним відвідуванням"
   },
   "FR": {
-    "Odwiedziny aplikacji": "Visites de l’application",
+    "Odwiedziny strony": "Visites du site",
     "Rośnie z każdym wejściem": "Augmente à chaque visite"
   },
   "IT": {
-    "Odwiedziny aplikacji": "Visite dell’app",
+    "Odwiedziny strony": "Visite del sito",
     "Rośnie z każdym wejściem": "Cresce a ogni visita"
   },
   "ES": {
-    "Odwiedziny aplikacji": "Visitas de la aplicación",
+    "Odwiedziny strony": "Visitas del sitio",
     "Rośnie z każdym wejściem": "Crece con cada visita"
   },
   "PT": {
-    "Odwiedziny aplikacji": "Visitas da aplicação",
+    "Odwiedziny strony": "Visitas do site",
     "Rośnie z każdym wejściem": "Cresce a cada visita"
   }
 };
@@ -2871,12 +2871,12 @@ const SB_PAGE_META = {
 
     const START_VALUE = 499986;
     const THROTTLE_MS = 30 * 60 * 1000; // one count per browser every 30 minutes
-    const countedKey = 'sb_visit_counter_last_counted_at';
-    const displayedKey = 'sb_visit_counter_last_displayed_count';
+    const countedKey = 'sb_site_visit_counter_last_counted_at';
+    const displayedKey = 'sb_site_visit_counter_last_displayed_count';
     const now = Date.now();
     const lastCountedAt = Number(localStorage.getItem(countedKey) || 0);
     const shouldCount = !lastCountedAt || (now - lastCountedAt) > THROTTLE_MS;
-    const endpoint = '/.netlify/functions/app-visits?inc=' + (shouldCount ? '1' : '0');
+    const endpoint = '/.netlify/functions/site-visits?inc=' + (shouldCount ? '1' : '0');
 
     function formatCount(value){
       try{ return new Intl.NumberFormat('en-US').format(value); }
