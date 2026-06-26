@@ -1,40 +1,44 @@
-const { getStore } = require('@netlify/blobs');
-
-const START_VALUE = 499986;
-
-exports.handler = async function(event) {
-  const headers = {
-    'Content-Type': 'application/json; charset=utf-8',
-    'Cache-Control': 'no-store, max-age=0',
-    'Access-Control-Allow-Origin': '*'
-  };
+exports.handler = async function (event) {
+  const START_COUNT = 499986;
 
   try {
-    if (event.httpMethod === 'OPTIONS') {
-      return { statusCode: 204, headers, body: '' };
+    const { getStore } = await import("@netlify/blobs");
+    const store = getStore("sense-bridge-counter");
+
+    const key = "app-visits";
+    const currentRaw = await store.get(key);
+    let count = currentRaw ? parseInt(currentRaw, 10) : START_COUNT;
+
+    const shouldIncrement = event.queryStringParameters?.inc === "1";
+
+    if (shouldIncrement) {
+      count += 1;
+      await store.set(key, String(count));
     }
-
-    const store = getStore({ name: 'sensebridge-counter' });
-    const raw = await store.get('app-visits');
-    let count = Number.parseInt(raw || '', 10);
-
-    if (!Number.isFinite(count) || count < START_VALUE) {
-      count = START_VALUE;
-    }
-
-    count += 1;
-    await store.set('app-visits', String(count));
 
     return {
       statusCode: 200,
-      headers,
-      body: JSON.stringify({ count })
+      headers: {
+        "Content-Type": "application/json",
+        "Cache-Control": "no-store"
+      },
+      body: JSON.stringify({
+        count,
+        fallback: false
+      })
     };
   } catch (error) {
     return {
       statusCode: 200,
-      headers,
-      body: JSON.stringify({ count: START_VALUE, fallback: true })
+      headers: {
+        "Content-Type": "application/json",
+        "Cache-Control": "no-store"
+      },
+      body: JSON.stringify({
+        count: START_COUNT,
+        fallback: true,
+        error: error.message
+      })
     };
   }
 };
