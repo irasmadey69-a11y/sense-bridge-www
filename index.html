@@ -2817,10 +2817,10 @@ const SB_PAGE_META = {
       });
       let n;
       while(n = walker.nextNode()){
-        const parent = n.parentElement;
-        if(parent.id === 'sbVisitNumber') return NodeFilter.FILTER_REJECT;
-if(!parent.dataset.pl) parent.dataset.pl = n.nodeValue.trim();
-      }
+  const parent = n.parentElement;
+  if(parent.id === 'sbVisitNumber') continue;
+  if(!parent.dataset.pl) parent.dataset.pl = n.nodeValue.trim();
+}
       document.body.dataset.i18nReady = '1';
     }
 
