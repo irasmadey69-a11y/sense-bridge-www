@@ -2866,56 +2866,58 @@ const SB_PAGE_META = {
 
 
   (function initVisitCounter(){
-    const numberEl = document.getElementById('sbVisitNumber');
-    if(!numberEl) return;
+  const numberEl = document.getElementById('sbVisitNumber');
+  if(!numberEl) return;
 
-    const START_VALUE = 499986;
-    const THROTTLE_MS = 30 * 60 * 1000; // one count per browser every 30 minutes
-    const countedKey = 'sb_site_visit_counter_last_counted_at';
-    const displayedKey = 'sb_site_visit_counter_last_displayed_count';
-    const now = Date.now();
-    const lastCountedAt = Number(localStorage.getItem(countedKey) || 0);
-    const shouldCount = true;
-    const endpoint = '/.netlify/functions/site-visits?inc=' + (shouldCount ? '1' : '0');
+  const START_VALUE = 499986;
+  const displayedKey = 'sb_site_visit_counter_last_displayed_count';
+  const endpoint = '/.netlify/functions/site-visits?inc=1';
 
-    function formatCount(value){
-      try{ return new Intl.NumberFormat('en-US').format(value); }
-      catch(e){ return String(value).replace(/\B(?=(\d{3})+(?!\d))/g, ','); }
+  function formatCount(value){
+    try{ return new Intl.NumberFormat('en-US').format(value); }
+    catch(e){ return String(value).replace(/\B(?=(\d{3})+(?!\d))/g, ','); }
+  }
+
+  function animateCount(from, to){
+    const start = Math.max(Number(from) || START_VALUE, START_VALUE);
+    const end = Math.max(Number(to) || START_VALUE, START_VALUE);
+
+    if(start === end){
+      numberEl.textContent = formatCount(end);
+      return;
     }
 
-    function animateCount(from, to){
-      const start = Math.max(Number(from) || START_VALUE, START_VALUE);
-      const end = Math.max(Number(to) || START_VALUE, START_VALUE);
-      if(start === end){
-        numberEl.textContent = formatCount(end);
-        return;
-      }
-      const duration = 700;
-      const t0 = performance.now();
-      function frame(nowFrame){
-        const progress = Math.min((nowFrame - t0) / duration, 1);
-        const eased = 1 - Math.pow(1 - progress, 3);
-        const current = Math.round(start + (end - start) * eased);
-        numberEl.textContent = formatCount(current);
-        if(progress < 1) requestAnimationFrame(frame);
-      }
-      requestAnimationFrame(frame);
+    const duration = 700;
+    const t0 = performance.now();
+
+    function frame(nowFrame){
+      const progress = Math.min((nowFrame - t0) / duration, 1);
+      const eased = 1 - Math.pow(1 - progress, 3);
+      const current = Math.round(start + (end - start) * eased);
+      numberEl.textContent = formatCount(current);
+      if(progress < 1) requestAnimationFrame(frame);
     }
 
-    fetch(endpoint, { cache:'no-store' })
-      .then(function(res){ if(!res.ok) throw new Error('counter'); return res.json(); })
-      .then(function(data){
-        const count = Math.max(Number(data.count) || START_VALUE, START_VALUE);
-        const previousDisplayed = Number(localStorage.getItem(displayedKey) || START_VALUE);
-        animateCount(previousDisplayed, count);
-        localStorage.setItem(displayedKey, String(count));
-        if(shouldCount) localStorage.setItem(countedKey, String(now));
-      })
-      .catch(function(){
-        const previousDisplayed = Number(localStorage.getItem(displayedKey) || START_VALUE);
-        numberEl.textContent = formatCount(previousDisplayed);
-      });
-  })();
+    requestAnimationFrame(frame);
+  }
+
+  const lastDisplayed = Number(localStorage.getItem(displayedKey) || START_VALUE);
+  numberEl.textContent = formatCount(lastDisplayed);
+
+  fetch(endpoint, { cache:'no-store' })
+    .then(function(res){
+      if(!res.ok) throw new Error('counter');
+      return res.json();
+    })
+    .then(function(data){
+      const count = Math.max(Number(data.count) || START_VALUE, START_VALUE);
+      animateCount(lastDisplayed, count);
+      localStorage.setItem(displayedKey, String(count));
+    })
+    .catch(function(){
+      numberEl.textContent = formatCount(lastDisplayed);
+    });
+})();
 
   const stickyCta = document.getElementById('stickyCta');
   window.addEventListener('scroll', function(){
