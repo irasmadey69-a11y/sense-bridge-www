@@ -1,11 +1,14 @@
+const { getStore, connectLambda } = require("@netlify/blobs");
+
 exports.handler = async function (event) {
   const START_COUNT = 499986;
 
   try {
-    const { getStore } = await import("@netlify/blobs");
-    const store = getStore("sense-bridge-counter");
+    connectLambda(event);
 
+    const store = getStore("sense-bridge-counter");
     const key = "app-visits";
+
     const currentRaw = await store.get(key);
     let count = currentRaw ? parseInt(currentRaw, 10) : START_COUNT;
 
