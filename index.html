@@ -2875,7 +2875,7 @@ const SB_PAGE_META = {
     const displayedKey = 'sb_site_visit_counter_last_displayed_count';
     const now = Date.now();
     const lastCountedAt = Number(localStorage.getItem(countedKey) || 0);
-    const shouldCount = !lastCountedAt || (now - lastCountedAt) > THROTTLE_MS;
+    const shouldCount = true;
     const endpoint = '/.netlify/functions/site-visits?inc=' + (shouldCount ? '1' : '0');
 
     function formatCount(value){
