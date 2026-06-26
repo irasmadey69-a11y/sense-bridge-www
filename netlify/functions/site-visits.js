@@ -7,7 +7,7 @@ exports.handler = async function (event) {
     connectLambda(event);
 
     const store = getStore("sense-bridge-counter");
-    const key = "site-visits";
+    const key = "site-visits-v2";
 
     const currentRaw = await store.get(key);
     let count = currentRaw ? parseInt(currentRaw, 10) : START_COUNT;
