@@ -2870,7 +2870,7 @@ const SB_PAGE_META = {
     if(!numberEl) return;
 
     const START_VALUE = 499986;
-    const endpoint = '/.netlify/functions/app-visits';
+    const endpoint = '/.netlify/functions/app-visits?inc=1';
 
     function formatCount(value){
       try{ return new Intl.NumberFormat('en-US').format(value); }
