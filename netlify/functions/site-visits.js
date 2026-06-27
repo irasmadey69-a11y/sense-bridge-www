@@ -1,7 +1,7 @@
 const { getStore, connectLambda } = require("@netlify/blobs");
 
 exports.handler = async function (event) {
-  const START_COUNT = 49998;
+  const START_COUNT = 50000;
 
   try {
     connectLambda(event);
