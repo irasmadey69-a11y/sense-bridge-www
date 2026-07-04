@@ -869,6 +869,7 @@
       justify-content:center;
       text-align:center;
       padding:34px 22px;
+      gap:28px;
     }
 
     .cta-phone-logo{
@@ -877,7 +878,7 @@
       border-radius:34px;
       display:grid;
       place-items:center;
-      margin:0 auto 18px;
+      margin:0 auto;
       background:#fff;
       border:1px solid rgba(63,138,114,.20);
       box-shadow:0 14px 34px rgba(15,23,42,.08);
@@ -891,22 +892,15 @@
       display:block;
     }
 
-    .cta-phone-text{
-      color:var(--navy);
-      font-size:24px;
-      line-height:1.22;
-      font-weight:900;
-      letter-spacing:-.035em;
-      max-width:310px;
-      margin:0 auto 22px;
-    }
 
     .cta-phone-button{
       width:100%;
-      max-width:330px;
-      min-height:72px;
+      max-width:390px;
+      min-height:92px;
       border-radius:999px;
-      font-size:18px;
+      font-size:23px;
+      padding:22px 28px;
+      line-height:1.15;
       box-shadow:0 18px 34px rgba(63,138,114,.28);
     }
 
@@ -917,10 +911,9 @@
 
     @media(max-width:560px){
       .hero-phones{gap:14px}
-      .cta-phone .screen{min-height:270px;padding:26px 16px}
+      .cta-phone .screen{min-height:270px;padding:26px 16px;gap:22px}
       .cta-phone-logo{width:96px;height:96px;border-radius:28px}
-      .cta-phone-text{font-size:21px}
-      .cta-phone-button{min-height:64px;font-size:17px}
+      .cta-phone-button{min-height:76px;font-size:18px;max-width:100%}
     }
 
   </style>
@@ -1005,7 +998,6 @@
         <div class="phone-top"><span>Sense Bridge</span><span>ONLINE</span></div>
         <div class="screen">
           <div class="cta-phone-logo"><img src="https://sensebridge.app/icon-192.png" alt="Sense Bridge logo" onerror="this.style.display='none';this.parentElement.textContent='SB';"></div>
-          <p class="cta-phone-text" data-pl="Zrozum oficjalne pisma w swoim języku.">Understand official letters in your language.</p>
           <a class="btn green app-cta cta-phone-button" href="https://sense-bridge-production.netlify.app" data-pl="Otwórz aplikację">Open Sense Bridge App</a>
         </div>
       </div>
