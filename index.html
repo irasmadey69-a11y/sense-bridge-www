@@ -3563,5 +3563,33 @@ Object.keys(SB_VISIT_COUNTER_I18N).forEach(function(lang){
     else { stickyCta.classList.remove('show'); }
   });
 </script>
+
+<script>
+  // Sense Bridge: direct privacy route support.
+  // Runs only when the page is opened through /privacy.
+  (function () {
+    function openPrivacyFromDirectLink() {
+      var path = (window.location.pathname || "").replace(/\/+$/, "");
+      if (path !== "/privacy") return;
+
+      var policy = document.getElementById("full-privacy-policy");
+      if (!policy) return;
+
+      policy.open = true;
+
+      // Let the page finish layout and language initialization first.
+      window.setTimeout(function () {
+        policy.scrollIntoView({ behavior: "smooth", block: "start" });
+      }, 250);
+    }
+
+    if (document.readyState === "loading") {
+      document.addEventListener("DOMContentLoaded", openPrivacyFromDirectLink);
+    } else {
+      openPrivacyFromDirectLink();
+    }
+  })();
+</script>
+
 </body>
 </html>
