@@ -998,6 +998,128 @@
       flex:0 0 auto;
     }
     .ai-tools-collapsible[open] summary::after{transform:rotate(180deg)}
+
+    /* AI Tools visibility patch — visual only */
+    .ai-tools-collapsible{
+      border:2px solid rgba(63,138,114,.48);
+      background:linear-gradient(135deg,#f4fff8,#ffffff);
+      box-shadow:0 14px 30px rgba(63,138,114,.14);
+    }
+    .ai-tools-collapsible summary{
+      min-height:148px;
+      padding:20px;
+      display:grid;
+      grid-template-columns:auto minmax(0,1fr) auto;
+      align-items:center;
+      gap:18px;
+      background:
+        radial-gradient(circle at 88% 18%,rgba(63,138,114,.18),transparent 26%),
+        linear-gradient(135deg,rgba(63,138,114,.13),rgba(255,255,255,.98));
+    }
+    .ai-tools-collapsible summary:hover{
+      background:
+        radial-gradient(circle at 88% 18%,rgba(63,138,114,.23),transparent 28%),
+        linear-gradient(135deg,rgba(63,138,114,.18),rgba(255,255,255,.98));
+    }
+    .ai-tools-collapsible summary::after{display:none;}
+    .ai-tools-summary-robot{
+      font-size:58px;
+      line-height:1;
+      filter:drop-shadow(0 8px 14px rgba(14,42,71,.14));
+    }
+    .ai-tools-summary-copy{
+      display:flex;
+      flex-direction:column;
+      align-items:flex-start;
+      min-width:0;
+    }
+    .ai-tools-summary-badge{
+      display:inline-flex;
+      margin-bottom:8px;
+      padding:5px 10px;
+      border-radius:999px;
+      background:linear-gradient(135deg,#166534,#15803d);
+      color:#fff;
+      border:1px solid rgba(22,101,52,.24);
+      font-size:12px;
+      font-weight:950;
+      letter-spacing:.035em;
+      box-shadow:0 7px 16px rgba(22,101,52,.18);
+    }
+    .ai-tools-summary-title{
+      display:block;
+      color:#0f5132;
+      font-size:clamp(27px,4.8vw,42px);
+      line-height:1.02;
+      letter-spacing:-.045em;
+    }
+    .ai-tools-summary-subtitle{
+      display:block;
+      margin-top:7px;
+      color:#245c4d;
+      font-size:16px;
+      font-weight:950;
+    }
+    .ai-tools-summary-note{
+      display:block;
+      margin-top:5px;
+      color:#536173;
+      font-size:13px;
+      font-weight:700;
+      line-height:1.4;
+    }
+    .ai-tools-summary-action{
+      min-width:126px;
+      min-height:82px;
+      padding:13px 16px;
+      border-radius:20px;
+      display:flex;
+      flex-direction:column;
+      align-items:center;
+      justify-content:center;
+      background:linear-gradient(135deg,#166534,#15803d);
+      color:#fff;
+      box-shadow:0 12px 24px rgba(22,101,52,.22);
+      text-align:center;
+    }
+    .ai-tools-summary-action::before{
+      content:"↓";
+      font-size:21px;
+      line-height:1;
+      margin-bottom:3px;
+      transition:transform .18s ease;
+    }
+    .ai-tools-collapsible[open] .ai-tools-summary-action::before{transform:rotate(180deg);}
+    .ai-tools-summary-action strong{font-size:16px;line-height:1.1;}
+    .ai-tools-summary-action small{
+      margin-top:4px;
+      font-size:11px;
+      font-weight:750;
+      opacity:.88;
+    }
+    @media(max-width:720px){
+      .ai-tools-collapsible summary{
+        min-height:0;
+        grid-template-columns:auto minmax(0,1fr);
+        padding:18px 16px;
+        gap:12px;
+      }
+      .ai-tools-summary-robot{font-size:43px;}
+      .ai-tools-summary-title{font-size:27px;}
+      .ai-tools-summary-subtitle{font-size:14px;}
+      .ai-tools-summary-note{font-size:12px;}
+      .ai-tools-summary-action{
+        grid-column:1 / -1;
+        width:100%;
+        min-height:58px;
+        flex-direction:row;
+        gap:9px;
+        border-radius:16px;
+      }
+      .ai-tools-summary-action::before{margin:0;}
+      .ai-tools-summary-action small{margin:0;font-size:12px;}
+    }
+
     .ai-tools-collapsible-body{
       padding:0 18px 18px;
       border-top:1px dashed rgba(63,138,114,.20);
@@ -1111,7 +1233,17 @@
 
       <details class="ai-tools-collapsible">
         <summary>
-          <span data-pl="🤖 Narzędzia AI — NOWOŚĆ">🤖 AI tools — NEW</span>
+          <span class="ai-tools-summary-robot" aria-hidden="true">🤖</span>
+          <span class="ai-tools-summary-copy">
+            <span class="ai-tools-summary-badge" data-pl="NOWOŚĆ">NEW</span>
+            <strong class="ai-tools-summary-title" data-pl="Nowe narzędzia AI">New AI tools</strong>
+            <span class="ai-tools-summary-subtitle" data-pl="Sprawdź 10 nowych narzędzi AI">Discover 10 new AI tools</span>
+            <span class="ai-tools-summary-note" data-pl="Analizuj zdjęcia, linki, maile i SMS-y oraz twórz odpowiedzi w kilka sekund.">Analyse screenshots, links, emails and SMS, and prepare replies in seconds.</span>
+          </span>
+          <span class="ai-tools-summary-action">
+            <strong data-pl="Rozwiń">Expand</strong>
+            <small data-pl="Kliknij, aby otworzyć">Tap to open</small>
+          </span>
         </summary>
         <div class="ai-tools-collapsible-body">
           <div class="ai-tools-collapsible-list">
@@ -1747,6 +1879,12 @@ Als wij de gegevens niet tijdig ontvangen, kan dit gevolgen hebben voor uw aanvr
      ========================================================= */
   const SB_PAGE_I18N = {
   "EN": {
+    "NOWOŚĆ": "NEW",
+    "Nowe narzędzia AI": "New AI tools",
+    "Sprawdź 10 nowych narzędzi AI": "Discover 10 new AI tools",
+    "Analizuj zdjęcia, linki, maile i SMS-y oraz twórz odpowiedzi w kilka sekund.": "Analyse screenshots, links, emails and SMS, and prepare replies in seconds.",
+    "Rozwiń": "Expand",
+    "Kliknij, aby otworzyć": "Tap to open",
     "Jak działa": "How it works",
     "Nowości": "Updates",
     "Przykład": "Example",
@@ -1921,6 +2059,12 @@ Als wij de gegevens niet tijdig ontvangen, kan dit gevolgen hebben voor uw aanvr
   
     "Nie musisz znać języka pisma.": "You do not need to know the language of the letter.",},
   "NL": {
+    "NOWOŚĆ": "NIEUW",
+    "Nowe narzędzia AI": "Nieuwe AI-tools",
+    "Sprawdź 10 nowych narzędzi AI": "Ontdek 10 nieuwe AI-tools",
+    "Analizuj zdjęcia, linki, maile i SMS-y oraz twórz odpowiedzi w kilka sekund.": "Analyseer screenshots, links, e-mails en sms-berichten en maak binnen enkele seconden antwoorden.",
+    "Rozwiń": "Uitklappen",
+    "Kliknij, aby otworzyć": "Tik om te openen",
     "Jak działa": "Hoe werkt het",
     "Nowości": "Updates",
     "Przykład": "Voorbeeld",
@@ -2004,6 +2148,12 @@ Als wij de gegevens niet tijdig ontvangen, kan dit gevolgen hebben voor uw aanvr
     "Sense Bridge nie potwierdza autentyczności pisma, ale pomaga zauważyć sygnały ostrzegawcze i bezpieczniej sprawdzić sprawę przez oficjalną stronę instytucji.": "Sense Bridge bevestigt niet of een brief echt is, maar helpt waarschuwingssignalen te zien en de zaak veiliger te controleren via de officiële website.",
     "Nie musisz znać języka pisma.": "Je hoeft de taal van de brief niet te kennen.",},
   "DE": {
+    "NOWOŚĆ": "NEU",
+    "Nowe narzędzia AI": "Neue KI-Tools",
+    "Sprawdź 10 nowych narzędzi AI": "Entdecke 10 neue KI-Tools",
+    "Analizuj zdjęcia, linki, maile i SMS-y oraz twórz odpowiedzi w kilka sekund.": "Analysiere Screenshots, Links, E-Mails und SMS und erstelle in wenigen Sekunden Antworten.",
+    "Rozwiń": "Öffnen",
+    "Kliknij, aby otworzyć": "Tippen zum Öffnen",
     "Jak działa": "So funktioniert es",
     "Nowości": "Neuigkeiten",
     "Przykład": "Beispiel",
@@ -2079,6 +2229,12 @@ Als wij de gegevens niet tijdig ontvangen, kan dit gevolgen hebben voor uw aanvr
     "Sense Bridge nie potwierdza autentyczności pisma, ale pomaga zauważyć sygnały ostrzegawcze i bezpieczniej sprawdzić sprawę przez oficjalną stronę instytucji.": "Sense Bridge bestätigt nicht die Echtheit eines Schreibens, hilft aber, Warnsignale zu erkennen und die Sache sicherer über die offizielle Website zu prüfen.",
     "Nie musisz znać języka pisma.": "Du musst die Sprache des Schreibens nicht kennen.",},
   "UA": {
+    "NOWOŚĆ": "НОВИНКА",
+    "Nowe narzędzia AI": "Нові інструменти ШІ",
+    "Sprawdź 10 nowych narzędzi AI": "Відкрийте 10 нових інструментів ШІ",
+    "Analizuj zdjęcia, linki, maile i SMS-y oraz twórz odpowiedzi w kilka sekund.": "Аналізуйте знімки екрана, посилання, електронні листи й SMS та створюйте відповіді за кілька секунд.",
+    "Rozwiń": "Розгорнути",
+    "Kliknij, aby otworzyć": "Натисніть, щоб відкрити",
     "Jak działa": "Як це працює",
     "Nowości": "Оновлення",
     "Przykład": "Приклад",
@@ -2150,6 +2306,12 @@ Als wij de gegevens niet tijdig ontvangen, kan dit gevolgen hebben voor uw aanvr
     "Sense Bridge nie potwierdza autentyczności pisma, ale pomaga zauważyć sygnały ostrzegawcze i bezpieczniej sprawdzić sprawę przez oficjalną stronę instytucji.": "Sense Bridge не підтверджує справжність листа, але допомагає помітити попереджувальні ознаки й безпечніше перевірити справу через офіційний сайт установи.",
     "Nie musisz znać języka pisma.": "Вам не потрібно знати мову листа.",},
   "FR": {
+    "NOWOŚĆ": "NOUVEAU",
+    "Nowe narzędzia AI": "Nouveaux outils d’IA",
+    "Sprawdź 10 nowych narzędzi AI": "Découvrez 10 nouveaux outils d’IA",
+    "Analizuj zdjęcia, linki, maile i SMS-y oraz twórz odpowiedzi w kilka sekund.": "Analysez des captures d’écran, des liens, des e-mails et des SMS, puis préparez des réponses en quelques secondes.",
+    "Rozwiń": "Développer",
+    "Kliknij, aby otworzyć": "Touchez pour ouvrir",
     "Jak działa": "Comment ça marche",
     "Nowości": "Nouveautés",
     "Przykład": "Exemple",
@@ -2221,6 +2383,12 @@ Als wij de gegevens niet tijdig ontvangen, kan dit gevolgen hebben voor uw aanvr
     "Sense Bridge nie potwierdza autentyczności pisma, ale pomaga zauważyć sygnały ostrzegawcze i bezpieczniej sprawdzić sprawę przez oficjalną stronę instytucji.": "Sense Bridge ne confirme pas l’authenticité d’une lettre, mais aide à repérer les signaux d’alerte et à vérifier plus sûrement via le site officiel.",
     "Nie musisz znać języka pisma.": "Vous n’avez pas besoin de connaître la langue de la lettre.",},
   "IT": {
+    "NOWOŚĆ": "NOVITÀ",
+    "Nowe narzędzia AI": "Nuovi strumenti IA",
+    "Sprawdź 10 nowych narzędzi AI": "Scopri 10 nuovi strumenti IA",
+    "Analizuj zdjęcia, linki, maile i SMS-y oraz twórz odpowiedzi w kilka sekund.": "Analizza screenshot, link, e-mail e SMS e prepara risposte in pochi secondi.",
+    "Rozwiń": "Espandi",
+    "Kliknij, aby otworzyć": "Tocca per aprire",
     "Jak działa": "Come funziona",
     "Nowości": "Novità",
     "Przykład": "Esempio",
@@ -2292,6 +2460,12 @@ Als wij de gegevens niet tijdig ontvangen, kan dit gevolgen hebben voor uw aanvr
     "Sense Bridge nie potwierdza autentyczności pisma, ale pomaga zauważyć sygnały ostrzegawcze i bezpieczniej sprawdzić sprawę przez oficjalną stronę instytucji.": "Sense Bridge non conferma l’autenticità di una lettera, ma aiuta a notare segnali di avvertimento e a verificare in modo più sicuro tramite il sito ufficiale.",
     "Nie musisz znać języka pisma.": "Non devi conoscere la lingua della lettera.",},
   "ES": {
+    "NOWOŚĆ": "NUEVO",
+    "Nowe narzędzia AI": "Nuevas herramientas de IA",
+    "Sprawdź 10 nowych narzędzi AI": "Descubre 10 nuevas herramientas de IA",
+    "Analizuj zdjęcia, linki, maile i SMS-y oraz twórz odpowiedzi w kilka sekund.": "Analiza capturas, enlaces, correos y SMS, y prepara respuestas en segundos.",
+    "Rozwiń": "Desplegar",
+    "Kliknij, aby otworzyć": "Toca para abrir",
     "Jak działa": "Cómo funciona",
     "Nowości": "Novedades",
     "Przykład": "Ejemplo",
@@ -2363,6 +2537,12 @@ Als wij de gegevens niet tijdig ontvangen, kan dit gevolgen hebben voor uw aanvr
     "Sense Bridge nie potwierdza autentyczności pisma, ale pomaga zauważyć sygnały ostrzegawcze i bezpieczniej sprawdzić sprawę przez oficjalną stronę instytucji.": "Sense Bridge no confirma la autenticidad de una carta, pero ayuda a detectar señales de advertencia y a comprobar el asunto de forma más segura en la web oficial.",
     "Nie musisz znać języka pisma.": "No necesitas conocer el idioma de la carta.",},
   "PT": {
+    "NOWOŚĆ": "NOVO",
+    "Nowe narzędzia AI": "Novas ferramentas de IA",
+    "Sprawdź 10 nowych narzędzi AI": "Descubra 10 novas ferramentas de IA",
+    "Analizuj zdjęcia, linki, maile i SMS-y oraz twórz odpowiedzi w kilka sekund.": "Analise capturas de ecrã, links, e-mails e SMS e prepare respostas em segundos.",
+    "Rozwiń": "Expandir",
+    "Kliknij, aby otworzyć": "Toque para abrir",
     "Jak działa": "Como funciona",
     "Nowości": "Novidades",
     "Przykład": "Exemplo",
