@@ -8,7 +8,7 @@
 
   <title>Sense Bridge — AI help for official letters, screenshots, links, emails and SMS</title>
   <meta name="description" content="Sense Bridge is an AI assistant for official letters, documents, screenshots, links, emails and SMS. Understand meaning, urgency, risks, scam signals and prepare replies in your language.">
-  <meta name="keywords" content="Sense Bridge, AI official letter help, understand official letters, government letter explanation, document explanation app, screenshot scam check, suspicious link checker, email scam checker, SMS phishing check, reply assistant, conversation preparation, AI document explanation, foreign language documents, expat document help, official letter translation, phishing letter check, scam message check, brief begrijpen, Belastingdienst brief uitleg, UWV brief begrijpen, amtlichen Brief verstehen, Behördenbrief verstehen, comprendre lettre officielle, capire lettera ufficiale, entender carta oficial, compreender carta oficial, офіційний лист пояснення">
+  <meta name="keywords" content="Sense Bridge, AI official letter help, understand official letters, government letter explanation, document explanation app, contract analysis AI, PDF document analysis, form explanation AI, invoice and bill explanation, photo document analysis, screenshot scam check, suspicious link checker, website safety check, email scam checker, SMS phishing check, reply assistant, bilingual reply generator, conversation preparation, prepare conversation with office, doctor, bank, school or employer, AI document explanation, foreign language documents, expat document help, official letter translation, phishing letter check, scam message check, brief begrijpen, Belastingdienst brief uitleg, UWV brief begrijpen, contract uitleg AI, PDF uitleg, Rechnung erklären, contrat analyse IA, analisi contratto AI, analizar contrato IA, análise de contrato IA, аналіз договору AI">
 
   <link rel="canonical" href="https://sensebridge.app/">
   <link rel="alternate" hreflang="en" href="https://sensebridge.app/">
@@ -49,7 +49,7 @@
     "applicationCategory": "ProductivityApplication",
     "operatingSystem": "Web, Android, iOS",
     "url": "https://sensebridge.app/",
-    "description": "Sense Bridge is an AI assistant that helps people understand official letters, documents, screenshots, links, emails and SMS in another language. It explains meaning, urgency, risks, scam signals, suspicious elements and helps prepare replies or conversations.",
+    "description": "Sense Bridge is an AI assistant that helps people understand official letters, contracts, PDF documents, forms, bills, invoices, photos, screenshots, links, emails and SMS in another language. It explains meaning, urgency, risks and scam signals, and helps prepare bilingual replies or conversations.",
     "inLanguage": ["pl", "en", "nl", "de", "uk", "fr", "it", "es", "pt"],
     "offers": {
       "@type": "Offer",
@@ -594,7 +594,7 @@
 
     .price-grid{
       display:grid;
-      grid-template-columns:repeat(3,1fr);
+      grid-template-columns:repeat(4,1fr);
       gap:11px;
       margin-top:14px;
       max-width:860px;
@@ -917,6 +917,119 @@
       .cta-phone-button{min-height:76px;font-size:18px;max-width:100%}
     }
 
+  
+    .price.pro{
+      border:2px solid #7c3aed;
+      background:linear-gradient(180deg,#f5f3ff,#fff);
+      box-shadow:0 14px 30px rgba(124,58,237,.14);
+    }
+    .price.pro .amount{color:#6d28d9}
+    .tag.pro-tag{background:#ede9fe;color:#5b21b6;border-color:#c4b5fd}
+    .store-soon{
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      gap:10px;
+      flex-wrap:wrap;
+      margin-top:16px;
+      padding:13px 16px;
+      border-radius:18px;
+      background:linear-gradient(135deg,rgba(14,42,71,.08),rgba(63,138,114,.10));
+      border:1px solid rgba(63,138,114,.24);
+      color:var(--navy);
+      font-weight:950;
+      text-align:center;
+    }
+    .store-soon span:first-child{font-size:23px}
+
+  
+    .language-power{
+      margin-top:16px;
+      padding:18px;
+      border-radius:24px;
+      background:linear-gradient(135deg,rgba(63,138,114,.12),rgba(14,42,71,.07));
+      border:1px solid rgba(63,138,114,.24);
+      box-shadow:0 10px 24px rgba(15,23,42,.045);
+    }
+    .language-power-grid{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:10px;
+    }
+    .language-power-item{
+      background:#fff;
+      border:1px solid rgba(63,138,114,.18);
+      border-radius:18px;
+      padding:14px;
+      text-align:center;
+      font-weight:950;
+      color:var(--navy);
+    }
+    .ai-tools-collapsible{
+      margin-top:16px;
+      border:1px solid rgba(63,138,114,.24);
+      border-radius:22px;
+      background:#fff;
+      overflow:hidden;
+      box-shadow:0 8px 20px rgba(15,23,42,.04);
+    }
+    .ai-tools-collapsible summary{
+      list-style:none;
+      cursor:pointer;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:12px;
+      padding:16px 18px;
+      font-weight:950;
+      color:var(--navy);
+    }
+    .ai-tools-collapsible summary::-webkit-details-marker{display:none}
+    .ai-tools-collapsible summary::after{
+      content:"⌄";
+      width:34px;
+      height:34px;
+      border-radius:999px;
+      display:grid;
+      place-items:center;
+      background:var(--soft);
+      color:var(--primary);
+      transition:transform .18s ease;
+      flex:0 0 auto;
+    }
+    .ai-tools-collapsible[open] summary::after{transform:rotate(180deg)}
+    .ai-tools-collapsible-body{
+      padding:0 18px 18px;
+      border-top:1px dashed rgba(63,138,114,.20);
+    }
+    .ai-tools-collapsible-list{
+      display:grid;
+      grid-template-columns:repeat(2,1fr);
+      gap:9px;
+      margin-top:14px;
+    }
+    .ai-tools-collapsible-list div{
+      background:rgba(14,42,71,.04);
+      border:1px solid rgba(14,42,71,.08);
+      border-radius:16px;
+      padding:11px 12px;
+      font-weight:850;
+      color:#344154;
+    }
+    .ai-tools-pro-note{
+      margin-top:14px;
+      padding:13px 14px;
+      border-radius:17px;
+      background:linear-gradient(135deg,#f5f3ff,#fff);
+      border:1px solid #c4b5fd;
+      color:#5b21b6;
+      font-weight:900;
+    }
+    @media(max-width:720px){
+      .language-power-grid{grid-template-columns:1fr}
+      .ai-tools-collapsible-list{grid-template-columns:1fr}
+    }
+
   </style>
 </head>
 
@@ -975,18 +1088,47 @@
         <div data-pl="⚠️ ryzyko">⚠️ risk</div>
         <div data-pl="🛡️ phishing">🛡️ phishing</div>
         <div data-pl="✍️ odpowiedzi">✍️ replies</div>
-        <div data-pl="🌎 wiele krajów">🌎 many countries</div>
+        <div data-pl="🌍 100+ języków">🌍 100+ languages</div>
         <div data-pl="🌐 Twój język">🌐 your language</div>
       </div>
 
       <div class="trust">
         <div data-pl="🆓 3 analizy FREE">🆓 3 FREE analyses</div>
         <div data-pl="🔒 prywatność">🔒 privacy</div>
-        <div data-pl="🌐 Wynik w 9 językach">🌍 9 languages</div>
+        <div data-pl="🌐 Twój język">🌐 your language</div>
         <div data-pl="📷 OCR zdjęć">📷 photo OCR</div>
         <div data-pl="⚡ analiza AI">⚡ AI analysis</div>
         <div data-pl="🧭 Ty decydujesz">🧭 you decide</div>
       </div>
+
+      <div class="language-power">
+        <div class="language-power-grid">
+          <div class="language-power-item" data-pl="🌍 Ponad 100 języków">🌍 More than 100 languages</div>
+          <div class="language-power-item" data-pl="📄 Pismo w dowolnym języku">📄 A letter in any language</div>
+          <div class="language-power-item" data-pl="🌐 Wynik w Twoim języku">🌐 Result in your language</div>
+        </div>
+      </div>
+
+      <details class="ai-tools-collapsible">
+        <summary>
+          <span data-pl="🤖 Narzędzia AI — NOWOŚĆ">🤖 AI tools — NEW</span>
+        </summary>
+        <div class="ai-tools-collapsible-body">
+          <div class="ai-tools-collapsible-list">
+            <div data-pl="📷 Sprawdź zrzut ekranu">📷 Check a screenshot</div>
+            <div data-pl="🔗 Sprawdź link lub stronę">🔗 Check a link or website</div>
+            <div data-pl="💬 Sprawdź e-mail lub SMS">💬 Check an email or SMS</div>
+            <div data-pl="✍️ Pomoc w odpowiedzi">✍️ Reply assistant</div>
+            <div data-pl="🗣️ Przygotuj rozmowę">🗣️ Prepare a conversation</div>
+            <div data-pl="📑 Analiza umowy">📑 Contract analysis</div>
+            <div data-pl="📄 Analiza PDF">📄 PDF analysis</div>
+            <div data-pl="🖼️ Analiza zdjęcia dokumentu">🖼️ Photo document analysis</div>
+            <div data-pl="📝 Pomoc z formularzem">📝 Form help</div>
+            <div data-pl="🧾 Wyjaśnienie rachunku lub faktury">🧾 Bill or invoice explanation</div>
+          </div>
+          <div class="ai-tools-pro-note" data-pl="⭐ 30 dni PRO: pełny dostęp do analiz i 100 użyć narzędzi AI.">⭐ 30 days PRO: full analysis access and 100 AI tool uses.</div>
+        </div>
+      </details>
 
       <div class="global-note">
         <h3 data-pl="🌎 Pismo w dowolnym języku. Wynik w języku, który rozumiesz.">🌎 From many countries. In the language you understand.</h3>
@@ -1049,20 +1191,26 @@
   <section class="section" id="ai-tools">
     <div class="card ai-tools-landing">
       <div class="section-head" style="margin-bottom:0">
-        <h2>🤖 Nowe narzędzia AI</h2>
-        <p>Sense Bridge pomaga już nie tylko zrozumieć pismo. Teraz możesz sprawdzić zrzut ekranu, link, e-mail, SMS i przygotować odpowiedź lub rozmowę.</p>
+        <h2 data-pl="🤖 Narzędzia AI Sense Bridge">🤖 Sense Bridge AI tools</h2>
+        <p data-pl="Nie tylko tłumaczenie pisma. Sprawdzaj wiadomości i strony, analizuj dokumenty oraz przygotuj odpowiedź lub rozmowę w dwóch językach.">More than letter translation. Check messages and websites, analyse documents, and prepare a reply or conversation in two languages.</p>
       </div>
 
       <div class="ai-tools-grid">
-        <div class="ai-tool-card"><div class="ai-tool-ico">📷</div><span class="ai-tool-badge">🆕 NEW AI TOOL</span><h3>Sprawdź zrzut ekranu</h3><p>Prześlij zrzut ekranu lub zdjęcie. Sense Bridge pomoże rozpoznać fałszywe ostrzeżenia, reklamy, podejrzane komunikaty i ekrany logowania.</p></div>
-        <div class="ai-tool-card"><div class="ai-tool-ico">🔗</div><span class="ai-tool-badge">🆕 NEW AI TOOL</span><h3>Sprawdź link lub stronę</h3><p>Wklej link i sprawdź domenę, podszywanie się pod instytucję, presję czasu oraz sygnały typowe dla phishingu.</p></div>
-        <div class="ai-tool-card"><div class="ai-tool-ico">💬</div><span class="ai-tool-badge">🆕 NEW AI TOOL</span><h3>Sprawdź e-mail lub SMS</h3><p>Wklej wiadomość i zobacz, czy wygląda wiarygodnie, czy może być próbą oszustwa, wyłudzenia danych albo fałszywą płatnością.</p></div>
-        <div class="ai-tool-card"><div class="ai-tool-ico">✍️</div><span class="ai-tool-badge">🆕 NEW AI TOOL</span><h3>Pomoc w odpowiedzi</h3><p>Przygotuj odpowiedź w dwóch językach: najpierw zobacz, co wysyłasz w swoim języku, a potem skopiuj wersję dla odbiorcy.</p></div>
-        <div class="ai-tool-card"><div class="ai-tool-ico">🗣️</div><span class="ai-tool-badge">🆕 NEW AI TOOL</span><h3>Przygotuj rozmowę</h3><p>Przygotuj rozmowę z urzędem, lekarzem, bankiem, szkołą lub pracodawcą. Otrzymasz pytania i gotowe zdania w dwóch językach.</p></div>
+        <div class="ai-tool-card"><div class="ai-tool-ico">📷</div><span class="ai-tool-badge" data-pl="NARZĘDZIE AI">AI TOOL</span><h3 data-pl="Sprawdź zrzut ekranu">Check a screenshot</h3><p data-pl="Prześlij zrzut lub zdjęcie i sprawdź podejrzane ostrzeżenia, reklamy, komunikaty oraz ekrany logowania.">Upload a screenshot or photo to check suspicious warnings, adverts, messages and login screens.</p></div>
+        <div class="ai-tool-card"><div class="ai-tool-ico">🔗</div><span class="ai-tool-badge" data-pl="NARZĘDZIE AI">AI TOOL</span><h3 data-pl="Sprawdź link lub stronę">Check a link or website</h3><p data-pl="Sprawdź domenę, podszywanie się pod instytucję, presję czasu i sygnały typowe dla phishingu.">Check the domain, institution impersonation, time pressure and common phishing signals.</p></div>
+        <div class="ai-tool-card"><div class="ai-tool-ico">💬</div><span class="ai-tool-badge" data-pl="NARZĘDZIE AI">AI TOOL</span><h3 data-pl="Sprawdź e-mail lub SMS">Check an email or SMS</h3><p data-pl="Zobacz, czy wiadomość wygląda wiarygodnie, czy może być próbą oszustwa, wyłudzenia danych lub fałszywej płatności.">See whether a message looks credible or may be a scam, data theft attempt or fake payment request.</p></div>
+        <div class="ai-tool-card"><div class="ai-tool-ico">✍️</div><span class="ai-tool-badge" data-pl="NARZĘDZIE AI">AI TOOL</span><h3 data-pl="Pomoc w odpowiedzi">Reply assistant</h3><p data-pl="Przygotuj odpowiedź w dwóch językach: przeczytaj ją po swojemu i skopiuj wersję dla odbiorcy.">Prepare a reply in two languages: read it in your language and copy the recipient version.</p></div>
+        <div class="ai-tool-card"><div class="ai-tool-ico">🗣️</div><span class="ai-tool-badge" data-pl="NARZĘDZIE AI">AI TOOL</span><h3 data-pl="Przygotuj rozmowę">Prepare a conversation</h3><p data-pl="Przygotuj pytania i gotowe zdania do rozmowy z urzędem, lekarzem, bankiem, szkołą lub pracodawcą.">Prepare questions and useful phrases for an office, doctor, bank, school or employer.</p></div>
+
+        <div class="ai-tool-card"><div class="ai-tool-ico">📑</div><span class="ai-tool-badge" data-pl="NOWE">NEW</span><h3 data-pl="Analiza umowy">Contract analysis</h3><p data-pl="Poznaj najważniejsze zapisy, obowiązki, terminy, wypowiedzenie, przedłużenie i punkty wymagające uwagi.">Understand key clauses, obligations, deadlines, termination, renewal and points requiring attention.</p></div>
+        <div class="ai-tool-card"><div class="ai-tool-ico">📄</div><span class="ai-tool-badge" data-pl="NOWE">NEW</span><h3 data-pl="Analiza dokumentu PDF">PDF document analysis</h3><p data-pl="Dodaj dokument PDF i otrzymaj proste wyjaśnienie jego treści, najważniejszych informacji oraz następnych kroków.">Add a PDF document and receive a plain explanation of its content, key information and next steps.</p></div>
+        <div class="ai-tool-card"><div class="ai-tool-ico">🖼️</div><span class="ai-tool-badge" data-pl="NOWE">NEW</span><h3 data-pl="Analiza zdjęcia dokumentu">Photo document analysis</h3><p data-pl="Dodaj zdjęcie pisma lub kilku kolejnych stron, aby odczytać tekst i zrozumieć dokument.">Add a photo of a letter or several consecutive pages to read and understand the document.</p></div>
+        <div class="ai-tool-card"><div class="ai-tool-ico">📝</div><span class="ai-tool-badge" data-pl="NOWE">NEW</span><h3 data-pl="Pomoc z formularzem">Form explanation</h3><p data-pl="Zrozum pola formularza, wymagane informacje i to, co warto przygotować przed jego wypełnieniem.">Understand form fields, required information and what to prepare before completing it.</p></div>
+        <div class="ai-tool-card"><div class="ai-tool-ico">🧾</div><span class="ai-tool-badge" data-pl="NOWE">NEW</span><h3 data-pl="Wyjaśnienie rachunku lub faktury">Bill or invoice explanation</h3><p data-pl="Sprawdź kwoty, terminy, dane płatności, opłaty i elementy, które mogą wymagać dodatkowego sprawdzenia.">Check amounts, deadlines, payment details, charges and items that may need further verification.</p></div>
       </div>
 
       <div class="ai-tools-bottom">
-        <div><strong>✨ Wszystkie narzędzia AI w jednej aplikacji.</strong><p>Wypróbuj 2 razy za darmo. Pełny dostęp jest dostępny w pakiecie czasowym Sense Bridge.</p></div>
+        <div><strong data-pl="✨ Wszystkie narzędzia AI w jednej aplikacji.">✨ All AI tools in one app.</strong><p data-pl="FREE i plany czasowe obejmują 2 użycia narzędzi AI. Pakiet 30 dni PRO obejmuje 100 użyć.">FREE and time passes include 2 AI tool uses. The 30-day PRO plan includes 100 uses.</p></div>
         <a class="btn green app-cta" href="https://sense-bridge-production.netlify.app" data-pl="🚀 Otwórz aplikację">🚀 Open Sense Bridge App</a>
       </div>
     </div>
@@ -1327,6 +1475,24 @@ Als wij de gegevens niet tijdig ontvangen, kan dit gevolgen hebben voor uw aanvr
     </div>
   </section>
 
+  <section class="section" id="ai-tools-seo">
+    <div class="section-head">
+      <h2 data-pl="🔎 Jak można znaleźć narzędzia Sense Bridge">🔎 Ways people can find Sense Bridge tools</h2>
+      <p data-pl="Naturalne opisy funkcji pomagają użytkownikom i wyszukiwarkom zrozumieć, do czego służy aplikacja.">Natural feature descriptions help users and search engines understand what the app can do.</p>
+    </div>
+    <div class="language-note">
+      <div class="seo-lang-card" lang="pl"><h3>🇵🇱 Narzędzia AI do dokumentów i bezpieczeństwa</h3><p>Analiza umowy AI, wyjaśnienie dokumentu PDF, pomoc z formularzem, wyjaśnienie rachunku lub faktury, analiza zdjęcia dokumentu, sprawdzanie linku, strony internetowej, e-maila, SMS-a i zrzutu ekranu.</p><div class="keyword-line"><span>analiza umowy AI</span><span>wyjaśnienie PDF</span><span>sprawdź link phishing</span><span>pomoc w odpowiedzi</span></div></div>
+      <div class="seo-lang-card" lang="en"><h3>🇬🇧 AI tools for documents and online safety</h3><p>AI contract analysis, PDF document explanation, form help, bill or invoice explanation, photo document analysis, suspicious website check, email and SMS scam check, bilingual reply assistant and conversation preparation.</p><div class="keyword-line"><span>AI contract analysis</span><span>PDF document explanation</span><span>suspicious website check</span><span>bilingual reply assistant</span></div></div>
+      <div class="seo-lang-card" lang="nl"><h3>🇳🇱 AI-hulp voor documenten en online veiligheid</h3><p>Contractanalyse met AI, PDF uitleg, hulp bij formulieren, rekening of factuur uitleg, documentfoto analyseren, verdachte link of website controleren, e-mail en sms controleren en een antwoord of gesprek voorbereiden.</p><div class="keyword-line"><span>contract uitleg AI</span><span>PDF uitleg</span><span>verdachte link controleren</span><span>antwoord voorbereiden</span></div></div>
+      <div class="seo-lang-card" lang="de"><h3>🇩🇪 KI-Hilfe für Dokumente und Online-Sicherheit</h3><p>Vertragsanalyse mit KI, PDF-Dokument erklären, Formularhilfe, Rechnung erklären, Dokumentfoto analysieren, verdächtigen Link oder Website prüfen, E-Mail und SMS prüfen sowie Antworten oder Gespräche vorbereiten.</p><div class="keyword-line"><span>Vertragsanalyse KI</span><span>PDF erklären</span><span>verdächtigen Link prüfen</span><span>Antwort vorbereiten</span></div></div>
+      <div class="seo-lang-card" lang="uk"><h3>🇺🇦 AI-інструменти для документів і безпеки</h3><p>AI-аналіз договору, пояснення PDF-документа, допомога з формою, пояснення рахунку або фактури, аналіз фото документа, перевірка посилання, сайту, електронного листа та SMS, підготовка відповіді або розмови.</p><div class="keyword-line"><span>аналіз договору AI</span><span>пояснення PDF</span><span>перевірка посилання</span><span>підготовка відповіді</span></div></div>
+      <div class="seo-lang-card" lang="fr"><h3>🇫🇷 Outils IA pour les documents et la sécurité</h3><p>Analyse de contrat par IA, explication de document PDF, aide pour formulaire, explication de facture, analyse de photo de document, vérification de lien ou site suspect, contrôle d’e-mail et SMS, préparation d’une réponse ou conversation.</p><div class="keyword-line"><span>analyse contrat IA</span><span>expliquer PDF</span><span>vérifier lien suspect</span><span>préparer une réponse</span></div></div>
+      <div class="seo-lang-card" lang="it"><h3>🇮🇹 Strumenti AI per documenti e sicurezza</h3><p>Analisi contratto AI, spiegazione documento PDF, aiuto con moduli, spiegazione bolletta o fattura, analisi foto documento, controllo link o sito sospetto, verifica e-mail e SMS, preparazione di una risposta o conversazione.</p><div class="keyword-line"><span>analisi contratto AI</span><span>spiegare PDF</span><span>controllare link sospetto</span><span>preparare risposta</span></div></div>
+      <div class="seo-lang-card" lang="es"><h3>🇪🇸 Herramientas de IA para documentos y seguridad</h3><p>Análisis de contratos con IA, explicación de documentos PDF, ayuda con formularios, explicación de facturas, análisis de fotos de documentos, comprobación de enlaces o sitios sospechosos, revisión de correo y SMS y preparación de respuestas o conversaciones.</p><div class="keyword-line"><span>analizar contrato IA</span><span>explicar PDF</span><span>comprobar enlace sospechoso</span><span>preparar respuesta</span></div></div>
+      <div class="seo-lang-card" lang="pt"><h3>🇵🇹 Ferramentas de IA para documentos e segurança</h3><p>Análise de contrato com IA, explicação de documento PDF, ajuda com formulários, explicação de fatura, análise de fotografia de documento, verificação de link ou site suspeito, controlo de email e SMS e preparação de resposta ou conversa.</p><div class="keyword-line"><span>análise de contrato IA</span><span>explicar PDF</span><span>verificar link suspeito</span><span>preparar resposta</span></div></div>
+    </div>
+  </section>
+
   <section class="section" id="pricing">
     <div class="section-head">
       <h2 data-pl="💶 Dostęp bez abonamentu">💶 Access without subscription</h2>
@@ -1337,25 +1503,39 @@ Als wij de gegevens niet tijdig ontvangen, kan dit gevolgen hebben voor uw aanvr
       <div class="price">
         <div class="price-name">24h PASS</div>
         <div class="amount">3 €</div>
-        <div class="small" data-pl="Dla jednego pilnego pisma.">For one urgent letter.</div>
+        <div class="small" data-pl="Analizy przez 24 godziny oraz 2 użycia narzędzi AI.">Analyses for 24 hours plus 2 AI tool uses.</div>
       </div>
 
       <div class="price">
         <div class="price-name" data-pl="7 dni">7 days</div>
         <div class="amount">7 €</div>
-        <div class="small" data-pl="Na serię wiadomości i odpowiedzi.">For a series of messages and replies.</div>
+        <div class="small" data-pl="Analizy przez 7 dni oraz 2 użycia narzędzi AI.">Analyses for 7 days plus 2 AI tool uses.</div>
       </div>
 
       <div class="price best">
         <span class="tag" data-pl="Najlepsza wartość">Best value</span>
         <div class="price-name" data-pl="30 dni">30 days</div>
         <div class="amount">15 €</div>
-        <div class="small" data-pl="Spokój na cały miesiąc.">Peace for a whole month.</div>
+        <div class="small" data-pl="Analizy przez 30 dni oraz 2 użycia narzędzi AI.">Analyses for 30 days plus 2 AI tool uses.</div>
+      </div>
+
+      <div class="price pro">
+        <span class="tag pro-tag">PRO</span>
+        <div class="price-name" data-pl="30 dni PRO">30 days PRO</div>
+        <div class="amount">25 €</div>
+        <div class="small" data-pl="Pełny dostęp do analiz oraz 100 użyć narzędzi AI przez 30 dni.">Full analysis access plus 100 AI tool uses for 30 days.</div>
       </div>
     </div>
   </section>
 
-  <section class="section" id="download">
+    <section class="section" id="google-play">
+    <div class="store-soon">
+      <span>▶️</span>
+      <span data-pl="Sense Bridge jest już dostępny jako aplikacja internetowa, a wkrótce pojawi się również w Google Play.">Sense Bridge is already available as a web app and is coming soon to Google Play.</span>
+    </div>
+  </section>
+
+<section class="section" id="download">
     <div class="card download">
       <div class="section-head" style="margin-bottom:0">
         <h2 data-pl="📱 Prosta aplikacja na telefon">📱 Simple phone app</h2>
@@ -3436,6 +3616,454 @@ Object.keys(SB_VISIT_COUNTER_I18N).forEach(function(lang){
     translated.forEach((value, index) => {
       SB_PAGE_I18N[lang][sbPrivacyPolishParagraphs[index]] = value;
     });
+  });
+
+
+  const SB_LANDING_NEW_I18N = {
+  "EN": {
+    "🤖 Narzędzia AI Sense Bridge": "🤖 Sense Bridge AI tools",
+    "Nie tylko tłumaczenie pisma. Sprawdzaj wiadomości i strony, analizuj dokumenty oraz przygotuj odpowiedź lub rozmowę w dwóch językach.": "More than letter translation. Check messages and websites, analyse documents, and prepare a reply or conversation in two languages.",
+    "NARZĘDZIE AI": "AI TOOL",
+    "Sprawdź zrzut ekranu": "Check a screenshot",
+    "Prześlij zrzut lub zdjęcie i sprawdź podejrzane ostrzeżenia, reklamy, komunikaty oraz ekrany logowania.": "Upload a screenshot or photo to check suspicious warnings, adverts, messages and login screens.",
+    "Sprawdź link lub stronę": "Check a link or website",
+    "Sprawdź domenę, podszywanie się pod instytucję, presję czasu i sygnały typowe dla phishingu.": "Check the domain, institution impersonation, time pressure and common phishing signals.",
+    "Sprawdź e-mail lub SMS": "Check an email or SMS",
+    "Zobacz, czy wiadomość wygląda wiarygodnie, czy może być próbą oszustwa, wyłudzenia danych lub fałszywej płatności.": "See whether a message looks credible or may be a scam, data theft attempt or fake payment request.",
+    "Pomoc w odpowiedzi": "Reply assistant",
+    "Przygotuj odpowiedź w dwóch językach: przeczytaj ją po swojemu i skopiuj wersję dla odbiorcy.": "Prepare a reply in two languages: read it in your language and copy the recipient version.",
+    "Przygotuj rozmowę": "Prepare a conversation",
+    "Przygotuj pytania i gotowe zdania do rozmowy z urzędem, lekarzem, bankiem, szkołą lub pracodawcą.": "Prepare questions and useful phrases for an office, doctor, bank, school or employer.",
+    "NOWE": "NEW",
+    "Analiza umowy": "Contract analysis",
+    "Poznaj najważniejsze zapisy, obowiązki, terminy, wypowiedzenie, przedłużenie i punkty wymagające uwagi.": "Understand key clauses, obligations, deadlines, termination, renewal and points requiring attention.",
+    "Analiza dokumentu PDF": "PDF document analysis",
+    "Dodaj dokument PDF i otrzymaj proste wyjaśnienie jego treści, najważniejszych informacji oraz następnych kroków.": "Add a PDF document and receive a plain explanation of its content, key information and next steps.",
+    "Analiza zdjęcia dokumentu": "Photo document analysis",
+    "Dodaj zdjęcie pisma lub kilku kolejnych stron, aby odczytać tekst i zrozumieć dokument.": "Add a photo of a letter or several consecutive pages to read and understand the document.",
+    "Pomoc z formularzem": "Form explanation",
+    "Zrozum pola formularza, wymagane informacje i to, co warto przygotować przed jego wypełnieniem.": "Understand form fields, required information and what to prepare before completing it.",
+    "Wyjaśnienie rachunku lub faktury": "Bill or invoice explanation",
+    "Sprawdź kwoty, terminy, dane płatności, opłaty i elementy, które mogą wymagać dodatkowego sprawdzenia.": "Check amounts, deadlines, payment details, charges and items that may need further verification.",
+    "✨ Wszystkie narzędzia AI w jednej aplikacji.": "✨ All AI tools in one app.",
+    "FREE i plany czasowe obejmują 2 użycia narzędzi AI. Pakiet 30 dni PRO obejmuje 100 użyć.": "FREE and time passes include 2 AI tool uses. The 30-day PRO plan includes 100 uses.",
+    "Sense Bridge jest już dostępny jako aplikacja internetowa, a wkrótce pojawi się również w Google Play.": "Sense Bridge is already available as a web app and is coming soon to Google Play.",
+    "Analizy przez 24 godziny oraz 2 użycia narzędzi AI.": "Analyses for 24 hours plus 2 AI tool uses.",
+    "Analizy przez 7 dni oraz 2 użycia narzędzi AI.": "Analyses for 7 days plus 2 AI tool uses.",
+    "Analizy przez 30 dni oraz 2 użycia narzędzi AI.": "Analyses for 30 days plus 2 AI tool uses.",
+    "30 dni PRO": "30 days PRO",
+    "Pełny dostęp do analiz oraz 100 użyć narzędzi AI przez 30 dni.": "Full analysis access plus 100 AI tool uses for 30 days.",
+    "🔎 Jak można znaleźć narzędzia Sense Bridge": "🔎 Ways people can find Sense Bridge tools",
+    "Naturalne opisy funkcji pomagają użytkownikom i wyszukiwarkom zrozumieć, do czego służy aplikacja.": "Natural feature descriptions help users and search engines understand what the app can do."
+  },
+  "NL": {
+    "🤖 Narzędzia AI Sense Bridge": "🤖 Sense Bridge AI-tools",
+    "Nie tylko tłumaczenie pisma. Sprawdzaj wiadomości i strony, analizuj dokumenty oraz przygotuj odpowiedź lub rozmowę w dwóch językach.": "Meer dan brieven vertalen. Controleer berichten en websites, analyseer documenten en bereid een antwoord of gesprek in twee talen voor.",
+    "NARZĘDZIE AI": "AI-TOOL",
+    "Sprawdź zrzut ekranu": "Controleer een schermafbeelding",
+    "Prześlij zrzut lub zdjęcie i sprawdź podejrzane ostrzeżenia, reklamy, komunikaty oraz ekrany logowania.": "Upload een screenshot of foto en controleer verdachte waarschuwingen, advertenties, berichten en inlogschermen.",
+    "Sprawdź link lub stronę": "Controleer een link of website",
+    "Sprawdź domenę, podszywanie się pod instytucję, presję czasu i sygnały typowe dla phishingu.": "Controleer het domein, imitatie van een instantie, tijdsdruk en typische phishingsignalen.",
+    "Sprawdź e-mail lub SMS": "Controleer e-mail of sms",
+    "Zobacz, czy wiadomość wygląda wiarygodnie, czy może być próbą oszustwa, wyłudzenia danych lub fałszywej płatności.": "Bekijk of een bericht betrouwbaar lijkt of mogelijk fraude, gegevensdiefstal of een vals betaalverzoek is.",
+    "Pomoc w odpowiedzi": "Hulp bij antwoorden",
+    "Przygotuj odpowiedź w dwóch językach: przeczytaj ją po swojemu i skopiuj wersję dla odbiorcy.": "Maak een antwoord in twee talen: lees het in je eigen taal en kopieer de versie voor de ontvanger.",
+    "Przygotuj rozmowę": "Bereid een gesprek voor",
+    "Przygotuj pytania i gotowe zdania do rozmowy z urzędem, lekarzem, bankiem, szkołą lub pracodawcą.": "Bereid vragen en zinnen voor een instantie, arts, bank, school of werkgever voor.",
+    "NOWE": "NIEUW",
+    "Analiza umowy": "Contractanalyse",
+    "Poznaj najważniejsze zapisy, obowiązki, terminy, wypowiedzenie, przedłużenie i punkty wymagające uwagi.": "Begrijp belangrijke bepalingen, verplichtingen, termijnen, opzegging, verlenging en aandachtspunten.",
+    "Analiza dokumentu PDF": "PDF-documentanalyse",
+    "Dodaj dokument PDF i otrzymaj proste wyjaśnienie jego treści, najważniejszych informacji oraz następnych kroków.": "Voeg een PDF toe en ontvang een eenvoudige uitleg van de inhoud, kerninformatie en volgende stappen.",
+    "Analiza zdjęcia dokumentu": "Analyse van een documentfoto",
+    "Dodaj zdjęcie pisma lub kilku kolejnych stron, aby odczytać tekst i zrozumieć dokument.": "Voeg een foto of meerdere opeenvolgende pagina’s toe om de tekst te lezen en het document te begrijpen.",
+    "Pomoc z formularzem": "Hulp bij formulieren",
+    "Zrozum pola formularza, wymagane informacje i to, co warto przygotować przed jego wypełnieniem.": "Begrijp formuliervelden, vereiste informatie en wat je vooraf moet voorbereiden.",
+    "Wyjaśnienie rachunku lub faktury": "Uitleg van rekening of factuur",
+    "Sprawdź kwoty, terminy, dane płatności, opłaty i elementy, które mogą wymagać dodatkowego sprawdzenia.": "Controleer bedragen, termijnen, betaalgegevens, kosten en punten die extra controle nodig hebben.",
+    "✨ Wszystkie narzędzia AI w jednej aplikacji.": "✨ Alle AI-tools in één app.",
+    "FREE i plany czasowe obejmują 2 użycia narzędzi AI. Pakiet 30 dni PRO obejmuje 100 użyć.": "FREE en tijdspassen bevatten 2 AI-toolgebruiken. 30 dagen PRO bevat 100 gebruiken.",
+    "Sense Bridge jest już dostępny jako aplikacja internetowa, a wkrótce pojawi się również w Google Play.": "Sense Bridge is al beschikbaar als webapp en komt binnenkort ook naar Google Play.",
+    "Analizy przez 24 godziny oraz 2 użycia narzędzi AI.": "Analyses gedurende 24 uur plus 2 AI-toolgebruiken.",
+    "Analizy przez 7 dni oraz 2 użycia narzędzi AI.": "Analyses gedurende 7 dagen plus 2 AI-toolgebruiken.",
+    "Analizy przez 30 dni oraz 2 użycia narzędzi AI.": "Analyses gedurende 30 dagen plus 2 AI-toolgebruiken.",
+    "30 dni PRO": "30 dagen PRO",
+    "Pełny dostęp do analiz oraz 100 użyć narzędzi AI przez 30 dni.": "Volledige analysetoegang plus 100 AI-toolgebruiken gedurende 30 dagen.",
+    "🔎 Jak można znaleźć narzędzia Sense Bridge": "🔎 Zo kunnen mensen Sense Bridge-tools vinden",
+    "Naturalne opisy funkcji pomagają użytkownikom i wyszukiwarkom zrozumieć, do czego służy aplikacja.": "Natuurlijke functiebeschrijvingen helpen gebruikers en zoekmachines begrijpen wat de app doet."
+  },
+  "DE": {
+    "🤖 Narzędzia AI Sense Bridge": "🤖 Sense Bridge KI-Tools",
+    "Nie tylko tłumaczenie pisma. Sprawdzaj wiadomości i strony, analizuj dokumenty oraz przygotuj odpowiedź lub rozmowę w dwóch językach.": "Mehr als Briefübersetzung. Prüfen Sie Nachrichten und Websites, analysieren Sie Dokumente und bereiten Sie Antworten oder Gespräche in zwei Sprachen vor.",
+    "NARZĘDZIE AI": "KI-TOOL",
+    "Sprawdź zrzut ekranu": "Screenshot prüfen",
+    "Prześlij zrzut lub zdjęcie i sprawdź podejrzane ostrzeżenia, reklamy, komunikaty oraz ekrany logowania.": "Laden Sie einen Screenshot oder ein Foto hoch und prüfen Sie verdächtige Warnungen, Werbung, Meldungen und Anmeldefenster.",
+    "Sprawdź link lub stronę": "Link oder Website prüfen",
+    "Sprawdź domenę, podszywanie się pod instytucję, presję czasu i sygnały typowe dla phishingu.": "Prüfen Sie Domain, Identitätsvortäuschung, Zeitdruck und typische Phishing-Signale.",
+    "Sprawdź e-mail lub SMS": "E-Mail oder SMS prüfen",
+    "Zobacz, czy wiadomość wygląda wiarygodnie, czy może być próbą oszustwa, wyłudzenia danych lub fałszywej płatności.": "Prüfen Sie, ob eine Nachricht glaubwürdig wirkt oder Betrug, Datendiebstahl oder eine falsche Zahlungsforderung sein könnte.",
+    "Pomoc w odpowiedzi": "Antwortassistent",
+    "Przygotuj odpowiedź w dwóch językach: przeczytaj ją po swojemu i skopiuj wersję dla odbiorcy.": "Erstellen Sie eine Antwort in zwei Sprachen: Lesen Sie sie in Ihrer Sprache und kopieren Sie die Empfängerversion.",
+    "Przygotuj rozmowę": "Gespräch vorbereiten",
+    "Przygotuj pytania i gotowe zdania do rozmowy z urzędem, lekarzem, bankiem, szkołą lub pracodawcą.": "Bereiten Sie Fragen und Sätze für Behörde, Arzt, Bank, Schule oder Arbeitgeber vor.",
+    "NOWE": "NEU",
+    "Analiza umowy": "Vertragsanalyse",
+    "Poznaj najważniejsze zapisy, obowiązki, terminy, wypowiedzenie, przedłużenie i punkty wymagające uwagi.": "Verstehen Sie wichtige Klauseln, Pflichten, Fristen, Kündigung, Verlängerung und Punkte, die Aufmerksamkeit erfordern.",
+    "Analiza dokumentu PDF": "PDF-Dokumentanalyse",
+    "Dodaj dokument PDF i otrzymaj proste wyjaśnienie jego treści, najważniejszych informacji oraz następnych kroków.": "Fügen Sie ein PDF hinzu und erhalten Sie eine einfache Erklärung von Inhalt, Kerninformationen und nächsten Schritten.",
+    "Analiza zdjęcia dokumentu": "Dokumentfoto analysieren",
+    "Dodaj zdjęcie pisma lub kilku kolejnych stron, aby odczytać tekst i zrozumieć dokument.": "Fügen Sie ein Foto oder mehrere aufeinanderfolgende Seiten hinzu, um den Text zu lesen und das Dokument zu verstehen.",
+    "Pomoc z formularzem": "Formularhilfe",
+    "Zrozum pola formularza, wymagane informacje i to, co warto przygotować przed jego wypełnieniem.": "Verstehen Sie Formularfelder, erforderliche Angaben und was vor dem Ausfüllen vorzubereiten ist.",
+    "Wyjaśnienie rachunku lub faktury": "Rechnung erklären",
+    "Sprawdź kwoty, terminy, dane płatności, opłaty i elementy, które mogą wymagać dodatkowego sprawdzenia.": "Prüfen Sie Beträge, Fristen, Zahlungsdaten, Gebühren und Punkte, die weiter geprüft werden sollten.",
+    "✨ Wszystkie narzędzia AI w jednej aplikacji.": "✨ Alle KI-Tools in einer App.",
+    "FREE i plany czasowe obejmują 2 użycia narzędzi AI. Pakiet 30 dni PRO obejmuje 100 użyć.": "FREE und Zeitpässe enthalten 2 KI-Tool-Nutzungen. 30 Tage PRO enthält 100 Nutzungen.",
+    "Sense Bridge jest już dostępny jako aplikacja internetowa, a wkrótce pojawi się również w Google Play.": "Sense Bridge ist bereits als Web-App verfügbar und kommt bald auch zu Google Play.",
+    "Analizy przez 24 godziny oraz 2 użycia narzędzi AI.": "Analysen für 24 Stunden plus 2 KI-Tool-Nutzungen.",
+    "Analizy przez 7 dni oraz 2 użycia narzędzi AI.": "Analysen für 7 Tage plus 2 KI-Tool-Nutzungen.",
+    "Analizy przez 30 dni oraz 2 użycia narzędzi AI.": "Analysen für 30 Tage plus 2 KI-Tool-Nutzungen.",
+    "30 dni PRO": "30 Tage PRO",
+    "Pełny dostęp do analiz oraz 100 użyć narzędzi AI przez 30 dni.": "Voller Analysezugang plus 100 KI-Tool-Nutzungen für 30 Tage.",
+    "🔎 Jak można znaleźć narzędzia Sense Bridge": "🔎 So können Menschen Sense Bridge-Tools finden",
+    "Naturalne opisy funkcji pomagają użytkownikom i wyszukiwarkom zrozumieć, do czego służy aplikacja.": "Natürliche Funktionsbeschreibungen helfen Nutzern und Suchmaschinen zu verstehen, was die App kann."
+  },
+  "UA": {
+    "🤖 Narzędzia AI Sense Bridge": "🤖 AI-інструменти Sense Bridge",
+    "Nie tylko tłumaczenie pisma. Sprawdzaj wiadomości i strony, analizuj dokumenty oraz przygotuj odpowiedź lub rozmowę w dwóch językach.": "Не лише переклад листа. Перевіряйте повідомлення й сайти, аналізуйте документи та готуйте відповідь або розмову двома мовами.",
+    "NARZĘDZIE AI": "AI-ІНСТРУМЕНТ",
+    "Sprawdź zrzut ekranu": "Перевірити знімок екрана",
+    "Prześlij zrzut lub zdjęcie i sprawdź podejrzane ostrzeżenia, reklamy, komunikaty oraz ekrany logowania.": "Завантажте знімок або фото й перевірте підозрілі попередження, рекламу, повідомлення та екрани входу.",
+    "Sprawdź link lub stronę": "Перевірити посилання або сайт",
+    "Sprawdź domenę, podszywanie się pod instytucję, presję czasu i sygnały typowe dla phishingu.": "Перевірте домен, видавання себе за установу, тиск часу та типові ознаки фішингу.",
+    "Sprawdź e-mail lub SMS": "Перевірити e-mail або SMS",
+    "Zobacz, czy wiadomość wygląda wiarygodnie, czy może być próbą oszustwa, wyłudzenia danych lub fałszywej płatności.": "Дізнайтеся, чи повідомлення виглядає надійним або може бути шахрайством, крадіжкою даних чи фальшивою оплатою.",
+    "Pomoc w odpowiedzi": "Допомога з відповіддю",
+    "Przygotuj odpowiedź w dwóch językach: przeczytaj ją po swojemu i skopiuj wersję dla odbiorcy.": "Підготуйте відповідь двома мовами: прочитайте своєю мовою та скопіюйте версію для одержувача.",
+    "Przygotuj rozmowę": "Підготувати розмову",
+    "Przygotuj pytania i gotowe zdania do rozmowy z urzędem, lekarzem, bankiem, szkołą lub pracodawcą.": "Підготуйте питання й готові фрази для установи, лікаря, банку, школи або роботодавця.",
+    "NOWE": "НОВЕ",
+    "Analiza umowy": "Аналіз договору",
+    "Poznaj najważniejsze zapisy, obowiązki, terminy, wypowiedzenie, przedłużenie i punkty wymagające uwagi.": "Зрозумійте ключові умови, обов’язки, строки, розірвання, продовження та важливі пункти.",
+    "Analiza dokumentu PDF": "Аналіз PDF-документа",
+    "Dodaj dokument PDF i otrzymaj proste wyjaśnienie jego treści, najważniejszych informacji oraz następnych kroków.": "Додайте PDF і отримайте просте пояснення змісту, головної інформації та наступних кроків.",
+    "Analiza zdjęcia dokumentu": "Аналіз фото документа",
+    "Dodaj zdjęcie pisma lub kilku kolejnych stron, aby odczytać tekst i zrozumieć dokument.": "Додайте фото листа або кількох послідовних сторінок, щоб прочитати й зрозуміти документ.",
+    "Pomoc z formularzem": "Допомога з формою",
+    "Zrozum pola formularza, wymagane informacje i to, co warto przygotować przed jego wypełnieniem.": "Зрозумійте поля форми, потрібну інформацію й що підготувати перед заповненням.",
+    "Wyjaśnienie rachunku lub faktury": "Пояснення рахунку або фактури",
+    "Sprawdź kwoty, terminy, dane płatności, opłaty i elementy, które mogą wymagać dodatkowego sprawdzenia.": "Перевірте суми, строки, платіжні дані, збори та пункти, які варто додатково перевірити.",
+    "✨ Wszystkie narzędzia AI w jednej aplikacji.": "✨ Усі AI-інструменти в одному застосунку.",
+    "FREE i plany czasowe obejmują 2 użycia narzędzi AI. Pakiet 30 dni PRO obejmuje 100 użyć.": "FREE і часові плани містять 2 використання AI-інструментів. 30 днів PRO містить 100 використань.",
+    "Sense Bridge jest już dostępny jako aplikacja internetowa, a wkrótce pojawi się również w Google Play.": "Sense Bridge уже доступний як вебзастосунок і незабаром з’явиться в Google Play.",
+    "Analizy przez 24 godziny oraz 2 użycia narzędzi AI.": "Аналізи протягом 24 годин і 2 використання AI-інструментів.",
+    "Analizy przez 7 dni oraz 2 użycia narzędzi AI.": "Аналізи протягом 7 днів і 2 використання AI-інструментів.",
+    "Analizy przez 30 dni oraz 2 użycia narzędzi AI.": "Аналізи протягом 30 днів і 2 використання AI-інструментів.",
+    "30 dni PRO": "30 днів PRO",
+    "Pełny dostęp do analiz oraz 100 użyć narzędzi AI przez 30 dni.": "Повний доступ до аналізів і 100 використань AI-інструментів протягом 30 днів.",
+    "🔎 Jak można znaleźć narzędzia Sense Bridge": "🔎 Як люди можуть знайти інструменти Sense Bridge",
+    "Naturalne opisy funkcji pomagają użytkownikom i wyszukiwarkom zrozumieć, do czego służy aplikacja.": "Природні описи функцій допомагають користувачам і пошуковим системам зрозуміти можливості застосунку."
+  },
+  "FR": {
+    "🤖 Narzędzia AI Sense Bridge": "🤖 Outils IA Sense Bridge",
+    "Nie tylko tłumaczenie pisma. Sprawdzaj wiadomości i strony, analizuj dokumenty oraz przygotuj odpowiedź lub rozmowę w dwóch językach.": "Plus que la traduction de lettres. Vérifiez messages et sites, analysez des documents et préparez une réponse ou conversation en deux langues.",
+    "NARZĘDZIE AI": "OUTIL IA",
+    "Sprawdź zrzut ekranu": "Vérifier une capture d’écran",
+    "Prześlij zrzut lub zdjęcie i sprawdź podejrzane ostrzeżenia, reklamy, komunikaty oraz ekrany logowania.": "Envoyez une capture ou photo pour vérifier avertissements, publicités, messages et écrans de connexion suspects.",
+    "Sprawdź link lub stronę": "Vérifier un lien ou un site",
+    "Sprawdź domenę, podszywanie się pod instytucję, presję czasu i sygnały typowe dla phishingu.": "Vérifiez le domaine, l’usurpation d’une institution, la pression temporelle et les signes de phishing.",
+    "Sprawdź e-mail lub SMS": "Vérifier un e-mail ou SMS",
+    "Zobacz, czy wiadomość wygląda wiarygodnie, czy może być próbą oszustwa, wyłudzenia danych lub fałszywej płatności.": "Voyez si un message paraît fiable ou peut être une fraude, un vol de données ou une fausse demande de paiement.",
+    "Pomoc w odpowiedzi": "Aide à la réponse",
+    "Przygotuj odpowiedź w dwóch językach: przeczytaj ją po swojemu i skopiuj wersję dla odbiorcy.": "Préparez une réponse en deux langues : lisez-la dans votre langue puis copiez la version destinée au destinataire.",
+    "Przygotuj rozmowę": "Préparer une conversation",
+    "Przygotuj pytania i gotowe zdania do rozmowy z urzędem, lekarzem, bankiem, szkołą lub pracodawcą.": "Préparez questions et phrases pour une administration, un médecin, une banque, une école ou un employeur.",
+    "NOWE": "NOUVEAU",
+    "Analiza umowy": "Analyse de contrat",
+    "Poznaj najważniejsze zapisy, obowiązki, terminy, wypowiedzenie, przedłużenie i punkty wymagające uwagi.": "Comprenez clauses, obligations, délais, résiliation, renouvellement et points nécessitant votre attention.",
+    "Analiza dokumentu PDF": "Analyse de document PDF",
+    "Dodaj dokument PDF i otrzymaj proste wyjaśnienie jego treści, najważniejszych informacji oraz następnych kroków.": "Ajoutez un PDF et recevez une explication simple de son contenu, des informations clés et des prochaines étapes.",
+    "Analiza zdjęcia dokumentu": "Analyse d’une photo de document",
+    "Dodaj zdjęcie pisma lub kilku kolejnych stron, aby odczytać tekst i zrozumieć dokument.": "Ajoutez une photo ou plusieurs pages consécutives pour lire et comprendre le document.",
+    "Pomoc z formularzem": "Aide pour formulaire",
+    "Zrozum pola formularza, wymagane informacje i to, co warto przygotować przed jego wypełnieniem.": "Comprenez les champs, les informations requises et ce qu’il faut préparer avant de remplir le formulaire.",
+    "Wyjaśnienie rachunku lub faktury": "Explication de facture",
+    "Sprawdź kwoty, terminy, dane płatności, opłaty i elementy, które mogą wymagać dodatkowego sprawdzenia.": "Vérifiez montants, délais, données de paiement, frais et éléments à contrôler davantage.",
+    "✨ Wszystkie narzędzia AI w jednej aplikacji.": "✨ Tous les outils IA dans une seule application.",
+    "FREE i plany czasowe obejmują 2 użycia narzędzi AI. Pakiet 30 dni PRO obejmuje 100 użyć.": "FREE et les accès temporaires incluent 2 utilisations. Le plan 30 jours PRO en inclut 100.",
+    "Sense Bridge jest już dostępny jako aplikacja internetowa, a wkrótce pojawi się również w Google Play.": "Sense Bridge est déjà disponible comme application web et arrive bientôt sur Google Play.",
+    "Analizy przez 24 godziny oraz 2 użycia narzędzi AI.": "Analyses pendant 24 heures et 2 utilisations des outils IA.",
+    "Analizy przez 7 dni oraz 2 użycia narzędzi AI.": "Analyses pendant 7 jours et 2 utilisations des outils IA.",
+    "Analizy przez 30 dni oraz 2 użycia narzędzi AI.": "Analyses pendant 30 jours et 2 utilisations des outils IA.",
+    "30 dni PRO": "30 jours PRO",
+    "Pełny dostęp do analiz oraz 100 użyć narzędzi AI przez 30 dni.": "Accès complet aux analyses et 100 utilisations des outils IA pendant 30 jours.",
+    "🔎 Jak można znaleźć narzędzia Sense Bridge": "🔎 Comment trouver les outils Sense Bridge",
+    "Naturalne opisy funkcji pomagają użytkownikom i wyszukiwarkom zrozumieć, do czego służy aplikacja.": "Des descriptions naturelles aident les utilisateurs et les moteurs de recherche à comprendre les fonctions de l’application."
+  },
+  "IT": {
+    "🤖 Narzędzia AI Sense Bridge": "🤖 Strumenti AI Sense Bridge",
+    "Nie tylko tłumaczenie pisma. Sprawdzaj wiadomości i strony, analizuj dokumenty oraz przygotuj odpowiedź lub rozmowę w dwóch językach.": "Non solo traduzione di lettere. Controlla messaggi e siti, analizza documenti e prepara risposte o conversazioni in due lingue.",
+    "NARZĘDZIE AI": "STRUMENTO AI",
+    "Sprawdź zrzut ekranu": "Controlla uno screenshot",
+    "Prześlij zrzut lub zdjęcie i sprawdź podejrzane ostrzeżenia, reklamy, komunikaty oraz ekrany logowania.": "Carica uno screenshot o una foto e controlla avvisi, pubblicità, messaggi e schermate di accesso sospetti.",
+    "Sprawdź link lub stronę": "Controlla un link o sito",
+    "Sprawdź domenę, podszywanie się pod instytucję, presję czasu i sygnały typowe dla phishingu.": "Controlla dominio, imitazione di enti, pressione temporale e segnali tipici del phishing.",
+    "Sprawdź e-mail lub SMS": "Controlla e-mail o SMS",
+    "Zobacz, czy wiadomość wygląda wiarygodnie, czy może być próbą oszustwa, wyłudzenia danych lub fałszywej płatności.": "Verifica se un messaggio sembra affidabile o può essere una truffa, un furto di dati o una falsa richiesta di pagamento.",
+    "Pomoc w odpowiedzi": "Assistente per risposte",
+    "Przygotuj odpowiedź w dwóch językach: przeczytaj ją po swojemu i skopiuj wersję dla odbiorcy.": "Prepara una risposta in due lingue: leggila nella tua lingua e copia la versione per il destinatario.",
+    "Przygotuj rozmowę": "Prepara una conversazione",
+    "Przygotuj pytania i gotowe zdania do rozmowy z urzędem, lekarzem, bankiem, szkołą lub pracodawcą.": "Prepara domande e frasi per ufficio, medico, banca, scuola o datore di lavoro.",
+    "NOWE": "NUOVO",
+    "Analiza umowy": "Analisi del contratto",
+    "Poznaj najważniejsze zapisy, obowiązki, terminy, wypowiedzenie, przedłużenie i punkty wymagające uwagi.": "Comprendi clausole, obblighi, scadenze, recesso, rinnovo e punti da controllare.",
+    "Analiza dokumentu PDF": "Analisi documento PDF",
+    "Dodaj dokument PDF i otrzymaj proste wyjaśnienie jego treści, najważniejszych informacji oraz następnych kroków.": "Aggiungi un PDF e ricevi una spiegazione semplice del contenuto, informazioni principali e prossimi passi.",
+    "Analiza zdjęcia dokumentu": "Analisi foto documento",
+    "Dodaj zdjęcie pisma lub kilku kolejnych stron, aby odczytać tekst i zrozumieć dokument.": "Aggiungi una foto o più pagine consecutive per leggere e capire il documento.",
+    "Pomoc z formularzem": "Aiuto con moduli",
+    "Zrozum pola formularza, wymagane informacje i to, co warto przygotować przed jego wypełnieniem.": "Comprendi campi, informazioni richieste e cosa preparare prima della compilazione.",
+    "Wyjaśnienie rachunku lub faktury": "Spiegazione bolletta o fattura",
+    "Sprawdź kwoty, terminy, dane płatności, opłaty i elementy, które mogą wymagać dodatkowego sprawdzenia.": "Controlla importi, scadenze, dati di pagamento, costi e punti da verificare.",
+    "✨ Wszystkie narzędzia AI w jednej aplikacji.": "✨ Tutti gli strumenti AI in un’unica app.",
+    "FREE i plany czasowe obejmują 2 użycia narzędzi AI. Pakiet 30 dni PRO obejmuje 100 użyć.": "FREE e gli accessi temporanei includono 2 utilizzi. Il piano 30 giorni PRO ne include 100.",
+    "Sense Bridge jest już dostępny jako aplikacja internetowa, a wkrótce pojawi się również w Google Play.": "Sense Bridge è già disponibile come web app e arriverà presto anche su Google Play.",
+    "Analizy przez 24 godziny oraz 2 użycia narzędzi AI.": "Analisi per 24 ore e 2 utilizzi degli strumenti AI.",
+    "Analizy przez 7 dni oraz 2 użycia narzędzi AI.": "Analisi per 7 giorni e 2 utilizzi degli strumenti AI.",
+    "Analizy przez 30 dni oraz 2 użycia narzędzi AI.": "Analisi per 30 giorni e 2 utilizzi degli strumenti AI.",
+    "30 dni PRO": "30 giorni PRO",
+    "Pełny dostęp do analiz oraz 100 użyć narzędzi AI przez 30 dni.": "Accesso completo alle analisi e 100 utilizzi degli strumenti AI per 30 giorni.",
+    "🔎 Jak można znaleźć narzędzia Sense Bridge": "🔎 Come trovare gli strumenti Sense Bridge",
+    "Naturalne opisy funkcji pomagają użytkownikom i wyszukiwarkom zrozumieć, do czego służy aplikacja.": "Descrizioni naturali aiutano utenti e motori di ricerca a capire le funzioni dell’app."
+  },
+  "ES": {
+    "🤖 Narzędzia AI Sense Bridge": "🤖 Herramientas de IA Sense Bridge",
+    "Nie tylko tłumaczenie pisma. Sprawdzaj wiadomości i strony, analizuj dokumenty oraz przygotuj odpowiedź lub rozmowę w dwóch językach.": "Más que traducir cartas. Comprueba mensajes y sitios, analiza documentos y prepara respuestas o conversaciones en dos idiomas.",
+    "NARZĘDZIE AI": "HERRAMIENTA IA",
+    "Sprawdź zrzut ekranu": "Comprobar una captura",
+    "Prześlij zrzut lub zdjęcie i sprawdź podejrzane ostrzeżenia, reklamy, komunikaty oraz ekrany logowania.": "Sube una captura o foto y comprueba avisos, anuncios, mensajes y pantallas de inicio de sesión sospechosos.",
+    "Sprawdź link lub stronę": "Comprobar un enlace o sitio",
+    "Sprawdź domenę, podszywanie się pod instytucję, presję czasu i sygnały typowe dla phishingu.": "Comprueba el dominio, la suplantación de instituciones, la presión de tiempo y señales típicas de phishing.",
+    "Sprawdź e-mail lub SMS": "Comprobar correo o SMS",
+    "Zobacz, czy wiadomość wygląda wiarygodnie, czy może być próbą oszustwa, wyłudzenia danych lub fałszywej płatności.": "Mira si un mensaje parece fiable o puede ser fraude, robo de datos o una falsa solicitud de pago.",
+    "Pomoc w odpowiedzi": "Asistente de respuestas",
+    "Przygotuj odpowiedź w dwóch językach: przeczytaj ją po swojemu i skopiuj wersję dla odbiorcy.": "Prepara una respuesta en dos idiomas: léela en tu idioma y copia la versión para el destinatario.",
+    "Przygotuj rozmowę": "Preparar una conversación",
+    "Przygotuj pytania i gotowe zdania do rozmowy z urzędem, lekarzem, bankiem, szkołą lub pracodawcą.": "Prepara preguntas y frases para una administración, médico, banco, escuela o empleador.",
+    "NOWE": "NUEVO",
+    "Analiza umowy": "Análisis de contrato",
+    "Poznaj najważniejsze zapisy, obowiązki, terminy, wypowiedzenie, przedłużenie i punkty wymagające uwagi.": "Comprende cláusulas, obligaciones, plazos, cancelación, renovación y puntos que requieren atención.",
+    "Analiza dokumentu PDF": "Análisis de documento PDF",
+    "Dodaj dokument PDF i otrzymaj proste wyjaśnienie jego treści, najważniejszych informacji oraz następnych kroków.": "Añade un PDF y recibe una explicación sencilla del contenido, información clave y próximos pasos.",
+    "Analiza zdjęcia dokumentu": "Análisis de foto de documento",
+    "Dodaj zdjęcie pisma lub kilku kolejnych stron, aby odczytać tekst i zrozumieć dokument.": "Añade una foto o varias páginas consecutivas para leer y entender el documento.",
+    "Pomoc z formularzem": "Ayuda con formularios",
+    "Zrozum pola formularza, wymagane informacje i to, co warto przygotować przed jego wypełnieniem.": "Comprende campos, información necesaria y qué preparar antes de completar el formulario.",
+    "Wyjaśnienie rachunku lub faktury": "Explicación de recibo o factura",
+    "Sprawdź kwoty, terminy, dane płatności, opłaty i elementy, które mogą wymagać dodatkowego sprawdzenia.": "Comprueba importes, plazos, datos de pago, cargos y puntos que necesitan revisión.",
+    "✨ Wszystkie narzędzia AI w jednej aplikacji.": "✨ Todas las herramientas de IA en una aplicación.",
+    "FREE i plany czasowe obejmują 2 użycia narzędzi AI. Pakiet 30 dni PRO obejmuje 100 użyć.": "FREE y los accesos temporales incluyen 2 usos. El plan 30 días PRO incluye 100.",
+    "Sense Bridge jest już dostępny jako aplikacja internetowa, a wkrótce pojawi się również w Google Play.": "Sense Bridge ya está disponible como aplicación web y llegará pronto a Google Play.",
+    "Analizy przez 24 godziny oraz 2 użycia narzędzi AI.": "Análisis durante 24 horas y 2 usos de herramientas de IA.",
+    "Analizy przez 7 dni oraz 2 użycia narzędzi AI.": "Análisis durante 7 días y 2 usos de herramientas de IA.",
+    "Analizy przez 30 dni oraz 2 użycia narzędzi AI.": "Análisis durante 30 días y 2 usos de herramientas de IA.",
+    "30 dni PRO": "30 días PRO",
+    "Pełny dostęp do analiz oraz 100 użyć narzędzi AI przez 30 dni.": "Acceso completo a análisis y 100 usos de herramientas de IA durante 30 días.",
+    "🔎 Jak można znaleźć narzędzia Sense Bridge": "🔎 Cómo encontrar las herramientas Sense Bridge",
+    "Naturalne opisy funkcji pomagają użytkownikom i wyszukiwarkom zrozumieć, do czego służy aplikacja.": "Las descripciones naturales ayudan a usuarios y buscadores a entender las funciones de la aplicación."
+  },
+  "PT": {
+    "🤖 Narzędzia AI Sense Bridge": "🤖 Ferramentas de IA Sense Bridge",
+    "Nie tylko tłumaczenie pisma. Sprawdzaj wiadomości i strony, analizuj dokumenty oraz przygotuj odpowiedź lub rozmowę w dwóch językach.": "Mais do que tradução de cartas. Verifique mensagens e sites, analise documentos e prepare respostas ou conversas em duas línguas.",
+    "NARZĘDZIE AI": "FERRAMENTA IA",
+    "Sprawdź zrzut ekranu": "Verificar captura de ecrã",
+    "Prześlij zrzut lub zdjęcie i sprawdź podejrzane ostrzeżenia, reklamy, komunikaty oraz ekrany logowania.": "Carregue uma captura ou foto e verifique avisos, anúncios, mensagens e ecrãs de início de sessão suspeitos.",
+    "Sprawdź link lub stronę": "Verificar link ou site",
+    "Sprawdź domenę, podszywanie się pod instytucję, presję czasu i sygnały typowe dla phishingu.": "Verifique domínio, imitação de instituições, pressão de tempo e sinais típicos de phishing.",
+    "Sprawdź e-mail lub SMS": "Verificar email ou SMS",
+    "Zobacz, czy wiadomość wygląda wiarygodnie, czy może być próbą oszustwa, wyłudzenia danych lub fałszywej płatności.": "Veja se uma mensagem parece credível ou pode ser fraude, roubo de dados ou pedido de pagamento falso.",
+    "Pomoc w odpowiedzi": "Assistente de resposta",
+    "Przygotuj odpowiedź w dwóch językach: przeczytaj ją po swojemu i skopiuj wersję dla odbiorcy.": "Prepare uma resposta em duas línguas: leia na sua língua e copie a versão para o destinatário.",
+    "Przygotuj rozmowę": "Preparar conversa",
+    "Przygotuj pytania i gotowe zdania do rozmowy z urzędem, lekarzem, bankiem, szkołą lub pracodawcą.": "Prepare perguntas e frases para entidade pública, médico, banco, escola ou empregador.",
+    "NOWE": "NOVO",
+    "Analiza umowy": "Análise de contrato",
+    "Poznaj najważniejsze zapisy, obowiązki, terminy, wypowiedzenie, przedłużenie i punkty wymagające uwagi.": "Compreenda cláusulas, obrigações, prazos, rescisão, renovação e pontos que exigem atenção.",
+    "Analiza dokumentu PDF": "Análise de documento PDF",
+    "Dodaj dokument PDF i otrzymaj proste wyjaśnienie jego treści, najważniejszych informacji oraz następnych kroków.": "Adicione um PDF e receba uma explicação simples do conteúdo, informação principal e próximos passos.",
+    "Analiza zdjęcia dokumentu": "Análise de fotografia de documento",
+    "Dodaj zdjęcie pisma lub kilku kolejnych stron, aby odczytać tekst i zrozumieć dokument.": "Adicione uma foto ou várias páginas seguidas para ler e compreender o documento.",
+    "Pomoc z formularzem": "Ajuda com formulário",
+    "Zrozum pola formularza, wymagane informacje i to, co warto przygotować przed jego wypełnieniem.": "Compreenda campos, informação necessária e o que preparar antes de preencher.",
+    "Wyjaśnienie rachunku lub faktury": "Explicação de conta ou fatura",
+    "Sprawdź kwoty, terminy, dane płatności, opłaty i elementy, które mogą wymagać dodatkowego sprawdzenia.": "Verifique valores, prazos, dados de pagamento, encargos e pontos que precisam de revisão.",
+    "✨ Wszystkie narzędzia AI w jednej aplikacji.": "✨ Todas as ferramentas de IA numa aplicação.",
+    "FREE i plany czasowe obejmują 2 użycia narzędzi AI. Pakiet 30 dni PRO obejmuje 100 użyć.": "FREE e os acessos temporários incluem 2 utilizações. O plano 30 dias PRO inclui 100.",
+    "Sense Bridge jest już dostępny jako aplikacja internetowa, a wkrótce pojawi się również w Google Play.": "Sense Bridge já está disponível como aplicação web e chegará em breve ao Google Play.",
+    "Analizy przez 24 godziny oraz 2 użycia narzędzi AI.": "Análises durante 24 horas e 2 utilizações das ferramentas de IA.",
+    "Analizy przez 7 dni oraz 2 użycia narzędzi AI.": "Análises durante 7 dias e 2 utilizações das ferramentas de IA.",
+    "Analizy przez 30 dni oraz 2 użycia narzędzi AI.": "Análises durante 30 dias e 2 utilizações das ferramentas de IA.",
+    "30 dni PRO": "30 dias PRO",
+    "Pełny dostęp do analiz oraz 100 użyć narzędzi AI przez 30 dni.": "Acesso completo às análises e 100 utilizações das ferramentas de IA durante 30 dias.",
+    "🔎 Jak można znaleźć narzędzia Sense Bridge": "🔎 Como encontrar as ferramentas Sense Bridge",
+    "Naturalne opisy funkcji pomagają użytkownikom i wyszukiwarkom zrozumieć, do czego służy aplikacja.": "Descrições naturais ajudam utilizadores e motores de pesquisa a compreender as funções da aplicação."
+  }
+};
+
+  Object.keys(SB_LANDING_NEW_I18N).forEach(lang => {
+    SB_PAGE_I18N[lang] = Object.assign({}, SB_PAGE_I18N[lang] || {}, SB_LANDING_NEW_I18N[lang]);
+  });
+
+
+  const SB_HERO_POWER_I18N = {
+  "EN": {
+    "🌍 100+ języków": "🌍 100+ languages",
+    "🌍 Ponad 100 języków": "🌍 More than 100 languages",
+    "📄 Pismo w dowolnym języku": "📄 A letter in any language",
+    "🌐 Wynik w Twoim języku": "🌐 Result in your language",
+    "🤖 Narzędzia AI — NOWOŚĆ": "🤖 AI tools — NEW",
+    "📷 Sprawdź zrzut ekranu": "📷 Check a screenshot",
+    "🔗 Sprawdź link lub stronę": "🔗 Check a link or website",
+    "💬 Sprawdź e-mail lub SMS": "💬 Check an email or SMS",
+    "✍️ Pomoc w odpowiedzi": "✍️ Reply assistant",
+    "🗣️ Przygotuj rozmowę": "🗣️ Prepare a conversation",
+    "📑 Analiza umowy": "📑 Contract analysis",
+    "📄 Analiza PDF": "📄 PDF analysis",
+    "🖼️ Analiza zdjęcia dokumentu": "🖼️ Photo document analysis",
+    "📝 Pomoc z formularzem": "📝 Form help",
+    "🧾 Wyjaśnienie rachunku lub faktury": "🧾 Bill or invoice explanation",
+    "⭐ 30 dni PRO: pełny dostęp do analiz i 100 użyć narzędzi AI.": "⭐ 30 days PRO: full analysis access and 100 AI tool uses."
+  },
+  "NL": {
+    "🌍 100+ języków": "🌍 100+ talen",
+    "🌍 Ponad 100 języków": "🌍 Meer dan 100 talen",
+    "📄 Pismo w dowolnym języku": "📄 Een brief in elke taal",
+    "🌐 Wynik w Twoim języku": "🌐 Resultaat in jouw taal",
+    "🤖 Narzędzia AI — NOWOŚĆ": "🤖 AI-tools — NIEUW",
+    "📷 Sprawdź zrzut ekranu": "📷 Controleer een screenshot",
+    "🔗 Sprawdź link lub stronę": "🔗 Controleer een link of website",
+    "💬 Sprawdź e-mail lub SMS": "💬 Controleer e-mail of sms",
+    "✍️ Pomoc w odpowiedzi": "✍️ Hulp bij antwoorden",
+    "🗣️ Przygotuj rozmowę": "🗣️ Bereid een gesprek voor",
+    "📑 Analiza umowy": "📑 Contractanalyse",
+    "📄 Analiza PDF": "📄 PDF-analyse",
+    "🖼️ Analiza zdjęcia dokumentu": "🖼️ Analyse van documentfoto",
+    "📝 Pomoc z formularzem": "📝 Hulp met formulier",
+    "🧾 Wyjaśnienie rachunku lub faktury": "🧾 Uitleg van rekening of factuur",
+    "⭐ 30 dni PRO: pełny dostęp do analiz i 100 użyć narzędzi AI.": "⭐ 30 dagen PRO: volledige analysetoegang en 100 AI-toolgebruiken."
+  },
+  "DE": {
+    "🌍 100+ języków": "🌍 100+ Sprachen",
+    "🌍 Ponad 100 języków": "🌍 Mehr als 100 Sprachen",
+    "📄 Pismo w dowolnym języku": "📄 Ein Schreiben in jeder Sprache",
+    "🌐 Wynik w Twoim języku": "🌐 Ergebnis in Ihrer Sprache",
+    "🤖 Narzędzia AI — NOWOŚĆ": "🤖 KI-Tools — NEU",
+    "📷 Sprawdź zrzut ekranu": "📷 Screenshot prüfen",
+    "🔗 Sprawdź link lub stronę": "🔗 Link oder Website prüfen",
+    "💬 Sprawdź e-mail lub SMS": "💬 E-Mail oder SMS prüfen",
+    "✍️ Pomoc w odpowiedzi": "✍️ Antwortassistent",
+    "🗣️ Przygotuj rozmowę": "🗣️ Gespräch vorbereiten",
+    "📑 Analiza umowy": "📑 Vertragsanalyse",
+    "📄 Analiza PDF": "📄 PDF-Analyse",
+    "🖼️ Analiza zdjęcia dokumentu": "🖼️ Dokumentfoto analysieren",
+    "📝 Pomoc z formularzem": "📝 Formularhilfe",
+    "🧾 Wyjaśnienie rachunku lub faktury": "🧾 Rechnung erklären",
+    "⭐ 30 dni PRO: pełny dostęp do analiz i 100 użyć narzędzi AI.": "⭐ 30 Tage PRO: voller Analysezugang und 100 KI-Tool-Nutzungen."
+  },
+  "UA": {
+    "🌍 100+ języków": "🌍 100+ мов",
+    "🌍 Ponad 100 języków": "🌍 Понад 100 мов",
+    "📄 Pismo w dowolnym języku": "📄 Лист будь-якою мовою",
+    "🌐 Wynik w Twoim języku": "🌐 Результат вашою мовою",
+    "🤖 Narzędzia AI — NOWOŚĆ": "🤖 AI-інструменти — НОВЕ",
+    "📷 Sprawdź zrzut ekranu": "📷 Перевірити знімок екрана",
+    "🔗 Sprawdź link lub stronę": "🔗 Перевірити посилання або сайт",
+    "💬 Sprawdź e-mail lub SMS": "💬 Перевірити e-mail або SMS",
+    "✍️ Pomoc w odpowiedzi": "✍️ Допомога з відповіддю",
+    "🗣️ Przygotuj rozmowę": "🗣️ Підготувати розмову",
+    "📑 Analiza umowy": "📑 Аналіз договору",
+    "📄 Analiza PDF": "📄 Аналіз PDF",
+    "🖼️ Analiza zdjęcia dokumentu": "🖼️ Аналіз фото документа",
+    "📝 Pomoc z formularzem": "📝 Допомога з формою",
+    "🧾 Wyjaśnienie rachunku lub faktury": "🧾 Пояснення рахунку або фактури",
+    "⭐ 30 dni PRO: pełny dostęp do analiz i 100 użyć narzędzi AI.": "⭐ 30 днів PRO: повний доступ до аналізів і 100 використань AI-інструментів."
+  },
+  "FR": {
+    "🌍 100+ języków": "🌍 100+ langues",
+    "🌍 Ponad 100 języków": "🌍 Plus de 100 langues",
+    "📄 Pismo w dowolnym języku": "📄 Une lettre dans n’importe quelle langue",
+    "🌐 Wynik w Twoim języku": "🌐 Résultat dans votre langue",
+    "🤖 Narzędzia AI — NOWOŚĆ": "🤖 Outils IA — NOUVEAU",
+    "📷 Sprawdź zrzut ekranu": "📷 Vérifier une capture d’écran",
+    "🔗 Sprawdź link lub stronę": "🔗 Vérifier un lien ou un site",
+    "💬 Sprawdź e-mail lub SMS": "💬 Vérifier un e-mail ou SMS",
+    "✍️ Pomoc w odpowiedzi": "✍️ Aide à la réponse",
+    "🗣️ Przygotuj rozmowę": "🗣️ Préparer une conversation",
+    "📑 Analiza umowy": "📑 Analyse de contrat",
+    "📄 Analiza PDF": "📄 Analyse PDF",
+    "🖼️ Analiza zdjęcia dokumentu": "🖼️ Analyse de photo de document",
+    "📝 Pomoc z formularzem": "📝 Aide pour formulaire",
+    "🧾 Wyjaśnienie rachunku lub faktury": "🧾 Explication de facture",
+    "⭐ 30 dni PRO: pełny dostęp do analiz i 100 użyć narzędzi AI.": "⭐ 30 jours PRO : accès complet aux analyses et 100 utilisations des outils IA."
+  },
+  "IT": {
+    "🌍 100+ języków": "🌍 100+ lingue",
+    "🌍 Ponad 100 języków": "🌍 Oltre 100 lingue",
+    "📄 Pismo w dowolnym języku": "📄 Una lettera in qualsiasi lingua",
+    "🌐 Wynik w Twoim języku": "🌐 Risultato nella tua lingua",
+    "🤖 Narzędzia AI — NOWOŚĆ": "🤖 Strumenti AI — NUOVO",
+    "📷 Sprawdź zrzut ekranu": "📷 Controlla uno screenshot",
+    "🔗 Sprawdź link lub stronę": "🔗 Controlla un link o sito",
+    "💬 Sprawdź e-mail lub SMS": "💬 Controlla e-mail o SMS",
+    "✍️ Pomoc w odpowiedzi": "✍️ Assistente per risposte",
+    "🗣️ Przygotuj rozmowę": "🗣️ Prepara una conversazione",
+    "📑 Analiza umowy": "📑 Analisi del contratto",
+    "📄 Analiza PDF": "📄 Analisi PDF",
+    "🖼️ Analiza zdjęcia dokumentu": "🖼️ Analisi foto documento",
+    "📝 Pomoc z formularzem": "📝 Aiuto con moduli",
+    "🧾 Wyjaśnienie rachunku lub faktury": "🧾 Spiegazione bolletta o fattura",
+    "⭐ 30 dni PRO: pełny dostęp do analiz i 100 użyć narzędzi AI.": "⭐ 30 giorni PRO: accesso completo alle analisi e 100 utilizzi degli strumenti AI."
+  },
+  "ES": {
+    "🌍 100+ języków": "🌍 100+ idiomas",
+    "🌍 Ponad 100 języków": "🌍 Más de 100 idiomas",
+    "📄 Pismo w dowolnym języku": "📄 Una carta en cualquier idioma",
+    "🌐 Wynik w Twoim języku": "🌐 Resultado en tu idioma",
+    "🤖 Narzędzia AI — NOWOŚĆ": "🤖 Herramientas de IA — NUEVO",
+    "📷 Sprawdź zrzut ekranu": "📷 Comprobar una captura",
+    "🔗 Sprawdź link lub stronę": "🔗 Comprobar un enlace o sitio",
+    "💬 Sprawdź e-mail lub SMS": "💬 Comprobar correo o SMS",
+    "✍️ Pomoc w odpowiedzi": "✍️ Asistente de respuestas",
+    "🗣️ Przygotuj rozmowę": "🗣️ Preparar una conversación",
+    "📑 Analiza umowy": "📑 Análisis de contrato",
+    "📄 Analiza PDF": "📄 Análisis PDF",
+    "🖼️ Analiza zdjęcia dokumentu": "🖼️ Análisis de foto de documento",
+    "📝 Pomoc z formularzem": "📝 Ayuda con formularios",
+    "🧾 Wyjaśnienie rachunku lub faktury": "🧾 Explicación de recibo o factura",
+    "⭐ 30 dni PRO: pełny dostęp do analiz i 100 użyć narzędzi AI.": "⭐ 30 días PRO: acceso completo a análisis y 100 usos de herramientas de IA."
+  },
+  "PT": {
+    "🌍 100+ języków": "🌍 100+ idiomas",
+    "🌍 Ponad 100 języków": "🌍 Mais de 100 idiomas",
+    "📄 Pismo w dowolnym języku": "📄 Uma carta em qualquer idioma",
+    "🌐 Wynik w Twoim języku": "🌐 Resultado na sua língua",
+    "🤖 Narzędzia AI — NOWOŚĆ": "🤖 Ferramentas de IA — NOVO",
+    "📷 Sprawdź zrzut ekranu": "📷 Verificar captura de ecrã",
+    "🔗 Sprawdź link lub stronę": "🔗 Verificar link ou site",
+    "💬 Sprawdź e-mail lub SMS": "💬 Verificar email ou SMS",
+    "✍️ Pomoc w odpowiedzi": "✍️ Assistente de resposta",
+    "🗣️ Przygotuj rozmowę": "🗣️ Preparar conversa",
+    "📑 Analiza umowy": "📑 Análise de contrato",
+    "📄 Analiza PDF": "📄 Análise PDF",
+    "🖼️ Analiza zdjęcia dokumentu": "🖼️ Análise de fotografia de documento",
+    "📝 Pomoc z formularzem": "📝 Ajuda com formulário",
+    "🧾 Wyjaśnienie rachunku lub faktury": "🧾 Explicação de conta ou fatura",
+    "⭐ 30 dni PRO: pełny dostęp do analiz i 100 użyć narzędzi AI.": "⭐ 30 dias PRO: acesso completo às análises e 100 utilizações das ferramentas de IA."
+  }
+};
+
+  Object.keys(SB_HERO_POWER_I18N).forEach(lang => {
+    SB_PAGE_I18N[lang] = Object.assign({}, SB_PAGE_I18N[lang] || {}, SB_HERO_POWER_I18N[lang]);
   });
 
   function setSiteLang(lang){
