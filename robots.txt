@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://sensebridge.com/sitemap.xml
+Sitemap: https://sensebridge.app/sitemap.xml

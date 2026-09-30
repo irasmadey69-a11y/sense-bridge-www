@@ -1,0 +1,11 @@
+Sense Bridge — regionalne strony v14, 28.09.2026
+
+Baza: v13 (15 stron regionalnych), pochodząca z przesłanej przez użytkownika strony v12a.
+
+Łącznie 40 stron regionalnych. Nowe rynki v14 (25): Portugalia, Angola, Mozambik, Hiszpania, Argentyna, Chile, Peru, Ekwador, Urugwaj, Dominikana, Australia, Nowa Zelandia, Irlandia, RPA, Singapur, Belgia francuska, Luksemburg francuski, Szwajcaria francuska, Wybrzeże Kości Słoniowej, Polacy w Danii, Norwegii, Szwecji i Finlandii oraz Ukraińcy w Wielkiej Brytanii i Irlandii.
+
+Dodano /countries/ — katalog wszystkich 40 stron. Na stronie głównej widoczne jest sześć przykładowych krajów i odnośnik do katalogu. Dodano URL-e do sitemap.xml. Każda strona ma unikalny tytuł, adres kanoniczny, fikcyjny przykład dokumentu, objaśnienie, kroki do sprawdzenia, link do aplikacji i lokalny oficjalny portal do niezależnej weryfikacji. Zewnętrzne portale są zwykłymi linkami, nie zasobami uruchomieniowymi.
+
+Nie tworzono 195 podobnych stron. Przewodniki językowe są globalne; strona regionalna powstaje wtedy, gdy można pokazać osobny przypadek i miejscowe słownictwo. Strony regionalne nie używają hreflang wobec nieidentycznych przewodników. SEO i reakcje użytkowników wymagają pomiaru po publikacji.
+
+Nie zmieniono kodu aplikacji ani licznika. Wdrożenie nie zostało wykonane. Przed podmianą produkcji sprawdź podgląd Netlify na telefonie, otwarcie /app, licznik i linki w /countries/.

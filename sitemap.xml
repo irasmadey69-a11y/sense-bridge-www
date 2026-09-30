@@ -1,13 +1,70 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url>
-    <loc>https://sensebridge.app/</loc>
-    <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>https://sensebridge.app/privacy</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
+<url><loc>https://sensebridge.app/</loc></url>
+<url><loc>https://sensebridge.app/guide/pl/</loc></url>
+<url><loc>https://sensebridge.app/guide/en/</loc></url>
+<url><loc>https://sensebridge.app/guide/nl/</loc></url>
+<url><loc>https://sensebridge.app/guide/de/</loc></url>
+<url><loc>https://sensebridge.app/guide/fr/</loc></url>
+<url><loc>https://sensebridge.app/guide/es/</loc></url>
+<url><loc>https://sensebridge.app/guide/it/</loc></url>
+<url><loc>https://sensebridge.app/guide/pt/</loc></url>
+<url><loc>https://sensebridge.app/guide/uk/</loc></url>
+<url><loc>https://sensebridge.app/guide/lt/</loc></url>
+<url><loc>https://sensebridge.app/guide/lv/</loc></url>
+<url><loc>https://sensebridge.app/guide/hu/</loc></url>
+<url><loc>https://sensebridge.app/guide/zh/</loc></url>
+<url><loc>https://sensebridge.app/guide/ja/</loc></url>
+<url><loc>https://sensebridge.app/guide/hi/</loc></url>
+<url><loc>https://sensebridge.app/guide/ar/</loc></url>
+<url><loc>https://sensebridge.app/guide/ar-EG/</loc></url>
+<url><loc>https://sensebridge.app/guide/et/</loc></url>
+<url><loc>https://sensebridge.app/guide/ro/</loc></url>
+<url><loc>https://sensebridge.app/guide/hr/</loc></url>
+<url><loc>https://sensebridge.app/guide/fi/</loc></url>
+<url><loc>https://sensebridge.app/guide/sv/</loc></url>
+<url><loc>https://sensebridge.app/guide/no/</loc></url>
+<url><loc>https://sensebridge.app/guide/da/</loc></url>
+<url><loc>https://sensebridge.app/privacy</loc></url>
+<url><loc>https://sensebridge.app/country/brasil/</loc></url>
+<url><loc>https://sensebridge.app/country/mexico/</loc></url>
+<url><loc>https://sensebridge.app/country/colombia/</loc></url>
+<url><loc>https://sensebridge.app/country/polacy-w-holandii/</loc></url>
+<url><loc>https://sensebridge.app/country/ukraincy-w-polsce/</loc></url>
+<url><loc>https://sensebridge.app/country/united-states/</loc></url>
+<url><loc>https://sensebridge.app/country/canada-francais/</loc></url>
+<url><loc>https://sensebridge.app/country/polacy-w-niemczech/</loc></url>
+<url><loc>https://sensebridge.app/country/polacy-w-wielkiej-brytanii/</loc></url>
+<url><loc>https://sensebridge.app/country/ukraincy-w-niemczech/</loc></url>
+<url><loc>https://sensebridge.app/country/hispanohablantes-en-estados-unidos/</loc></url>
+<url><loc>https://sensebridge.app/country/united-kingdom/</loc></url>
+<url><loc>https://sensebridge.app/country/france/</loc></url>
+<url><loc>https://sensebridge.app/country/india/</loc></url>
+<url><loc>https://sensebridge.app/country/deutschland/</loc></url>
+<url><loc>https://sensebridge.app/country/australia/</loc></url>
+<url><loc>https://sensebridge.app/country/ireland/</loc></url>
+<url><loc>https://sensebridge.app/country/new-zealand/</loc></url>
+<url><loc>https://sensebridge.app/country/singapore/</loc></url>
+<url><loc>https://sensebridge.app/country/south-africa/</loc></url>
+<url><loc>https://sensebridge.app/country/argentina/</loc></url>
+<url><loc>https://sensebridge.app/country/chile/</loc></url>
+<url><loc>https://sensebridge.app/country/ecuador/</loc></url>
+<url><loc>https://sensebridge.app/country/espana/</loc></url>
+<url><loc>https://sensebridge.app/country/peru/</loc></url>
+<url><loc>https://sensebridge.app/country/republica-dominicana/</loc></url>
+<url><loc>https://sensebridge.app/country/uruguay/</loc></url>
+<url><loc>https://sensebridge.app/country/belgique-francais/</loc></url>
+<url><loc>https://sensebridge.app/country/cote-divoire/</loc></url>
+<url><loc>https://sensebridge.app/country/luxembourg-francais/</loc></url>
+<url><loc>https://sensebridge.app/country/suisse-romande/</loc></url>
+<url><loc>https://sensebridge.app/country/polacy-w-danii/</loc></url>
+<url><loc>https://sensebridge.app/country/polacy-w-finlandii/</loc></url>
+<url><loc>https://sensebridge.app/country/polacy-w-norwegii/</loc></url>
+<url><loc>https://sensebridge.app/country/polacy-w-szwecji/</loc></url>
+<url><loc>https://sensebridge.app/country/angola/</loc></url>
+<url><loc>https://sensebridge.app/country/mocambique/</loc></url>
+<url><loc>https://sensebridge.app/country/portugal/</loc></url>
+<url><loc>https://sensebridge.app/country/ukraincy-w-irlandii/</loc></url>
+<url><loc>https://sensebridge.app/country/ukraincy-w-wielkiej-brytanii/</loc></url>
+<url><loc>https://sensebridge.app/countries/</loc></url>
 </urlset>

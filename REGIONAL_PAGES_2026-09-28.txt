@@ -1,0 +1,27 @@
+Sense Bridge — regionalne strony pilotażowe, 28.09.2026
+
+Baza: przesłany przez użytkownika ZIP Sense-Bridge-www-v12a-hreflang-24-jezyki-2026-09-27.zip.
+
+Nowe podstrony (15):
+/country/brasil/ — pt-BR, boleto i wiadomości o płatności
+/country/mexico/ — es-MX, avisos de trámite
+/country/colombia/ — es-CO, requerimiento i radicado
+/country/polacy-w-holandii/ — pl, pismo po niderlandzku
+/country/ukraincy-w-polsce/ — uk, pismo po polsku
+/country/united-states/ — en-US, request for documents
+/country/canada-francais/ — fr-CA, demande de pièces
+/country/polacy-w-niemczech/ — pl, Unterlagen i Aktenzeichen
+/country/polacy-w-wielkiej-brytanii/ — pl, council tax
+/country/ukraincy-w-niemczech/ — uk, Unterlagen i Aktenzeichen
+/country/hispanohablantes-en-estados-unidos/ — es-US, factura médica
+/country/united-kingdom/ — en-GB, council letter
+/country/france/ — fr-FR, justificatifs
+/country/india/ — hi, rachunek za prąd
+/country/deutschland/ — de-DE, pismo od ubezpieczyciela
+
+Zmodyfikowane pliki: index.html — odnośniki do stron regionalnych i usunięcie błędnych hreflang strony głównej; sitemap.xml — dodane 15 adresów.
+Nie zmieniono licznika ani aplikacji. Podstrony zawierają wyraźnie oznaczone fikcyjne przykłady. Nie potwierdzają autentyczności dokumentów i nie udzielają porady prawnej.
+
+Te 15 stron to pierwsza pula, a nie pokrycie wszystkich państw. Ogólne przewodniki w 24 wersjach językowych pozostają dostępne globalnie. Kolejne krajowe strony należy tworzyć dla innych realnych problemów i fraz wyszukiwanych przez odbiorców, po sprawdzeniu jakości tłumaczeń.
+
+Wgraj całą zawartość katalogu sense-bridge-www-main jako jeden deploy Netlify w podglądzie. Sprawdź na telefonie linki, ścieżkę /app, licznik oraz strony krajowe. Nie wdrożono na produkcję automatycznie.
