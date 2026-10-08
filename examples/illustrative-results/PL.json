@@ -1,0 +1,13 @@
+{
+  "letterSummary": "Twoja aplikacja jest niekompletna. Proszę dostarczyć dowód adresu i wypełniony formularz w ciągu 14 dni od otrzymania tego listu. Aplikacja nie może być przetworzona, dopóki te dokumenty nie zostaną otrzymane.",
+  "letterAction": "Dostarcz brakujące dokumenty w ciągu 14 dni od otrzymania listu.",
+  "letterSafety": "Ten przykładowy list prosi o brakujące dokumenty. Sprawdź nadawcę, korzystając z metody kontaktu, którą już znasz.",
+  "letterTranslation": "Przykładowy list — fikcyjny przykład\nData: 7 października 2026\nTemat: Brakujące dokumenty do Twojej aplikacji\nDrogi wnioskodawco,\nTwoja aplikacja jest niekompletna. Proszę dostarczyć dowód adresu i wypełniony formularz w ciągu 14 dni od otrzymania tego listu. Twoja aplikacja nie może być przetworzona, dopóki te dokumenty nie zostaną otrzymane. W razie pytań skorzystaj z metody kontaktu, którą już znasz.\nZ poważaniem,\nPracownik sprawy",
+  "smsSummary": "Wiadomość twierdzi, że Twoja paczka jest zatrzymana i prosi o płatność w wysokości 2 EUR w ciągu 30 minut. Krótki termin i nieznany link to znaki ostrzegawcze.",
+  "smsAction": "Nie płac ani nie otwieraj linku. Sprawdź przesyłkę bezpośrednio w oficjalnej aplikacji lub na stronie internetowej firmy dostawczej.",
+  "smsSafety": "To fikcyjny przykład podejrzanej wiadomości. Pilność i prośba o płatność przez nieznany link zwiększają ryzyko.",
+  "billSummary": "Przykładowa faktura dotyczy usługi internetowej. Kwota wynosi 48 EUR, a termin płatności to 21 października 2026.",
+  "billAction": "Sprawdź odbiorcę i numer konta w porównaniu do informacji od swojego dostawcy przed dokonaniem płatności.",
+  "billSafety": "Sama kwota i termin nie potwierdzają, że faktura jest autentyczna. Sprawdź szczegóły płatności.",
+  "exampleType": "prepared fictional example rendered by the existing app interface"
+}

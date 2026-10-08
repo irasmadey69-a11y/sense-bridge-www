@@ -1,0 +1,13 @@
+{
+  "letterSummary": "Jūsų paraiška yra neišsami. Prašome pateikti savo adreso įrodymą ir užpildytą formą per 14 dienų nuo šio laiško gavimo. Paraiška negali būti apdorota, kol šie dokumentai nebus gauti.",
+  "letterAction": "Pateikite trūkstamus dokumentus per 14 dienų nuo laiško gavimo.",
+  "letterSafety": "Šis pavyzdinis laiškas prašo trūkstamų dokumentų. Patikrinkite siuntėją naudodami jums jau žinomą kontaktinį metodą.",
+  "letterTranslation": "Pavyzdinis laiškas — išgalvotas pavyzdys\nData: 2026 m. spalio 7 d.\nTema: Trūkstami dokumentai jūsų paraiškai\nGerbiamas pareiškėjau,\nJūsų paraiška yra neišsami. Prašome pateikti savo adreso įrodymą ir užpildytą formą per 14 dienų nuo šio laiško gavimo. Jūsų paraiška negali būti apdorota, kol šie dokumentai nebus gauti. Dėl klausimų naudokite jums jau žinomą kontaktinį metodą.\nPagarbiai,\nBylos pareigūnas",
+  "smsSummary": "Žinutė teigia, kad jūsų siunta yra sulaikyta ir prašo sumokėti 2 EUR per 30 minučių. Trumpas terminas ir nepažįstamas nuoroda yra įspėjimo ženklai.",
+  "smsAction": "Nemokėkite ir neatidarykite nuorodos. Patikrinkite siuntą tiesiogiai oficialioje pristatymo įmonės programoje arba svetainėje.",
+  "smsSafety": "Tai yra išgalvotas įtartinos žinutės pavyzdys. Skubumas ir mokėjimo prašymas per nepažįstamą nuorodą didina riziką.",
+  "billSummary": "Pavyzdinė sąskaita yra už interneto paslaugą. Suma yra 48 EUR, o mokėjimo terminas — 2026 m. spalio 21 d.",
+  "billAction": "Patikrinkite gavėją ir sąskaitos numerį pagal informaciją iš jūsų teikėjo prieš atlikdami mokėjimą.",
+  "billSafety": "Suma ir terminas patys savaime nepatvirtina, kad sąskaita yra autentiška. Patikrinkite mokėjimo duomenis.",
+  "exampleType": "prepared fictional example rendered by the existing app interface"
+}

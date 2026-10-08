@@ -1,0 +1,13 @@
+{
+  "letterSummary": "Sua aplicação está incompleta. Forneça comprovante de seu endereço e o formulário preenchido dentro de 14 dias após o recebimento desta carta. A aplicação não pode ser processada até que esses documentos sejam recebidos.",
+  "letterAction": "Forneça os documentos faltantes dentro de 14 dias após o recebimento da carta.",
+  "letterSafety": "Esta carta de exemplo solicita documentos faltantes. Verifique o remetente usando um método de contato que você já conhece.",
+  "letterTranslation": "Carta de exemplo — exemplo fictício\nData: 7 de outubro de 2026\nAssunto: Documentos faltantes para sua aplicação\nCaro candidato,\nSua aplicação está incompleta. Por favor, forneça comprovante de seu endereço e o formulário preenchido dentro de 14 dias após o recebimento desta carta. Sua aplicação não pode ser processada até que esses documentos sejam recebidos. Para dúvidas, use um método de contato que você já conhece.\nAtenciosamente,\nO agente responsável",
+  "smsSummary": "A mensagem afirma que seu pacote está retido e solicita um pagamento de EUR 2 dentro de 30 minutos. O prazo curto e o link desconhecido são sinais de alerta.",
+  "smsAction": "Não pague nem abra o link. Verifique a remessa diretamente no aplicativo ou site oficial da empresa de entrega.",
+  "smsSafety": "Este é um exemplo fictício de mensagem suspeita. A urgência e um pedido de pagamento através de um link desconhecido aumentam o risco.",
+  "billSummary": "A fatura de exemplo é para serviço de internet. O valor é EUR 48 e o prazo de pagamento é 21 de outubro de 2026.",
+  "billAction": "Verifique o destinatário e o número da conta com as informações do seu provedor antes de fazer o pagamento.",
+  "billSafety": "O valor e o prazo sozinhos não confirmam que uma fatura é autêntica. Verifique os detalhes do pagamento.",
+  "exampleType": "prepared fictional example rendered by the existing app interface"
+}

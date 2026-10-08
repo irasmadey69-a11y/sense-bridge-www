@@ -1,0 +1,13 @@
+{
+  "letterSummary": "Vaša prijava je nepotpuna. Dostavite dokaz o svojoj adresi i ispunjeni obrazac unutar 14 dana od primitka ovog pisma. Prijava se ne može obraditi dok se ovi dokumenti ne prime.",
+  "letterAction": "Dostavite nedostajuće dokumente unutar 14 dana od primitka pisma.",
+  "letterSafety": "Ovo uzorak pisma traži nedostajuće dokumente. Provjerite pošiljatelja koristeći metodu kontakta koju već poznajete.",
+  "letterTranslation": "Uzorak pisma — fiktivni primjer\nDatum: 7. listopada 2026.\nPredmet: Nedostajući dokumenti za vašu prijavu\nPoštovani podnositelju,\nVaša prijava je nepotpuna. Molimo vas da dostavite dokaz o svojoj adresi i ispunjeni obrazac unutar 14 dana od primitka ovog pisma. Vaša prijava se ne može obraditi dok se ovi dokumenti ne prime. Za pitanja, koristite metodu kontakta koju već poznajete.\nS poštovanjem,\nSlužbenik za slučajeve",
+  "smsSummary": "Poruka tvrdi da je vaša pošiljka zadržana i traži uplatu od 2 EUR unutar 30 minuta. Kratki rok i nepoznata poveznica su znakovi upozorenja.",
+  "smsAction": "Ne plaćajte niti otvarajte poveznicu. Provjerite pošiljku izravno u službenoj aplikaciji ili web stranici dostavne tvrtke.",
+  "smsSafety": "Ovo je fiktivni primjer sumnjive poruke. Hitnost i zahtjev za uplatu putem nepoznate poveznice povećavaju rizik.",
+  "billSummary": "Uzorak računa je za internetsku uslugu. Iznos je 48 EUR, a rok plaćanja je 21. listopada 2026.",
+  "billAction": "Provjerite primatelja i broj računa s informacijama od vašeg pružatelja usluga prije nego što izvršite uplatu.",
+  "billSafety": "Iznos i rok sami po sebi ne potvrđuju da je račun autentičan. Provjerite podatke o uplati.",
+  "exampleType": "prepared fictional example rendered by the existing app interface"
+}

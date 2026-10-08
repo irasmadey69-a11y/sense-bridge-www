@@ -1,0 +1,13 @@
+{
+  "letterSummary": "Hakemuksesi on puutteellinen. Toimita osoitteesi todistus ja täytetty lomake 14 päivän kuluessa tämän kirjeen vastaanottamisesta. Hakemusta ei voida käsitellä ennen kuin nämä asiakirjat on vastaanotettu.",
+  "letterAction": "Toimita puuttuvat asiakirjat 14 päivän kuluessa kirjeen vastaanottamisesta.",
+  "letterSafety": "Tämä esimerkkikirje pyytää puuttuvia asiakirjoja. Tarkista lähettäjä käyttämällä tuntemasi yhteydenottotapaa.",
+  "letterTranslation": "Esimerkkikirje — kuvitteellinen esimerkki\nPäivämäärä: 7. lokakuuta 2026\nAihe: Puuttuvat asiakirjat hakemuksellesi\nHyvä hakija,\nHakemuksesi on puutteellinen. Ole hyvä ja toimita osoitteesi todistus ja täytetty lomake 14 päivän kuluessa tämän kirjeen vastaanottamisesta. Hakemustasi ei voida käsitellä ennen kuin nämä asiakirjat on vastaanotettu. Kysymyksissä käytä tuntemiasi yhteydenottotapoja.\nYstävällisin terveisin,\nAsiantuntija",
+  "smsSummary": "Viesti väittää, että pakettisi on pidätetty ja pyytää maksua 2 euroa 30 minuutin kuluessa. Lyhyt määräaika ja tuntematon linkki ovat varoitusmerkkejä.",
+  "smsAction": "Älä maksa tai avaa linkkiä. Tarkista lähetys suoraan toimitusyrityksen virallisessa sovelluksessa tai verkkosivustolla.",
+  "smsSafety": "Tämä on kuvitteellinen epäilyttävä viesti-esimerkki. Kiireellisyys ja maksupyyntö tuntemattoman linkin kautta lisäävät riskiä.",
+  "billSummary": "Esimerkkilasku on internetpalvelusta. Summa on 48 euroa ja maksuaika on 21. lokakuuta 2026.",
+  "billAction": "Tarkista vastaanottaja ja tilinumero palveluntarjoajaltasi ennen maksamista.",
+  "billSafety": "Pelkkä summa ja määräaika eivät vahvista laskun aitoutta. Tarkista maksutiedot.",
+  "exampleType": "prepared fictional example rendered by the existing app interface"
+}

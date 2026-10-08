@@ -1,0 +1,13 @@
+{
+  "letterSummary": "Uw aanvraag is onvolledig. Lever bewijs van uw adres en het ingevulde formulier binnen 14 dagen na ontvangst van deze brief. De aanvraag kan niet worden verwerkt totdat deze documenten zijn ontvangen.",
+  "letterAction": "Lever de ontbrekende documenten binnen 14 dagen na ontvangst van de brief.",
+  "letterSafety": "Deze voorbeeldbrief vraagt om ontbrekende documenten. Controleer de afzender met een contactmethode die u al kent.",
+  "letterTranslation": "Voorbeeldbrief — fictief voorbeeld\nDatum: 7 oktober 2026\nOnderwerp: Ontbrekende documenten voor uw aanvraag\nBeste aanvrager,\nUw aanvraag is onvolledig. Gelieve bewijs van uw adres en het ingevulde formulier binnen 14 dagen na ontvangst van deze brief te leveren. Uw aanvraag kan niet worden verwerkt totdat deze documenten zijn ontvangen. Voor vragen kunt u een contactmethode gebruiken die u al kent.\nMet vriendelijke groet,\nDe casusbeheerder",
+  "smsSummary": "Het bericht beweert dat uw pakket vastgehouden wordt en vraagt om een betaling van EUR 2 binnen 30 minuten. De korte deadline en onbekende link zijn waarschuwingssignalen.",
+  "smsAction": "Betaal niet en open de link niet. Controleer de zending rechtstreeks in de officiële app of website van het bezorgbedrijf.",
+  "smsSafety": "Dit is een fictief voorbeeld van een verdachte boodschap. Urgentie en een betalingsverzoek via een onbekende link verhogen het risico.",
+  "billSummary": "De voorbeeldfactuur is voor internetdienst. Het bedrag is EUR 48 en de betalingsdeadline is 21 oktober 2026.",
+  "billAction": "Controleer de ontvanger en het rekeningnummer met informatie van uw provider voordat u de betaling doet.",
+  "billSafety": "Het bedrag en de deadline alleen bevestigen niet dat een factuur authentiek is. Controleer de betalingsgegevens.",
+  "exampleType": "prepared fictional example rendered by the existing app interface"
+}

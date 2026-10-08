@@ -1,0 +1,13 @@
+{
+  "letterSummary": "Søknaden din er ufullstendig. Vennligst gi bevis på adressen din og det utfylte skjemaet innen 14 dager etter å ha mottatt dette brevet. Søknaden kan ikke behandles før disse dokumentene er mottatt.",
+  "letterAction": "Gi de manglende dokumentene innen 14 dager etter å ha mottatt brevet.",
+  "letterSafety": "Dette eksempelbrevet ber om manglende dokumenter. Sjekk avsenderen ved å bruke en kontaktmetode du allerede kjenner.",
+  "letterTranslation": "Eksempelbrev — fiktivt eksempel\nDato: 7. oktober 2026\nEmne: Manglende dokumenter for søknaden din\nKjære søker,\nSøknaden din er ufullstendig. Vennligst gi bevis på adressen din og det utfylte skjemaet innen 14 dager etter å ha mottatt dette brevet. Søknaden din kan ikke behandles før disse dokumentene er mottatt. For spørsmål, bruk en kontaktmetode du allerede kjenner.\nMed vennlig hilsen,\nSaksbehandleren",
+  "smsSummary": "Meldingen hevder at pakken din er holdt og ber om en betaling på EUR 2 innen 30 minutter. Den korte fristen og den ukjente lenken er advarselstegn.",
+  "smsAction": "Ikke betal eller åpne lenken. Sjekk forsendelsen direkte i leveringsselskapets offisielle app eller nettside.",
+  "smsSafety": "Dette er et fiktivt eksempel på en mistenkelig melding. Hastverk og en betalingsforespørsel gjennom en ukjent lenke øker risikoen.",
+  "billSummary": "Eksempelregningen er for internettjeneste. Beløpet er EUR 48 og betalingsfristen er 21. oktober 2026.",
+  "billAction": "Sjekk mottakeren og kontonummeret mot informasjon fra leverandøren din før du foretar betalingen.",
+  "billSafety": "Beløpet og fristen alene bekrefter ikke at en faktura er autentisk. Sjekk betalingsdetaljene.",
+  "exampleType": "prepared fictional example rendered by the existing app interface"
+}

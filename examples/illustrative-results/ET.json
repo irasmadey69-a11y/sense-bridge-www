@@ -1,0 +1,13 @@
+{
+  "letterSummary": "Teie taotlus on puudulik. Esitage oma aadressi tõend ja täidetud vorm 14 päeva jooksul alates selle kirja saamisest. Taotlust ei saa töödelda, kuni need dokumendid on saadud.",
+  "letterAction": "Esitage puuduvad dokumendid 14 päeva jooksul alates kirja saamisest.",
+  "letterSafety": "See näidiskiri küsib puuduvaid dokumente. Kontrollige saatjat kasutades kontaktmeetodit, mida juba tunnete.",
+  "letterTranslation": "Näidiskiri — väljamõeldud näide\nKuupäev: 7. oktoober 2026\nTeema: Puuduvad dokumendid teie taotluse jaoks\nLugupeetud taotleja,\nTeie taotlus on puudulik. Palun esitage oma aadressi tõend ja täidetud vorm 14 päeva jooksul alates selle kirja saamisest. Teie taotlust ei saa töödelda, kuni need dokumendid on saadud. Küsimuste korral kasutage kontaktmeetodit, mida juba tunnete.\nLugupidamisega,\nJuhtumiametnik",
+  "smsSummary": "Sõnum väidab, et teie pakk on kinni peetud ja palub maksta 2 eurot 30 minuti jooksul. Lühike tähtaeg ja tundmatu link on hoiatavad märgid.",
+  "smsAction": "Ärge makske ega avage linki. Kontrollige saadetist otse kohaletoimetamisfirma ametlikus rakenduses või veebisaidil.",
+  "smsSafety": "See on väljamõeldud kahtlane sõnumi näide. Kiirus ja makse nõudmine tundmatu lingi kaudu suurendavad riski.",
+  "billSummary": "Näidisarve on internetiteenuse eest. Summa on 48 eurot ja maksetähtaeg on 21. oktoober 2026.\"\"\"",
+  "billAction": "Kontrollige saaja ja konto numbrit oma teenusepakkuja teabe põhjal enne makse tegemist.",
+  "billSafety": "Ainult summa ja tähtaeg ei kinnita, et arve on autentne. Kontrollige makseandmeid.",
+  "exampleType": "prepared fictional example rendered by the existing app interface"
+}

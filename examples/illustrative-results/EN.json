@@ -1,0 +1,13 @@
+{
+  "letterSummary": "Your application is incomplete. Provide proof of your address and the completed form within 14 days of receiving this letter. The application cannot be processed until these documents are received.",
+  "letterAction": "Provide the missing documents within 14 days of receiving the letter.",
+  "letterSafety": "This sample letter requests missing documents. Check the sender using a contact method you already know.",
+  "letterTranslation": "Sample letter — fictional example\nDate: 7 October 2026\nSubject: Missing documents for your application\nDear applicant,\nYour application is incomplete. Please provide proof of your address and the completed form within 14 days of receiving this letter. Your application cannot be processed until these documents are received. For questions, use a contact method you already know.\nKind regards,\nThe case officer",
+  "smsSummary": "The message claims your parcel is held and asks for a payment of EUR 2 within 30 minutes. The short deadline and unfamiliar link are warning signs.",
+  "smsAction": "Do not pay or open the link. Check the shipment directly in the delivery company’s official app or website.",
+  "smsSafety": "This is a fictional suspicious-message example. Urgency and a payment request through an unfamiliar link increase the risk.",
+  "billSummary": "The sample invoice is for internet service. The amount is EUR 48 and the payment deadline is 21 October 2026.",
+  "billAction": "Check the recipient and account number against information from your provider before making the payment.",
+  "billSafety": "The amount and deadline alone do not confirm that an invoice is authentic. Check the payment details.",
+  "exampleType": "prepared fictional example rendered by the existing app interface"
+}

@@ -1,0 +1,13 @@
+{
+  "letterSummary": "Az alkalmazásod hiányos. Kérjük, nyújts be lakcímigazolást és a kitöltött űrlapot 14 napon belül a levél kézhezvételétől számítva. Az alkalmazás nem dolgozható fel, amíg ezek a dokumentumok meg nem érkeznek.",
+  "letterAction": "Kérjük, nyújtsd be a hiányzó dokumentumokat 14 napon belül a levél kézhezvételétől számítva.",
+  "letterSafety": "Ez a minta levél hiányzó dokumentumokat kér. Ellenőrizd a feladót egy már ismert kapcsolattartási módszerrel.",
+  "letterTranslation": "Minta levél — képzeletbeli példa\nDátum: 2026. október 7.\nTárgy: Hiányzó dokumentumok az alkalmazásodhoz\nKedves pályázó,\nAz alkalmazásod hiányos. Kérjük, nyújts be lakcímigazolást és a kitöltött űrlapot 14 napon belül a levél kézhezvételétől számítva. Az alkalmazásod nem dolgozható fel, amíg ezek a dokumentumok meg nem érkeznek. Kérdések esetén használd a már ismert kapcsolattartási módszert.\nÜdvözlettel,\nAz ügyintéző",
+  "smsSummary": "Az üzenet azt állítja, hogy a csomagod visszatartásra került, és 30 percen belül 2 EUR-t kér. A rövid határidő és az ismeretlen link figyelmeztető jelek.",
+  "smsAction": "Ne fizess, és ne nyisd meg a linket. Ellenőrizd a szállítmányt közvetlenül a szállító cég hivatalos alkalmazásában vagy weboldalán.",
+  "smsSafety": "Ez egy képzeletbeli gyanús üzenet példa. A sürgősség és az ismeretlen linken keresztüli kifizetési kérés növeli a kockázatot.",
+  "billSummary": "A minta számla internetes szolgáltatásra vonatkozik. Az összeg 48 EUR, a fizetési határidő pedig 2026. október 21.",
+  "billAction": "Ellenőrizd a címzettet és a számlaszámot a szolgáltatód információi alapján a kifizetés előtt.",
+  "billSafety": "Az összeg és a határidő önmagában nem igazolja, hogy a számla hiteles. Ellenőrizd a fizetési részleteket.",
+  "exampleType": "prepared fictional example rendered by the existing app interface"
+}

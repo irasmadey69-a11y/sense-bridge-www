@@ -1,0 +1,13 @@
+{
+  "letterSummary": "Tu solicitud está incompleta. Proporciona prueba de tu dirección y el formulario completado dentro de los 14 días posteriores a la recepción de esta carta. La solicitud no puede ser procesada hasta que se reciban estos documentos.",
+  "letterAction": "Proporciona los documentos faltantes dentro de los 14 días posteriores a la recepción de la carta.",
+  "letterSafety": "Esta carta de muestra solicita documentos faltantes. Verifica al remitente utilizando un método de contacto que ya conoces.",
+  "letterTranslation": "Carta de muestra — ejemplo ficticio\nFecha: 7 de octubre de 2026\nAsunto: Documentos faltantes para tu solicitud\nEstimado solicitante,\nTu solicitud está incompleta. Por favor, proporciona prueba de tu dirección y el formulario completado dentro de los 14 días posteriores a la recepción de esta carta. Tu solicitud no puede ser procesada hasta que se reciban estos documentos. Para preguntas, utiliza un método de contacto que ya conoces.\nAtentamente,\nEl oficial del caso",
+  "smsSummary": "El mensaje afirma que tu paquete está retenido y solicita un pago de 2 EUR dentro de los 30 minutos. El plazo corto y el enlace desconocido son señales de advertencia.",
+  "smsAction": "No pagues ni abras el enlace. Verifica el envío directamente en la aplicación oficial o el sitio web de la empresa de entrega.",
+  "smsSafety": "Este es un ejemplo ficticio de mensaje sospechoso. La urgencia y una solicitud de pago a través de un enlace desconocido aumentan el riesgo.",
+  "billSummary": "La factura de muestra es por servicio de internet. El monto es de 48 EUR y la fecha límite de pago es el 21 de octubre de 2026.",
+  "billAction": "Verifica el destinatario y el número de cuenta con la información de tu proveedor antes de realizar el pago.",
+  "billSafety": "El monto y la fecha límite por sí solos no confirman que una factura sea auténtica. Verifica los detalles del pago.",
+  "exampleType": "prepared fictional example rendered by the existing app interface"
+}

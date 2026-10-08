@@ -1,0 +1,13 @@
+{
+  "letterSummary": "Din ansökan är ofullständig. Vänligen lämna bevis på din adress och den ifyllda blanketten inom 14 dagar efter att du mottagit detta brev. Ansökan kan inte behandlas förrän dessa dokument har mottagits.",
+  "letterAction": "Lämna de saknade dokumenten inom 14 dagar efter att du mottagit brevet.",
+  "letterSafety": "Detta exempelbrev begär saknade dokument. Kontrollera avsändaren med en kontaktmetod du redan känner till.",
+  "letterTranslation": "Exempelbrev — fiktivt exempel\nDatum: 7 oktober 2026\nÄmne: Saknade dokument för din ansökan\nKära sökande,\nDin ansökan är ofullständig. Vänligen lämna bevis på din adress och den ifyllda blanketten inom 14 dagar efter att du mottagit detta brev. Din ansökan kan inte behandlas förrän dessa dokument har mottagits. För frågor, använd en kontaktmetod du redan känner till.\nVänliga hälsningar,\nHandläggaren",
+  "smsSummary": "Meddelandet påstår att ditt paket hålls och begär en betalning på 2 EUR inom 30 minuter. Den korta tidsfristen och den okända länken är varningssignaler.",
+  "smsAction": "Betala inte eller öppna länken. Kontrollera försändelsen direkt i leveransföretagets officiella app eller webbplats.",
+  "smsSafety": "Detta är ett fiktivt exempel på ett misstänkt meddelande. Brådska och en betalningsbegäran genom en okänd länk ökar risken.",
+  "billSummary": "Denna exempelräkning är för internetservice. Beloppet är 48 EUR och betalningsfristen är 21 oktober 2026.\"\"\"",
+  "billAction": "Kontroller modtageren og kontonummeret i forhold til oplysninger fra din udbyder, før du foretager betalingen.",
+  "billSafety": "Beløbet og fristen alene bekræfter ikke, at en faktura er ægte. Tjek betalingsoplysningerne.",
+  "exampleType": "prepared fictional example rendered by the existing app interface"
+}

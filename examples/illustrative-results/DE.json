@@ -1,0 +1,13 @@
+{
+  "letterSummary": "Ihr Antrag ist unvollständig. Bitte reichen Sie innerhalb von 14 Tagen nach Erhalt dieses Schreibens einen Nachweis Ihrer Adresse und das ausgefüllte Formular ein. Der Antrag kann nicht bearbeitet werden, bis diese Dokumente eingegangen sind.",
+  "letterAction": "Reichen Sie die fehlenden Dokumente innerhalb von 14 Tagen nach Erhalt des Schreibens ein.",
+  "letterSafety": "Dieses Musteranschreiben fordert fehlende Dokumente an. Überprüfen Sie den Absender mit einer Kontaktmethode, die Sie bereits kennen.",
+  "letterTranslation": "Musterbrief — fiktives Beispiel\nDatum: 7. Oktober 2026\nBetreff: Fehlende Dokumente für Ihren Antrag\nSehr geehrter Antragsteller,\nIhr Antrag ist unvollständig. Bitte reichen Sie innerhalb von 14 Tagen nach Erhalt dieses Schreibens einen Nachweis Ihrer Adresse und das ausgefüllte Formular ein. Ihr Antrag kann nicht bearbeitet werden, bis diese Dokumente eingegangen sind. Bei Fragen nutzen Sie eine Kontaktmethode, die Sie bereits kennen.\nMit freundlichen Grüßen,\nDer Sachbearbeiter",
+  "smsSummary": "Die Nachricht behauptet, Ihr Paket sei zurückgehalten und fordert eine Zahlung von 2 EUR innerhalb von 30 Minuten. Die kurze Frist und der unbekannte Link sind Warnzeichen.",
+  "smsAction": "Zahlen Sie nicht und öffnen Sie den Link nicht. Überprüfen Sie die Sendung direkt in der offiziellen App oder Website des Lieferunternehmens.",
+  "smsSafety": "Dies ist ein fiktives Beispiel für eine verdächtige Nachricht. Dringlichkeit und eine Zahlungsaufforderung über einen unbekannten Link erhöhen das Risiko.",
+  "billSummary": "Die Musterrechnung ist für einen Internetdienst. Der Betrag beträgt 48 EUR und die Zahlungsfrist ist der 21. Oktober 2026.",
+  "billAction": "Überprüfen Sie den Empfänger und die Kontonummer anhand der Informationen Ihres Anbieters, bevor Sie die Zahlung vornehmen.",
+  "billSafety": "Der Betrag und die Frist allein bestätigen nicht, dass eine Rechnung authentisch ist. Überprüfen Sie die Zahlungsdetails.",
+  "exampleType": "prepared fictional example rendered by the existing app interface"
+}

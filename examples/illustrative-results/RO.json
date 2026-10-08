@@ -1,0 +1,13 @@
+{
+  "letterSummary": "Cererea dumneavoastră este incompletă. Vă rugăm să furnizați dovada adresei și formularul completat în termen de 14 zile de la primirea acestei scrisori. Cererea nu poate fi procesată până când aceste documente nu sunt primite.",
+  "letterAction": "Furnizați documentele lipsă în termen de 14 zile de la primirea scrisorii.",
+  "letterSafety": "Această scrisoare exemplu solicită documente lipsă. Verificați expeditorul folosind o metodă de contact pe care o cunoașteți deja.",
+  "letterTranslation": "Scrisoare exemplu — exemplu fictiv\nData: 7 octombrie 2026\nSubiect: Documente lipsă pentru cererea dumneavoastră\nStimate solicitant,\nCererea dumneavoastră este incompletă. Vă rugăm să furnizați dovada adresei și formularul completat în termen de 14 zile de la primirea acestei scrisori. Cererea dumneavoastră nu poate fi procesată până când aceste documente nu sunt primite. Pentru întrebări, folosiți o metodă de contact pe care o cunoașteți deja.\nCu stimă,\nOfițerul de caz",
+  "smsSummary": "Mesajul afirmă că coletul dumneavoastră este reținut și solicită o plată de 2 EUR în termen de 30 de minute. Termenul scurt și linkul necunoscut sunt semne de avertizare.",
+  "smsAction": "Nu plătiți și nu deschideți linkul. Verificați expedierea direct în aplicația oficială sau pe site-ul companiei de livrare.",
+  "smsSafety": "Acesta este un exemplu fictiv de mesaj suspect. Urgența și solicitarea de plată printr-un link necunoscut cresc riscul.",
+  "billSummary": "Factura exemplu este pentru serviciul de internet. Suma este de 48 EUR, iar termenul de plată este 21 octombrie 2026.",
+  "billAction": "Verificați destinatarul și numărul de cont cu informațiile de la furnizorul dumneavoastră înainte de a efectua plata.",
+  "billSafety": "Suma și termenul de plată singure nu confirmă că o factură este autentică. Verificați detaliile plății.",
+  "exampleType": "prepared fictional example rendered by the existing app interface"
+}

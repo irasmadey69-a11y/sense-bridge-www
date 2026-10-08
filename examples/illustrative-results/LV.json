@@ -1,0 +1,13 @@
+{
+  "letterSummary": "Jūsu pieteikums ir nepilnīgs. Lūdzu, sniedziet adreses pierādījumu un aizpildītu veidlapu 14 dienu laikā pēc šīs vēstules saņemšanas. Pieteikums nevar tikt apstrādāts, līdz šie dokumenti ir saņemti.",
+  "letterAction": "Sniedziet trūkstošos dokumentus 14 dienu laikā pēc vēstules saņemšanas.",
+  "letterSafety": "Šī parauga vēstule pieprasa trūkstošos dokumentus. Pārbaudiet sūtītāju, izmantojot kontaktmetodi, ko jau zināt.",
+  "letterTranslation": "Parauga vēstule — fiktīvs piemērs\nDatums: 2026. gada 7. oktobris\nTemats: Trūkstošie dokumenti jūsu pieteikumam\nCienījamais pieteicēj,\nJūsu pieteikums ir nepilnīgs. Lūdzu, sniedziet adreses pierādījumu un aizpildītu veidlapu 14 dienu laikā pēc šīs vēstules saņemšanas. Jūsu pieteikums nevar tikt apstrādāts, līdz šie dokumenti ir saņemti. Ja jums ir jautājumi, izmantojiet kontaktmetodi, ko jau zināt.\nAr cieņu,\nLietas virsnieks",
+  "smsSummary": "Ziņojums apgalvo, ka jūsu sūtījums ir aizturēts un lūdz samaksu 2 EUR 30 minūšu laikā. Īsais termiņš un nepazīstamais saite ir brīdinājuma zīmes.",
+  "smsAction": "Nemaksājiet un neatslēdziet saiti. Pārbaudiet sūtījumu tieši pie piegādes uzņēmuma oficiālajā lietotnē vai vietnē.",
+  "smsSafety": "Šis ir fiktīvs aizdomīgs ziņojuma piemērs. Steidzamība un maksājuma pieprasījums caur nepazīstamu saiti palielina risku.",
+  "billSummary": "Parauga rēķins ir par interneta pakalpojumu. Summa ir 48 EUR un maksājuma termiņš ir 2026. gada 21. oktobris.",
+  "billAction": "Pārbaudiet saņēmēju un konta numuru, salīdzinot ar informāciju no jūsu pakalpojumu sniedzēja, pirms veicat maksājumu.",
+  "billSafety": "Tikai summa un termiņš neapstiprina, ka rēķins ir autentisks. Pārbaudiet maksājuma detaļas.",
+  "exampleType": "prepared fictional example rendered by the existing app interface"
+}

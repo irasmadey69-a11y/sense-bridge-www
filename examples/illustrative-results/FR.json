@@ -1,0 +1,13 @@
+{
+  "letterSummary": "Votre demande est incomplète. Fournissez une preuve de votre adresse et le formulaire complété dans les 14 jours suivant la réception de cette lettre. La demande ne peut pas être traitée tant que ces documents ne sont pas reçus.",
+  "letterAction": "Fournissez les documents manquants dans les 14 jours suivant la réception de la lettre.",
+  "letterSafety": "Cet exemple de lettre demande des documents manquants. Vérifiez l'expéditeur en utilisant un moyen de contact que vous connaissez déjà.",
+  "letterTranslation": "Lettre d'exemple — exemple fictif\nDate : 7 octobre 2026\nObjet : Documents manquants pour votre demande\nCher candidat,\nVotre demande est incomplète. Veuillez fournir une preuve de votre adresse et le formulaire complété dans les 14 jours suivant la réception de cette lettre. Votre demande ne peut pas être traitée tant que ces documents ne sont pas reçus. Pour toute question, utilisez un moyen de contact que vous connaissez déjà.\nCordialement,\nL'agent en charge du dossier",
+  "smsSummary": "Le message indique que votre colis est retenu et demande un paiement de 2 EUR dans les 30 minutes. Le délai court et le lien inconnu sont des signes d'alerte.",
+  "smsAction": "Ne payez pas et n'ouvrez pas le lien. Vérifiez l'envoi directement dans l'application officielle ou le site web de la société de livraison.",
+  "smsSafety": "Ceci est un exemple fictif de message suspect. L'urgence et une demande de paiement via un lien inconnu augmentent le risque.",
+  "billSummary": "L'exemple de facture concerne un service Internet. Le montant est de 48 EUR et la date limite de paiement est le 21 octobre 2026.",
+  "billAction": "Vérifiez le destinataire et le numéro de compte par rapport aux informations de votre fournisseur avant d'effectuer le paiement.",
+  "billSafety": "Le montant et la date limite à eux seuls ne confirment pas qu'une facture est authentique. Vérifiez les détails de paiement.",
+  "exampleType": "prepared fictional example rendered by the existing app interface"
+}

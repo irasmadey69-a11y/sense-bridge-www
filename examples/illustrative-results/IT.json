@@ -1,0 +1,13 @@
+{
+  "letterSummary": "La tua domanda è incompleta. Fornisci la prova del tuo indirizzo e il modulo compilato entro 14 giorni dal ricevimento di questa lettera. La domanda non può essere elaborata fino a quando questi documenti non sono ricevuti.",
+  "letterAction": "Fornisci i documenti mancanti entro 14 giorni dal ricevimento della lettera.",
+  "letterSafety": "Questa lettera campione richiede documenti mancanti. Controlla il mittente utilizzando un metodo di contatto che già conosci.",
+  "letterTranslation": "Lettera campione — esempio fittizio\nData: 7 ottobre 2026\nOggetto: Documenti mancanti per la tua domanda\nCaro richiedente,\nLa tua domanda è incompleta. Ti preghiamo di fornire la prova del tuo indirizzo e il modulo compilato entro 14 giorni dal ricevimento di questa lettera. La tua domanda non può essere elaborata fino a quando questi documenti non sono ricevuti. Per domande, utilizza un metodo di contatto che già conosci.\nCordiali saluti,\nL'ufficiale del caso",
+  "smsSummary": "Il messaggio afferma che il tuo pacco è trattenuto e richiede un pagamento di 2 EUR entro 30 minuti. La scadenza breve e il link sconosciuto sono segnali di avvertimento.",
+  "smsAction": "Non pagare né aprire il link. Controlla la spedizione direttamente nell'app ufficiale o nel sito web della compagnia di consegna.",
+  "smsSafety": "Questo è un esempio fittizio di messaggio sospetto. L'urgenza e una richiesta di pagamento tramite un link sconosciuto aumentano il rischio.",
+  "billSummary": "La fattura campione è per un servizio internet. L'importo è di 48 EUR e la scadenza per il pagamento è il 21 ottobre 2026.",
+  "billAction": "Controlla il destinatario e il numero di conto rispetto alle informazioni del tuo fornitore prima di effettuare il pagamento.",
+  "billSafety": "L'importo e la scadenza da soli non confermano che una fattura sia autentica. Controlla i dettagli del pagamento.",
+  "exampleType": "prepared fictional example rendered by the existing app interface"
+}
