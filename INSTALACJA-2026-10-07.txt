@@ -1,0 +1,15 @@
+Sense Bridge WWW — rzeczywiste wyniki analizy i instalacja na górze, 07.10.2026
+
+Wdrożenie: wdróż kompletną zawartość katalogu sense-bridge-www-main z tego ZIP-a do istniejącego projektu WWW. To aktualizacja strony. Aplikacja nie została zmieniona w ramach tej poprawki.
+
+Kolejność: pierwszy ekran → Dodaj Sense Bridge do telefonu → Analiza pisma z wynikiem → Dodatkowe funkcje. Przycisk dodania do telefonu w pierwszym ekranie zachowany.
+
+Wykonano rzeczywiste analizy przez aktualny endpoint produkcyjny aplikacji, dla 24 języków. Oryginał pisma jest niemiecki; dla niemieckiej strony użyto pisma angielskiego. Język dokumentu zawsze różni się od języka wyniku. Pismo dotyczy uzupełnienia brakujących dokumentów w ciągu 14 dni. Jest fikcyjnym przykładem bez prawdziwych danych osoby lub urzędu.
+
+Przykład pokazuje obcojęzyczne pismo, autentyczny ekran szybkiego podsumowania z aplikacji oraz rzeczywiste tłumaczenie pod rozwijanym przyciskiem. Nie przedstawia już pustego formularza jako wyniku. Zrzuty wyników wykonano w aktualnym interfejsie aplikacji z odpowiedziami uzyskanymi z produkcyjnego backendu. Oryginalne odpowiedzi i teksty wejściowe zachowano w examples/analysis-results. Nie poprawiano ręcznie treści wygenerowanych wyników.
+
+Przykłady strony używają zapisanych wyników. Wizyta na stronie nie wykonuje nowego zapytania analizy. Dodatkowe ekrany również ponownie wykonano z językiem interfejsu i językiem odpowiedzi zgodnym z językiem strony. Zmieniono wyłącznie pliki WWW; backend, admin, limity i statystyki zachowane. Rzeczywiste testowe analizy przechodzą przez istniejący mechanizm rejestracji użycia backendu.
+
+Sprawdzenie: 24 języki x 390/820/1440 px, pozycja instalacji, obcojęzyczny oryginał, rzeczywiste podsumowanie, ładowanie zrzutu wyniku, 14 paneli funkcji aplikacji. 110 kontroli bez błędów JavaScript i poziomego przewijania. Wszystkie 144 zrzuty odczytane poprawnie. Sprawdzono składnię JS, JSON-LD, identyfikatory oraz rozpakowanie ZIP-a i porównanie plików bajtowo.
+
+Podstrony guide/country/countries zachowane z wcześniejszej modernizacji w tej rozmowie. To ogólne fikcyjne przykłady, nie historyczne artykuły ani porady o przepisach konkretnego kraju.

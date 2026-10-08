@@ -1,0 +1,37 @@
+Sense Bridge — zestaw końcowy 08.10.2026
+
+Baza: przesłany plik „Nowa paczka S. 7.10.2026.zip”.
+
+WWW:
+- Nowy układ 40 podstron krajowych: zdjęcia, obcojęzyczne przykłady, przetłumaczone wyniki i pełna instrukcja instalacji Android / iOS / komputer. Zachowane adresy i metadane.
+- Dodany osobny kontakt Sense Bridge Support: sensebridge.support@gmail.com. Kontakt ogólny zachowany.
+- Przyciski 4: obwódki i delikatne tła pozycji menu; obwódki i cienie głównych przycisków; reakcja na naciśnięcie i najechanie; respektowanie ograniczenia ruchu.
+- Poprawki 2: film i lista języków domyślnie otwarte; przywrócone flagi języków; kraje i regiony zgodne z listą wariantów aplikacji, z nazwami w języku strony; większy tekst desktopowy; przeładowanie ekranów przykładów przy zmianie języka i nowa wersja adresów obrazów.
+- Zaakceptowany układ: wyjaśnienie Sense Bridge u góry; analiza pisma przed dodatkowymi funkcjami.
+- Dodaj do telefonu w pierwszym ekranie i instrukcja bezpośrednio pod nim.
+- Zdjęcia sytuacji z życia i lokalne ekrany aplikacji, z powiększaniem.
+- Wszystkie 14 funkcji w czterech grupach z wyraźnym Rozwiń/Zwiń.
+- 24 języki tekstów, wyników i ekranów; prawidłowy język obcego pisma.
+- Przykłady pisma, SMS-a i rachunku są fikcyjne, przygotowane i przetłumaczone. Ekrany wyników są renderowane przez istniejący interfejs aplikacji z tymi przykładami. Nie są nowymi analizami prawdziwych dokumentów użytkowników.
+- Zdjęcia i ekrany lokalne; brak zależności od zewnętrznych serwisów obrazów podczas otwierania strony.
+- Zachowane metadane SEO, dane strukturalne, sitemap, robots, konfiguracja, strony językowe/krajowe, film, prywatność, kontakt i rzeczywisty mechanizm licznika.
+
+APP:
+- Zrozum pismo i Zrozum więcej w 24 językach; miętowe odcienie głównego panelu w jasnym trybie.
+- Kontakt pomocy kierowany do sensebridge.support@gmail.com.
+- Zachowane funkcje, panel administracyjny i pliki serwerowe z przekazanej paczki.
+- Przekazanie języka ze strony do interfejsu i języka wyjaśnienia.
+- Instrukcja instalacji i natywny prompt, gdy przeglądarka go udostępni.
+- Rozpoznawanie uruchomienia jako aplikacja; ukrywanie zachęty do instalacji.
+- Uwzględnienie małych urządzeń dotykowych z Linux/Android proszących o widok komputerowy.
+
+Sprawdzenia: 79 sprawdzeń WWW i 41 sprawdzeń interfejsu APP; syntax JavaScript, poprawność JSON-LD, identyfikatory HTML, obrazy i integralność ZIP. Testy lokalne używały zastępczych odpowiedzi statystyk, bez dopisywania testowych wizyt do licznika produkcyjnego. Nie jest to nowy test wszystkich odpowiedzi serwera na prawdziwe dokumenty; pliki serwerowe są niezmienione.
+
+Wdrożenie:
+1. ZIP WWW zawiera index.html w katalogu głównym — przeznaczony dla projektu strony sensebridge.app.
+2. ZIP APP zawiera index.html w katalogu głównym — przeznaczony dla projektu sense-bridge-production.netlify.app.
+3. Zachowaj obecne zmienne środowiskowe i dane Netlify. Nie zastępuj projektu APP plikami WWW.
+4. Przy wdrażaniu przez GitHub rozpakuj właściwy ZIP i przenieś całą zawartość do właściwego repozytorium, wraz z nowymi plikami i folderami.
+5. Zbiorczy ZIP jest kopią obu katalogów i instrukcji; nie służy do publikowania jako jedna strona.
+
+Nic nie zostało wdrożone automatycznie.

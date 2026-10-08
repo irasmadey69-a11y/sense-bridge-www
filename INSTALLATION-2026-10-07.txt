@@ -1,0 +1,33 @@
+Sense Bridge — modernizacja strony i nazw funkcji, 07.10.2026
+
+BAZA
+Strona: wyłącznie sense-bridge-www-main (10).zip wraz z poprawką instalacji wykonaną w tej rozmowie.
+Aplikacja: wyłącznie sense-bridge-production-main (23).zip wraz z poprawką instalacji wykonaną w tej rozmowie.
+
+WDROŻENIE
+1. Wdroż pełną zawartość katalogu sense-bridge-production-main z Sense-Bridge-APP-modernizacja-2026-10-07.zip do istniejącego projektu aplikacji.
+2. Następnie wdroż pełną zawartość katalogu sense-bridge-www-main z Sense-Bridge-WWW-modernizacja-2026-10-07.zip do istniejącego projektu strony WWW.
+3. Nie pomijaj nowych plików CSS, JS, katalogów guide, country i countries ani assets.
+
+STRONA
+Krótszy pierwszy ekran, menu na telefonach i tabletach, przykład wyniku wyżej, wyróżniona instalacja, lokalne ikony i materiały, 14 funkcji w czterech grupach.
+Nowe nazwy i opisy są lokalizowane w 24 językach przez obecny mechanizm strony.
+Wyjaśniono 3 bezpłatne użycia i możliwość poproszenia o dalszy dostęp. Usunięto nieaktualny widoczny komunikat o PRO.
+Zachowano treści SEO, metadane, sitemap, adresy oraz istniejący licznik. Powtarzające się sekcje SEO umieszczono w rozwijanych blokach.
+Uzupełniono brakujące 24 strony językowe, 40 stron krajowych i katalog krajów. Są to nowe strony wejściowe z fikcyjnymi przykładami komunikacji, a nie odtworzenie dawnych artykułów ani opis lokalnego prawa. Przykładowy termin 14 dni pochodzi z fikcyjnego pisma i nie jest lokalnym terminem ustawowym.
+
+APLIKACJA
+Nagłówek Dodatkowe funkcje, dolna zakładka Funkcje, krótsze karty, siatka na dużych ekranach. Zachowano wszystkie dotychczasowe funkcje i ich obsługę.
+Pozostaje poprawka instalacji: natywny prompt gdy dostępny, instrukcje iOS/Android/komputer, obsługa trybu aplikacji, poprawne rozmiary ikon i service worker bez cache dokumentów czy odpowiedzi API. Aplikacja wymaga internetu.
+Istniejący licznik shortcut_add jest wywoływany po appinstalled. Safari nie zgłasza tego zdarzenia dla ręcznej instalacji. Dane historyczne nie są zmieniane.
+
+WERYFIKACJA
+Przeglądarka Chromium: strona w 24 językach przy szerokościach 390, 820 i 1440 px — bez błędów JS i przewijania w bok.
+Przełączanie nazw aplikacji w 24 językach. Otwarcie i zamknięcie wszystkich 14 paneli funkcji.
+Kontrola składni skryptów, JSON-LD, lokalnych zasobów, odnośników poradników i integralności archiwów.
+Backend, admin, konfiguracja wdrożenia i kod statystyk identyczne z aktualnymi pakietami produkcyjnymi.
+Testy przeglądarkowe korzystały z lokalnych odpowiedzi testowych, nie uruchamiały analiz i nie zużywały dostępu użytkownika. Nie stanowią testu jakości odpowiedzi AI ani rzeczywistej instalacji na urządzeniach.
+
+PO WDROŻENIU
+Sprawdź instalację na prawdziwym Androidzie i w Safari na iPhone/iPadzie; uruchom aplikację z nowej ikony.
+Sprawdź faktyczny licznik odwiedzin, przykładową analizę i nowe adresy poradników.
