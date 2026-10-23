@@ -1,1 +1,2 @@
 document.querySelectorAll('[data-install-device]').forEach(button=>button.addEventListener('click',()=>{document.querySelectorAll('[data-install-device]').forEach(b=>b.setAttribute('aria-pressed',String(b===button)));const step=document.getElementById('regionalInstallMiddle');step.textContent=step.dataset[button.dataset.installDevice];}));
+(() => {const script=document.createElement('script');script.src='/content-metrics.js';script.dataset.mode='website';document.head.appendChild(script);})();
